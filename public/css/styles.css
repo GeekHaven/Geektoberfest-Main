@@ -31,6 +31,13 @@ nav {
   font-size: 2rem;
 }
 
+.logo {
+  max-height: 1em;
+  bottom: -4px;
+  position: relative;
+  margin-right: 0.25em;
+}
+
 .links a {
   font-weight: bold;
   font-size: 1.3rem;
@@ -53,6 +60,7 @@ section {
 section h2 {
   font-size: 3rem;
 }
+
 section p {
   font-size: 1.3rem;
 }
