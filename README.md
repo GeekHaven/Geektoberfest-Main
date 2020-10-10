@@ -29,8 +29,8 @@ To add your pull requests, open `contributions` folder and in their add your own
         "facebook": "facebook-url",
         "github" : "github-url",
         "prs": [
-            "https://link-to-pr1.com",
-            "https://link-to-pr-2.com",
+            "https://github.com/link/to/pr/1",
+            "https://github.com/link/to/pr/2",
             ...
         ]
      }
