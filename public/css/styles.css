@@ -63,7 +63,7 @@ section * {
 
 #home {
   align-items: center;
-  background-color: #0bd7ef;
+  background-color: #86af49;
   color: #011552;
 }
 
@@ -72,24 +72,24 @@ section * {
 }
 
 #home button {
-  background-color: #011552;
+  background-color: #d64161;
   font-size: 2rem;
-  color: #0bd7ef;
+  color: #feb236;
   padding: 10px 20px;
   transition: background-color 0.6s;
 }
 
 #home button:hover {
-  background-color: rgba(1, 21, 82, 0.8);
+  background-color: #fefbd8;
 }
 
 #about {
-  color: #0bd7ef;
-  background-color: #011552;
+  color: #ffcc5c;
+  background-color: #6b5b95;
 }
 
 #projects {
-  background-color: #0bd7ef;
+  background-color: #ffff00;
   color: #011552;
 }
 
@@ -125,7 +125,7 @@ section * {
 }
 
 #participants {
-  background-color: #011552;
+  background-color: #ff0066;
   color: #0bd7ef;
 }
 
