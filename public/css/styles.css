@@ -195,7 +195,57 @@ section * {
   font-weight: bold;
   border-radius: 100px;
 }
+.contact{
+    background: #011552;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    transition: 0.6s;
+    padding: 35px 120px;
+    bottom: 0;
+}
 
+.contact ul {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact ul li {
+    list-style: none;
+}
+
+.contact  ul li a {
+
+    margin: 5px 45px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.contact ul li:nth-child(7n+1) a:hover {
+    cursor: pointer;
+    text-shadow: 0 0 10px #4267B2, 0 0 20px #4267B2, 0 0 30px #4267B2, 0 0 40px #4267B2, 0 0 50px #4267B2, 0 0 60px #4267B2, 0 0 70px #4267B2, 0 0 80px #4267B2, 0 0 90px #4267B2;
+}
+
+.contact ul li:nth-child(7n+2) a:hover {
+    cursor: pointer;
+    text-shadow: 0 0 10px #0e76a8, 0 0 20px #0e76a8, 0 0 30px #0e76a8, 0 0 40px #0e76a8, 0 0 50px #0e76a8, 0 0 60px #0e76a8, 0 0 70px #0e76a8, 0 0 80px #0e76a8, 0 0 90px #0e76a8;
+}
+
+.contact ul li:nth-child(7n+3) a:hover {
+    cursor: pointer;
+    text-shadow: 0 0 10px #6cc644, 0 0 20px #6cc644, 0 0 30px #6cc644, 0 0 40px #6cc644, 0 0 50px #6cc644, 0 0 60px #6cc644, 0 0 70px #6cc644, 0 0 80px #6cc644, 0 0 90px #6cc644;
+}
+
+.contact ul li:nth-child(7n+4) a:hover {
+    cursor: pointer;
+    text-shadow: 0 0 10px #D44638, 0 0 20px #B23121, 0 0 30px #D44638, 0 0 40px #B23121, 0 0 50px #D44638, 0 0 60px #B23121, 0 0 70px #B23121, 0 0 80px #D44638, 0 0 90px #B23121;
+}
 footer {
   display: flex;
   justify-content: center;
