@@ -20,6 +20,10 @@ button {
   cursor: pointer;
 }
 
+.highlighted {
+      color: red;
+    }
+
 nav {
   display: flex;
   justify-content: space-around;
@@ -65,7 +69,7 @@ section * {
   margin: 20px 0px;
 }
 
-#home {
+#section1 {
   align-items: center;
   background-color: #05386B;
   color: #011552;
@@ -88,14 +92,14 @@ section * {
   left: 0px;
 }
 
-#home h1 {
+#section1 h1 {
   font-size: 5rem;
   color: white;
   text-shadow: 1px 1px #778899, 2px 2px #a9a9a9, 3px 3px #a9a9a9,
     4px 4px #a9a9a9;
 }
 
-#home button {
+#section1 button {
   background-color: #011552;
   font-size: 2rem;
   /*color: #0bd7ef;*/
@@ -105,16 +109,16 @@ section * {
   text-shadow: 1px 1px #778899;
 }
 
-#home button:hover {
+#section1 button:hover {
   background-color: rgba(1, 21, 82, 0.8);
 }
 
-#about {
+#section2 {
   color: #0bd7ef;
   background-color: #37968B;
 }
 
-#projects {
+#section3 {
   background-color: #5CDB95;
   color: #011552;
 }
@@ -150,7 +154,7 @@ section * {
   border-radius: 100px;
 }
 
-#participants {
+#section4 {
   background-color: #8EE4AF;
   color: #ee6f57;
 }
