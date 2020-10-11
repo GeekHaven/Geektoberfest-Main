@@ -181,6 +181,15 @@ section * {
   font-size: 1.4rem;
 }
 
+/*
+  section1=home
+  section2=about
+  section3=projects
+  section4=Participants
+  section5=Contact
+  */
+
+
 .participant a {
   width: 80%;
   color: #0bd7ef;
