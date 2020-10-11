@@ -63,7 +63,7 @@ section * {
 
 #home {
   align-items: center;
-  background-color: #0bd7ef;
+  background-color: #05386B;
   color: #011552;
 
     position: relative; 
@@ -109,11 +109,11 @@ section * {
 
 #about {
   color: #0bd7ef;
-  background-color: #011552;
+  background-color: #37968B;
 }
 
 #projects {
-  background-color: #0bd7ef;
+  background-color: #5CDB95;
   color: #011552;
 }
 
@@ -149,8 +149,8 @@ section * {
 }
 
 #participants {
-  background-color: #011552;
-  color: #0bd7ef;
+  background-color: #8EE4AF;
+  color: #ee6f57;
 }
 
 .participants-container {
