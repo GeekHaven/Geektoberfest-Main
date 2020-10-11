@@ -228,3 +228,40 @@ footer {
   background-color: #011552;
   color: #0bd7ef;
 }
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 200px;
+  background-color: #0bd7ef;
+  color: #011552;
+}
+
+footer{
+  flex-direction:column ;
+}
+#icons{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.fa{
+  color: #fff;
+}
+a i{
+  font-size: 2rem;
+}
+.contact-details {
+  font-size: 2.4rem;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  transition: transform 0.3s ease-out;
+}
+.contact-details:hover {
+  transform: translateY(8px);
+}
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+}
