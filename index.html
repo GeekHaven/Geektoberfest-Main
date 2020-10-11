@@ -5,20 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geektoberfest</title>
     <link rel="stylesheet" href="public/css/styles.css">
+
+    <!--bootstrap v4 CSS CDN ---->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!--bootstrap v4 CDN---->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+
+    
 </head>
 <body>
-    <haeder>
-        <nav>
-            <div class="brand">GEEKTOBERFEST'20</div>
-            <div class="links">
-                <a href="#home">home</a>
-                <a href="#about">about</a>
-                <a href="#projects">projects</a>
-                <a href="#participants">participants</a>
-                <a href="#">contact</a>
+    <header>
+    	<div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="navbar-brand" id="brand">GEEKTOBERFEST'20</div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    				<span class="navbar-toggler-icon"></span>
+  			</button>
+            <div class="links collapse navbar-collapse" id="navbarNav ">
+            	<ul class="navbar-nav navbar-right" id="navbarList">
+            		<li class="nav-item">
+                		<a href="#home">home</a>
+                	</li>
+                	<li class="nav-item">
+                		<a href="#about">about</a>
+                	</li>
+                	<li class="nav-item">
+                		<a href="#projects">projects</a>
+                	</li>
+                	<li class="nav-item">
+                		<a href="#participants">participants</a>
+                	</li>
+                	<li class="nav-item">
+                		<a href="#">contact</a>
+                	</li>
+                </ul>
             </div>
         </nav>
-    </haeder>
+    </div>
+    </header>
     <main>
         <section id="home">
             <h1>GEEKTOBERFEST'20</h1>
@@ -78,7 +106,6 @@
     </main>
     <footer>
         <p>© Copyright Geektoberfest'20 | GeekHaven - IIIT Allahabad</p>
-    </footer>
-    
+    </footer>  
 </body>
 </html>
