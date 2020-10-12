@@ -8,10 +8,6 @@
   section5=Contact
   */
 
-
-
-
-
 *,
 *:before,
 *:after {
@@ -34,35 +30,29 @@ button {
   cursor: pointer;
 }
 
-nav {
-  display: flex;
+.navbar{
   font-family: 'Nunito', sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  justify-content: space-around;
-  align-items: center;
-  padding: 20px 10px;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  background-color: rgb(255, 255, 255);
+  padding: 0.5rem 10rem;
+  background-color: rgb(235, 245, 255);
 }
 
 
-#brand {
-  font-size: 1.3rem;
+.navbar-brand {
+  font-size: 1.5rem;
 }
 
-.links a {
-  font-weight: bold;
-  font-size: 1.3rem;
+#navbarNav .nav-link {
+  font-weight: 500;
+  font-size: 1.1em;
   margin: 5px;
   padding: 5px;
   transition: color 0.2s;
 }
 
-.links a:hover {
-  color: #1d1ac2;
+#navbarNav .nav-link:hover {
+  color: #7c32d1;
 }
 
 /* Home Section Starts */
@@ -110,6 +100,44 @@ section * {
   left: 0px;
 }
 
+/* Countdown Timer CSS */
+
+.timer {
+  color: #eeddff;
+  text-transform: uppercase;
+  /* margin: 0 auto 50px; */
+  text-shadow: 0px 3px 3px rgba(38,102,240,0.4),
+               0px 6px 8px rgba(89,142,255,0.4),
+               0px 15px 20px rgba(146,208,247,0.5);
+}
+
+td{
+  text-align: center;
+}
+
+.countdownContainer{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 220px;
+  transform : translateX(-50%) translateY(-50%);
+  text-align: top center;
+  background: rgba(245, 245, 245, 0.1);
+  box-shadow: 0 0 5px 3px rgba(255, 255, 255, 0.5);
+  border: 0.1px solid #999;
+  padding: 10px;
+}
+.info-label td{
+  font-size: 3em;
+  padding: 0;
+}
+.info-data {
+  font-size: 4em;
+}
+
+/* -------------- */
+
 #section1 h1 {
   font-size: 5rem;
   color: white;
@@ -117,7 +145,7 @@ section * {
     4px 4px #a9a9a9;
 }
  /* Animated button */
- .btn {
+ #bton {
   outline: none;
   border: none;
   cursor: pointer;
@@ -135,12 +163,12 @@ section * {
   box-shadow: 0 6px #1d4ff2;
 }
 
-.btn:hover {
+#bton:hover {
   box-shadow: 0 4px #1d4ff2;
   top: 2px;
 }
 
-.btn:active {
+#bton:active {
   box-shadow: none;
   top: 6px;
 }
@@ -154,7 +182,7 @@ section * {
   background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 64%);
   padding: 50px 100px;
   display: flex;
-  flex-direction: unset;
+  flex-direction: row;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -172,6 +200,7 @@ section * {
 #section2 .symbol{
   width: 50%;
   display: inline;
+  position: relative;
   font-size: 350px;
   margin: 20px 50px;
   font-weight: 400;
@@ -400,6 +429,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   padding: 50px 200px;
   background-color: #011552;
   color: #0bd7ef;
