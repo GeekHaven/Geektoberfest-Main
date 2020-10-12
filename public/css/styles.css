@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Poppins&family=Raleway&display=swap');
+
 *,
 *:before,
 *:after {
@@ -22,14 +24,18 @@ button {
 
 nav {
   display: flex;
+  font-family: 'Nunito', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
   justify-content: space-around;
   align-items: center;
-  padding: 30px 0px;
+  padding: 20px 10px;
   position: sticky;
   top: 0;
   z-index: 1;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }
+
 
 #brand {
   font-size: 1.3rem;
@@ -39,12 +45,15 @@ nav {
   font-weight: bold;
   font-size: 1.3rem;
   margin: 5px;
-  transition: color 0.6s;
+  padding: 5px;
+  transition: color 0.2s;
 }
 
 .links a:hover {
-  color: #0bd7ef;
+  color: #1d1ac2;
 }
+
+/* Home Section Starts */
 
 section {
   display: flex;
@@ -69,7 +78,7 @@ section * {
   align-items: center;
   background-color: #05386B;
   color: #011552;
-
+  font-family: 'Raleway', serif;
   position: relative;
   height: 100vh;
   width: 100%;
@@ -78,9 +87,10 @@ section * {
   justify-content: center;
   background-image: url("https://www.veracode.com/sites/default/files/styles/blog_post_resize_960/public/developer-guide-blog-2.png?itok=JQGRVjEX");
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.hone::before {
+.home::before {
   position: absolute;
   top: 0px;
   right: 0px;
@@ -94,29 +104,84 @@ section * {
   text-shadow: 1px 1px #778899, 2px 2px #a9a9a9, 3px 3px #a9a9a9,
     4px 4px #a9a9a9;
 }
-
-#home button {
-  background-color: #011552;
-  font-size: 2rem;
-  /*color: #0bd7ef;*/
-  padding: 10px 20px;
-  transition: background-color 0.6s;
+ /* Animated button */
+ .btn {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  background-color: #4285F4;
+  font-size: 20px;
+  font-weight: 400px;
   color: white;
-  text-shadow: 1px 1px #778899;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 25px 80px;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0 6px #1d4ff2;
 }
 
-#home button:hover {
-  background-color: rgba(1, 21, 82, 0.8);
+.btn:hover {
+  box-shadow: 0 4px #1d4ff2;
+  top: 2px;
 }
 
+.btn:active {
+  box-shadow: none;
+  top: 6px;
+}
+
+/* Home Section Ends  */
+
+/* About Section Starts  */
 #about {
-  color: #0bd7ef;
-  background-color: #37968B;
+  color: #210b92;
+  background-color: #85FFBD;
+  background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 64%);
+  padding: 50px 100px;
+  display: flex;
+  flex-direction: unset;
+  font-family: 'Raleway', sans-serif;
 }
+
+#about .content{
+  width: 50%;
+  font-size: 1.5em;
+}
+
+#about .content h2{
+  text-transform: uppercase;
+  font-size: 2em;
+  letter-spacing: 0.1em;
+}
+
+#about .symbol{
+  width: 50%;
+  display: inline;
+  font-size: 350px;
+}
+#about .symbol h3{
+  margin: 20px 50px;
+  font-weight: 400;
+  text-align: end;
+}
+/* About Section Ends  */
+
+/* Project Section Starts  */
 
 #projects {
-  background-color: #5CDB95;
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
   color: #011552;
+  font-family: 'Nunito', sans-serif;
+  padding: 50px 100px;
+}
+
+#projects h2{
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .projects-container {
@@ -132,9 +197,10 @@ section * {
   align-items: center;
   height: 300px;
   width: 250px;
-  background-color: #011552;
+  background-color: #022488;
   color: #0bd7ef;
   margin: 10px;
+  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
 }
 
 .project-info h3 {
@@ -144,15 +210,32 @@ section * {
 .project a {
   width: 80%;
   background-color: #0bd7ef;
-  color: #011552;
+  color: #022488;
   padding: 10px 20px;
   font-weight: bold;
   border-radius: 100px;
+  transition: background color 0.2s;
+}
+.project a:hover {
+  background: #4affa1;
+  color: #1f2329;
 }
 
+/* Project Section Ends */
+
+/* Participants Section Starts */
+
 #participants {
-  background-color: #8EE4AF;
-  color: #ee6f57;
+  background-color: #08AEEA;
+  background-image: linear-gradient(315deg, #08AEEA 15%, #2AF598 47%);
+  color: #3e5248;
+  font-family: 'Nunito', sans-serif;
+  padding: 50px 100px;
+}
+
+#participants h2{
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .participants-container {
@@ -168,9 +251,10 @@ section * {
   align-items: center;
   height: 300px;
   width: 250px;
-  color: #011552;
-  background-color: #0bd7ef;
+  color: #022488;
+  background-color: #24b9d6;
   margin: 10px;
+  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
 }
 
 .participant-info h3 {
@@ -180,11 +264,21 @@ section * {
 .participant a {
   width: 80%;
   color: #0bd7ef;
-  background-color: #011552;
+  background-color: #022488;
   padding: 10px 20px;
   font-weight: bold;
   border-radius: 100px;
+  transition: background color 0.2s;
 }
+
+.participant a:hover {
+  background: #4affa1;
+  color: #334455;
+}
+
+/* Project Section Ends */
+
+/* Maintainers Section Starts */
 
 #maintainers {
   background-color: #0bd7ef;
@@ -221,58 +315,73 @@ section * {
   font-weight: bold;
   border-radius: 100px;
 }
+
+/* Maintainers Section Ends */
+
+/* Contact Session Starts */
+
 .contact{
     background: #011552;
     z-index: 100;
-    min-width: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     left: 0;
     transition: 0.6s;
-    padding: 35px 80px;
+    padding: 35px 120px;
     bottom: 0;
 }
 
+.contact h2{
+  float: center;
+  color: white;
+}
+
 .contact ul {
-    /* position: absolute; */
+
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .contact ul li {
-    /* position: relative; */
     list-style: none;
 }
 
 .contact  ul li a {
-    /* position: relative; */
-    margin: 5px 30px;
+
+    margin: 5px 45px;
     text-decoration: none;
     color: #fff;
     transition: 0.5s;
 }
-
-.contact ul li:nth-child(4n+1) a:hover {
+.contact ul li:nth-child(5n+1) a:hover {
     cursor: pointer;
     text-shadow: 0 0 10px #4267B2, 0 0 20px #4267B2, 0 0 30px #4267B2, 0 0 40px #4267B2, 0 0 50px #4267B2, 0 0 60px #4267B2, 0 0 70px #4267B2, 0 0 80px #4267B2, 0 0 90px #4267B2;
 }
 
-.contact ul li:nth-child(4n+2) a:hover {
+.contact ul li:nth-child(5n+2) a:hover {
+    cursor: pointer;
+    text-shadow: 0 0 10px #1da1f2, 0 0 20px #1da1f2, 0 0 30px #1da1f2, 0 0 40px #1da1f2, 0 0 50px #1da1f2, 0 0 60px #1da1f2, 0 0 70px #1da1f2, 0 0 80px #1da1f2, 0 0 90px #1da1f2, 0 0 100px #1da1f2;
+}
+
+.contact ul li:nth-child(5n+3) a:hover {
     cursor: pointer;
     text-shadow: 0 0 10px #0e76a8, 0 0 20px #0e76a8, 0 0 30px #0e76a8, 0 0 40px #0e76a8, 0 0 50px #0e76a8, 0 0 60px #0e76a8, 0 0 70px #0e76a8, 0 0 80px #0e76a8, 0 0 90px #0e76a8;
 }
 
-.contact ul li:nth-child(4n+3) a:hover {
+.contact ul li:nth-child(5n+4) a:hover {
     cursor: pointer;
     text-shadow: 0 0 10px #6cc644, 0 0 20px #6cc644, 0 0 30px #6cc644, 0 0 40px #6cc644, 0 0 50px #6cc644, 0 0 60px #6cc644, 0 0 70px #6cc644, 0 0 80px #6cc644, 0 0 90px #6cc644;
 }
 
-.contact ul li:nth-child(4n+4) a:hover {
+.contact ul li:nth-child(5n+5) a:hover {
     cursor: pointer;
     text-shadow: 0 0 10px #D44638, 0 0 20px #B23121, 0 0 30px #D44638, 0 0 40px #B23121, 0 0 50px #D44638, 0 0 60px #B23121, 0 0 70px #B23121, 0 0 80px #D44638, 0 0 90px #B23121;
 }
+/* Contacts Section Ends */
+
 footer {
   display: flex;
   justify-content: center;
