@@ -1,17 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&family=Poppins&family=Raleway&display=swap');
 
-/*
-  section1=home
-  section2=about
-  section3=projects
-  section4=Participants
-  section5=Contact
-  */
-
-
-
-
-
 *,
 *:before,
 *:after {
@@ -86,7 +74,7 @@ section * {
   margin: 20px 0px;
 }
 
-#section1 {
+#home {
   align-items: center;
   background-color: #05386B;
   color: #011552;
@@ -110,7 +98,7 @@ section * {
   left: 0px;
 }
 
-#section1 h1 {
+#home h1 {
   font-size: 5rem;
   color: white;
   text-shadow: 1px 1px #778899, 2px 2px #a9a9a9, 3px 3px #a9a9a9,
@@ -148,7 +136,7 @@ section * {
 /* Home Section Ends  */
 
 /* About Section Starts  */
-#section2 {
+#about {
   color: #210b92;
   background-color: #85FFBD;
   background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 64%);
@@ -158,18 +146,18 @@ section * {
   font-family: 'Raleway', sans-serif;
 }
 
-#section2 .content{
+#about .content{
   width: 50%;
   font-size: 1.5em;
 }
 
-#section2 .content h2{
+#about .content h2{
   text-transform: uppercase;
   font-size: 2em;
   letter-spacing: 0.1em;
 }
 
-#section2 .symbol{
+#about .symbol{
   width: 50%;
   display: inline;
   font-size: 350px;
@@ -181,7 +169,7 @@ section * {
 
 /* Project Section Starts  */
 
-#section3 {
+#projects {
   background-color: #0093E9;
   background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
   color: #011552;
@@ -189,7 +177,7 @@ section * {
   padding: 50px 100px;
 }
 
-#section3 h2{
+#projects h2{
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
@@ -235,7 +223,7 @@ section * {
 
 /* Participants Section Starts */
 
-#section4 {
+#participants {
   background-color: #08AEEA;
   background-image: linear-gradient(315deg, #08AEEA 15%, #2AF598 47%);
   color: #3e5248;
@@ -243,7 +231,7 @@ section * {
   padding: 50px 100px;
 }
 
-#section4 h2{
+#participants h2{
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
@@ -299,10 +287,6 @@ section * {
   display: flex;
   flex-wrap: wrap;
 }
-
-.highlighted {
-      color: red;
-    }
 
 .maintainer {
   display: flex;
