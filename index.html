@@ -7,71 +7,92 @@
     <link rel="stylesheet" href="public/css/styles.css">
     <script src="public/js/main.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--bootstrap v4 CSS CDN ---->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 </head>
 <body>
 
     <haeder>
-        <nav id="navigation">
-            <div class="brand">GEEKTOBERFEST'20</div>
-            <div class="links">
-                <a href="#sectionLink1">home</a>
-                <a href="#sectionLink2">about</a>
-                <a href="#sectionLink3">projects</a>
-                <a href="#sectionLink4">participants</a>
-                <a href="#sectionLink5">contact</a>
+        <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+
+            <a class="navbar-brand" id="brand">GEEKTOBERFEST'20</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="links collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sectionLink1">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sectionLink2">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sectionLink3">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sectionLink4">Participants</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sectionLink5">Contact</a>
+                    </li>
+                </ul>
             </div>
         </nav>
+        </div>
     </haeder>
     <main>
-        <section id="section1"><!--- Home--------------------------------------------->
+        <section id="section1"><!--Home---------------------------------------------------------------------------->
 
             <h1>GEEKTOBERFEST'20</h1>
-            <button>Get started</button>
+            <div id="animated">
+                <button class="btn">Get Started</button>
+            </div>
 
-        </section> <!--------------------------------------------------------------------->
+        </section>
+        <section id="section2"><!--About----------------------------------------------------------------------------->
+            <span class="content">
+                <h2>About GeektoberFest</h2>
+                <p>GeektoberFest’20 is a 20 day long open source event running in parallel with the Hacktober fest. We have set up some beginner friendly repositories to help you begin your journey in the daunting world of open source and help you take your first step in your development career.<br>
+                <br>
+                This roller coaster ride will begin at 12 midnight on 10th Oct and will keep you entertained till 12 midnight on 31st October.<br>
+                <br>
+                To encourage the budding developers all participants with a minimum 4 valid Pull requests would be eligible for the goodies from Hacktoberfest in addition to that GeekHaven would also be giving away prizes to the best performers.</p>
+            </span>
+            <span class="symbol"><i class="fa fa-question"></i></span>
+        </section>
 
 
-
-        <section id="section2"><!---About--------------------------------------------->
-            <h2>About Geektober</h2>
-            <p>GeektoberFest’20 is a 20 day long open source event running in parallel with the Hacktober fest. We have set up some beginner friendly repositories to help you begin your journey in the daunting world of open source and help you take your first step in your development career.<br>
-			<br>
-			This roller coaster ride will begin at 12 midnight on 10th Oct and will keep you entertained till 12 midnight on 31st October.<br>
-			<br>
-			To encourage the budding developers all participants with a minimum 4 valid Pull requests would be eligible for the goodies from Hacktoberfest in addition to that GeekHaven would also be giving away prizes to the best performers.</p>
-    </section> <!--------------------------------------------------------------------->
-
-
-
-
-        <section id="section3"><!---Projects------------------------------------------>
+        <section id="section3"><!--Projects------------------------------------------------------------------------->
             <h2>projects</h2>
             <div class="projects-container">
                 <div class="project">
-                    <div class="project-info"><h3>Project1</h3>
+                    <div class="project-info"><h3>Project 1</h3>
                     <p>Description...</p></div>
 
                     <a href="#">Repo link</a>
                 </div>
                 <div class="project">
-                    <div class="project-info"><h3>Project2</h3>
+                    <div class="project-info"><h3>Project 2</h3>
                     <p>Description...</p></div>
 
                     <a href="#">Repo link</a>
                 </div>
                 <div class="project">
-                    <div class="project-info"><h3>Project3</h3>
+                    <div class="project-info"><h3>Project 3</h3>
                     <p>Description...</p></div>
 
                     <a href="#">Repo link</a>
                 </div>
-
             </div>
-        </section> <!--------------------------------------------------------------------->
+        </section>
 
 
-
-        <section id="section4"><!---Participants------------------------------------->
+        <section id="section4"><!--Participants----------------------------------------------------------------------->
             <h2>participants</h2>
             <div class="participants-container">
                 <div class="participant">
@@ -93,24 +114,31 @@
                         <a href="#">github profile</a>
                 </div>
             </div>
-        </section> <!--------------------------------------------------------------------->
+        </section>
     </main>
 
 
-    <div class="contact" id="section5"> <!--Contact------------------------------------>
-        <ul>
-            <li><a href="#" class="fa fa-2x fa-facebook-square" target="_blank"></a></li>
-            <li><a href="#" class="fa fa-2x fa-linkedin" target="_blank"></a></li>
-            <li><a href="#" class="fa fa-2x fa-github" target="_blank"></a></li>
-            <li><a href="mailto:#" class="fa fa-2x fa-envelope"></a></li>
-        </ul>
+    <div class="contact" id="section5"><!--Contacts---------------------------------------------------------------->
+        <div><h2 class="text"><em> Contact Us At:</em></h2></div>
+        <div>
+            <ul>
+                <li><a href="https://www.facebook.com/geekhaveniiita" class="fa fa-2x fa-facebook-square" target="_blank"></a></li>
+                <li><a href="https://twitter.com/geekhaveniiita?s=20" class="fa fa-2x fa-twitter-square" target="_blank"></a></li>
+                <li><a href="https://www.linkedin.com/company/geekhaven-iiita" class="fa fa-2x fa-linkedin" target="_blank"></a></li>
+                <li><a href="https://github.com/GeekHaven/" class="fa fa-2x fa-github" target="_blank"></a></li>
+                <li><a href="mailto:geekhaven@iiita.ac.in" class="fa fa-2x fa-envelope"></a></li>
+            </ul>
+        </div>
     </div>
-    <!--Contact section End------------------------------------------------------------>
+
     <footer>
         <p>© Copyright Geektoberfest'20 | GeekHaven - IIIT Allahabad</p>
     </footer>
 
-</body>
-
-
+    <!--bootstrap v4 CDN---->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
 </html>
+
