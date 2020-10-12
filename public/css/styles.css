@@ -38,6 +38,10 @@ button {
   background-color: rgb(235, 245, 255);
 }
 
+#navbar.fixed-top{
+  position: absolute;
+}
+
 
 .navbar-brand {
   font-size: 1.5rem;
