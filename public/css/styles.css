@@ -36,9 +36,9 @@ nav {
   background-color: rgb(255, 255, 255);
 }
 
-.brand {
-  font-size: 2rem;
-  margin-bottom: 10px;
+
+#brand {
+  font-size: 1.3rem;
 }
 
 .links a {
