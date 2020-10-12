@@ -31,8 +31,8 @@ nav {
   background-color: white;
 }
 
-.brand {
-  font-size: 2rem;
+#brand {
+  font-size: 1.3rem;
 }
 
 .links a {
