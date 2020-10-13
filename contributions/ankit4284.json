@@ -1,0 +1,10 @@
+{
+    "name" : "Ankit Gupta",
+    "imageurl" : "https://scontent.fdel42-1.fna.fbcdn.net/v/t1.0-9/71931942_759572854478211_4388956869952012288_o.jpg?_nc_cat=111&_nc_sid=09cbfe&_nc_ohc=u5hRf-EBuEYAX_W2Zpw&_nc_ht=scontent.fdel42-1.fna&oh=04d03b5d876e66bc7ed4eb9b61cc0f76&oe=5FABC812",
+    "about" : "Hello, I'm a Student, Tech Lover and Programmer!",
+    "facebook": "facebook-url",
+    "github" : "https://github.com/ankit4284",
+    "prs": [
+        "https://github.com/GeekHaven/WorkTrack/pull/13"
+    ]
+ }
