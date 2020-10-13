@@ -460,3 +460,76 @@ footer {
   background-color: #011552;
   color: #0bd7ef;
 }
+
+/* ========================
+Custom ScrollBar
+======================== */
+
+/* On firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #90A4AE white;
+}
+
+/* On Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-track {
+  background: white;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5b798a;
+}
+::-webkit-scrollbar-thumb:active {
+  background:#325668;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color:#90A4AE;
+  border: 1px solid white;
+} 
+
+/* ========================
+Custom Cursor
+======================== */
+:root {
+	--x: 120px;
+	--y: 120px;
+	--cSize: 34px;
+	--cSizeSmall: 10px;
+}
+
+html {
+	cursor: none;
+}
+
+.cursor {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: var(--cSize);
+	height: var(--cSize);
+	background: blue;
+	border-radius: 50%;
+	transform: translate(calc(var(--x) - var(--cSize)/2), calc(var(--y) - var(--cSize)/2));
+	will-change: transform;
+  transform-style: preserve-3d;
+	z-index: 99;
+	pointer-events: none;
+}
+
+.cursor--large {
+	opacity: .5;
+	transition: transform 0.1s linear;
+}
+
+.cursor--small {
+	width: var(--cSizeSmall);
+	height: var(--cSizeSmall);
+	transform: translate(calc(var(--x) - var(--cSizeSmall)/2), calc(var(--y) - var(--cSizeSmall)/2));
+}
+/* ========================
+
+======================== */
