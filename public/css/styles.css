@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Poppins&family=Raleway&display=swap');
+
+/*
+  section1=home
+  section2=about
+  section3=projects
+  section4=Participants
+  section5=Contact
+  */
+
 *,
 *:before,
 *:after {
@@ -20,27 +30,58 @@ button {
   cursor: pointer;
 }
 
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 30px 0px;
+.navbar{
+  font-family: 'Nunito', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  padding: 0.5rem 10rem;
+  background-color: rgb(235, 245, 255);
 }
 
-.brand {
-  font-size: 2rem;
+#navbar.fixed-top{
+  position: fixed;
+  justify-content: inherit;
 }
 
-.links a {
-  font-weight: bold;
-  font-size: 1.3rem;
+
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
+.navbar-brand img{
+  width: 40px;
+  height: 40px;
+  margin: 0 0 10px 10px;
+  margin-bottom: 10px;
+}
+
+#navbarNav .nav-link {
+  font-weight: 500;
+  font-size: 1.1em;
   margin: 5px;
-  transition: color 0.6s;
+  padding: 5px;
+  transition: color 0.2s;
 }
 
-.links a:hover {
-  color: #0bd7ef;
+#navbarNav .nav-link:hover {
+  color: #7c32d1;
 }
+
+/* Nav-link Hover Animation */
+.hvr-grow-shadow {
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  transition-duration: 0.3s;
+  transition-property: box-shadow, transform;
+}
+.hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+}
+
+/* Home Section Starts */
 
 section {
   display: flex;
@@ -61,60 +102,152 @@ section * {
   margin: 20px 0px;
 }
 
-#home {
+#section1 {
   align-items: center;
   background-color: #05386B;
   color: #011552;
-
-    position: relative; 
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url("https://www.veracode.com/sites/default/files/styles/blog_post_resize_960/public/developer-guide-blog-2.png?itok=JQGRVjEX");
-    background-size: cover;
+  font-family: 'Raleway', serif;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://www.veracode.com/sites/default/files/styles/blog_post_resize_960/public/developer-guide-blog-2.png?itok=JQGRVjEX");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.hone::before {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
+.home::before {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
 }
 
-#home h1 {
+/* Countdown Timer CSS */
+
+.timer {
+  color: #eeddff;
+  text-transform: uppercase;
+  /* margin: 0 auto 50px; */
+  text-shadow: 0px 3px 3px rgba(38,102,240,0.4),
+               0px 6px 8px rgba(89,142,255,0.4),
+               0px 15px 20px rgba(146,208,247,0.5);
+}
+
+td{
+  text-align: center;
+}
+
+.countdownContainer{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 220px;
+  transform : translateX(-50%) translateY(-50%);
+  text-align: top center;
+  background: rgba(245, 245, 245, 0.1);
+  box-shadow: 0 0 5px 3px rgba(255, 255, 255, 0.5);
+  border: 0.1px solid #999;
+  padding: 10px;
+}
+.info-label td{
+  font-size: 3em;
+  padding: 0;
+}
+.info-data {
+  font-size: 4em;
+}
+
+/* -------------- */
+
+#section1 h1 {
   font-size: 5rem;
   color: white;
-  text-shadow: 1px 1px #778899, 
-                2px 2px #A9A9A9, 
-                3px 3px #A9A9A9, 
-                4px 4px #A9A9A9;
+  text-shadow: 1px 1px #778899, 2px 2px #a9a9a9, 3px 3px #a9a9a9,
+    4px 4px #a9a9a9;
 }
-
-#home button {
-  background-color: #011552;
-  font-size: 2rem;
-  /*color: #0bd7ef;*/
-  padding: 10px 20px;
-  transition: background-color 0.6s;
+ /* Animated button */
+ #bton {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  background-color: #4285F4;
+  font-size: 20px;
+  font-weight: 400px;
   color: white;
-  text-shadow: 1px 1px #778899;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 25px 80px;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0 6px #1d4ff2;
 }
 
-#home button:hover {
-  background-color: rgba(1, 21, 82, 0.8);
+#bton:hover {
+  box-shadow: 0 4px #1d4ff2;
+  top: 2px;
 }
 
-#about {
-  color: #0bd7ef;
-  background-color: #37968B;
+#bton:active {
+  box-shadow: none;
+  top: 6px;
 }
 
-#projects {
-  background-color: #5CDB95;
+
+/* Home Section Ends  */
+
+/* About Section Starts  */
+#section2 {
+  color: #210b92;
+  background-color: #85FFBD;
+  background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 64%);
+  padding: 50px 100px;
+  display: flex;
+  flex-direction: row;
+  font-family: 'Raleway', sans-serif;
+}
+
+#section2 .content{
+  width: 50%;
+  font-size: 1.5em;
+}
+
+#section2 .content h2{
+  text-transform: uppercase;
+  font-size: 2em;
+  letter-spacing: 0.1em;
+}
+
+#section2 .symbol{
+  width: 50%;
+  display: inline;
+  position: relative;
+  font-size: 350px;
+  margin: 20px 50px;
+  font-weight: 400;
+  text-align: end;
+}
+/* About Section Ends  */
+
+/* Project Section Starts  */
+
+#section3 {
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
   color: #011552;
+  font-family: 'Nunito', sans-serif;
+  padding: 50px 100px;
+}
+
+#section3 h2{
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .projects-container {
@@ -130,9 +263,10 @@ section * {
   align-items: center;
   height: 300px;
   width: 250px;
-  background-color: #011552;
+  background-color: #022488;
   color: #0bd7ef;
   margin: 10px;
+  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
 }
 
 .project-info h3 {
@@ -142,15 +276,32 @@ section * {
 .project a {
   width: 80%;
   background-color: #0bd7ef;
-  color: #011552;
+  color: #022488;
   padding: 10px 20px;
   font-weight: bold;
   border-radius: 100px;
+  transition: background color 0.2s;
+}
+.project a:hover {
+  background: #4affa1;
+  color: #1f2329;
 }
 
-#participants {
-  background-color: #8EE4AF;
-  color: #ee6f57;
+/* Project Section Ends */
+
+/* Participants Section Starts */
+
+#section4 {
+  background-color: #08AEEA;
+  background-image: linear-gradient(315deg, #08AEEA 15%, #2AF598 47%);
+  color: #3e5248;
+  font-family: 'Nunito', sans-serif;
+  padding: 50px 100px;
+}
+
+#section4 h2{
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .participants-container {
@@ -166,9 +317,10 @@ section * {
   align-items: center;
   height: 300px;
   width: 250px;
-  color: #011552;
-  background-color: #0bd7ef;
+  color: #022488;
+  background-color: #24b9d6;
   margin: 10px;
+  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
 }
 
 .participant-info h3 {
@@ -178,11 +330,21 @@ section * {
 .participant a {
   width: 80%;
   color: #0bd7ef;
-  background-color: #011552;
+  background-color: #022488;
   padding: 10px 20px;
   font-weight: bold;
   border-radius: 100px;
+  transition: background color 0.2s;
 }
+
+.participant a:hover {
+  background: #4affa1;
+  color: #334455;
+}
+
+/* Project Section Ends */
+
+/* Maintainers Section Starts */
 
 #maintainers {
   background-color: #0bd7ef;
@@ -193,6 +355,10 @@ section * {
   display: flex;
   flex-wrap: wrap;
 }
+
+.highlighted {
+      color: red;
+    }
 
 .maintainer {
   display: flex;
@@ -220,10 +386,77 @@ section * {
   border-radius: 100px;
 }
 
+/* Maintainers Section Ends */
+
+/* Contact Session Starts */
+
+.contact{
+    background: #011552;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    transition: 0.6s;
+    padding: 35px 120px;
+    bottom: 0;
+}
+
+.contact h2{
+  float: center;
+  color: white;
+}
+
+.contact ul {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact ul li {
+    list-style: none;
+}
+
+.contact  ul li a {
+
+    margin: 5px 45px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.5s;
+}
+.contact ul li:nth-child(5n+1) a:hover {
+    cursor: pointer;
+    text-shadow: 0 0 10px #4267B2, 0 0 20px #4267B2, 0 0 30px #4267B2, 0 0 40px #4267B2, 0 0 50px #4267B2, 0 0 60px #4267B2, 0 0 70px #4267B2, 0 0 80px #4267B2, 0 0 90px #4267B2;
+}
+
+.contact ul li:nth-child(5n+2) a:hover {
+    cursor: pointer;
+    text-shadow: 0 0 10px #1da1f2, 0 0 20px #1da1f2, 0 0 30px #1da1f2, 0 0 40px #1da1f2, 0 0 50px #1da1f2, 0 0 60px #1da1f2, 0 0 70px #1da1f2, 0 0 80px #1da1f2, 0 0 90px #1da1f2, 0 0 100px #1da1f2;
+}
+
+.contact ul li:nth-child(5n+3) a:hover {
+    cursor: pointer;
+    text-shadow: 0 0 10px #0e76a8, 0 0 20px #0e76a8, 0 0 30px #0e76a8, 0 0 40px #0e76a8, 0 0 50px #0e76a8, 0 0 60px #0e76a8, 0 0 70px #0e76a8, 0 0 80px #0e76a8, 0 0 90px #0e76a8;
+}
+
+.contact ul li:nth-child(5n+4) a:hover {
+    cursor: pointer;
+    text-shadow: 0 0 10px #6cc644, 0 0 20px #6cc644, 0 0 30px #6cc644, 0 0 40px #6cc644, 0 0 50px #6cc644, 0 0 60px #6cc644, 0 0 70px #6cc644, 0 0 80px #6cc644, 0 0 90px #6cc644;
+}
+
+.contact ul li:nth-child(5n+5) a:hover {
+    cursor: pointer;
+    text-shadow: 0 0 10px #D44638, 0 0 20px #B23121, 0 0 30px #D44638, 0 0 40px #B23121, 0 0 50px #D44638, 0 0 60px #B23121, 0 0 70px #B23121, 0 0 80px #D44638, 0 0 90px #B23121;
+}
+/* Contacts Section Ends */
+
 footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   padding: 50px 200px;
   background-color: #011552;
   color: #0bd7ef;

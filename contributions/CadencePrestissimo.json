@@ -1,0 +1,11 @@
+{
+    "name" : "Pavika Chaudhary",
+    "imageurl" : "https://i.ibb.co/sVPHFjR/image.jpg",
+    "about" : "Hello, I am a second year undergrad @ IIITA ",
+    "facebook": "https://www.facebook.com/pavika.chaudhary.7",
+    "github" : "https://github.com/CadencePrestissimo",
+    "prs": [
+        "https://github.com/GeekHaven/Geektoberfest-Main/pull/68",
+        "https://github.com/GeekHaven/ChatApp/pull/6"
+    ]
+ }
