@@ -461,3 +461,29 @@ footer {
   background-color: #011552;
   color: #0bd7ef;
 }
+/*Move To Top Button Starts*/
+
+.fixed-btn{
+  position: fixed;
+  bottom: 2%;
+  right: 1%;
+  background: #0FACF3;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 6px;
+  box-shadow: 4px 4px 4px #0a78aa;
+  cursor: pointer;
+}
+.fixed-btn p{
+  color: #fff;
+}
+.fixed-btn:hover{
+  box-shadow: 0 2px  #0b6994 ;
+}
+.fixed-btn:active{
+  box-shadow: 0  0;
+}
+
+/*Move To Top Button Ends*/
