@@ -39,7 +39,8 @@ button {
 }
 
 #navbar.fixed-top{
-  position: absolute;
+  position: fixed;
+  justify-content: inherit;
 }
 
 
@@ -64,6 +65,20 @@ button {
 
 #navbarNav .nav-link:hover {
   color: #7c32d1;
+}
+
+/* Nav-link Hover Animation */
+.hvr-grow-shadow {
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  transition-duration: 0.3s;
+  transition-property: box-shadow, transform;
+}
+.hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
 }
 
 /* Home Section Starts */
