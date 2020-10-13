@@ -47,6 +47,13 @@ button {
   font-size: 1.5rem;
 }
 
+.navbar-brand img{
+  width: 40px;
+  height: 40px;
+  margin: 0 0 10px 10px;
+  margin-bottom: 10px;
+}
+
 #navbarNav .nav-link {
   font-weight: 500;
   font-size: 1.1em;
