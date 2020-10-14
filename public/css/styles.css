@@ -63,7 +63,7 @@ button {
   transition: color 0.2s;
 }
 
-#navbarNav .nav-link:hover {
+#navbarNav .nav-link:hover, #navbarNav .nav-link:focus, #navbarNav .nav-link:hover {
   color: #7c32d1;
 }
 
@@ -357,7 +357,7 @@ td{
 }
 
 .highlighted {
-      color: red;
+      padding-top: 100px;
     }
 
 .maintainer {
@@ -390,74 +390,66 @@ td{
 
 /* Contact Session Starts */
 
-.contact{
-    background: #011552;
-    z-index: 100;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    left: 0;
-    transition: 0.6s;
-    padding: 35px 120px;
-    bottom: 0;
-}
-
-.contact h2{
-  float: center;
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:#2a2e33;
+  font-family: 'Nunito', sans-serif;
   color: white;
-}
-
-.contact ul {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.contact ul li {
-    list-style: none;
-}
-
-.contact  ul li a {
-
-    margin: 5px 45px;
-    text-decoration: none;
-    color: #fff;
-    transition: 0.5s;
-}
-.contact ul li:nth-child(5n+1) a:hover {
-    cursor: pointer;
-    text-shadow: 0 0 10px #4267B2, 0 0 20px #4267B2, 0 0 30px #4267B2, 0 0 40px #4267B2, 0 0 50px #4267B2, 0 0 60px #4267B2, 0 0 70px #4267B2, 0 0 80px #4267B2, 0 0 90px #4267B2;
-}
-
-.contact ul li:nth-child(5n+2) a:hover {
-    cursor: pointer;
-    text-shadow: 0 0 10px #1da1f2, 0 0 20px #1da1f2, 0 0 30px #1da1f2, 0 0 40px #1da1f2, 0 0 50px #1da1f2, 0 0 60px #1da1f2, 0 0 70px #1da1f2, 0 0 80px #1da1f2, 0 0 90px #1da1f2, 0 0 100px #1da1f2;
-}
-
-.contact ul li:nth-child(5n+3) a:hover {
-    cursor: pointer;
-    text-shadow: 0 0 10px #0e76a8, 0 0 20px #0e76a8, 0 0 30px #0e76a8, 0 0 40px #0e76a8, 0 0 50px #0e76a8, 0 0 60px #0e76a8, 0 0 70px #0e76a8, 0 0 80px #0e76a8, 0 0 90px #0e76a8;
-}
-
-.contact ul li:nth-child(5n+4) a:hover {
-    cursor: pointer;
-    text-shadow: 0 0 10px #6cc644, 0 0 20px #6cc644, 0 0 30px #6cc644, 0 0 40px #6cc644, 0 0 50px #6cc644, 0 0 60px #6cc644, 0 0 70px #6cc644, 0 0 80px #6cc644, 0 0 90px #6cc644;
-}
-
-.contact ul li:nth-child(5n+5) a:hover {
-    cursor: pointer;
-    text-shadow: 0 0 10px #D44638, 0 0 20px #B23121, 0 0 30px #D44638, 0 0 40px #B23121, 0 0 50px #D44638, 0 0 60px #B23121, 0 0 70px #B23121, 0 0 80px #D44638, 0 0 90px #B23121;
-}
-/* Contacts Section Ends */
-
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-top: 0px;
+  padding-top: 10pt;
+  padding-bottom: 0;
   text-align: center;
-  padding: 50px 200px;
-  background-color: #011552;
-  color: #0bd7ef;
+ }
+
+ .social li {
+   display: inline-block;
+}
+
+.social li a {
+   width: 45px;
+   height: 45px;
+   border-radius: 50%;
+   margin: 0.5em;
+   background: #fff;
+   color: black;
+   position: center;
+   display: block;
+   line-height: 1.4em;
+   text-decoration: none;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+  transition-duration: 0.2s;
+}
+
+.fa-facebook:hover{
+  box-shadow: 0 0 2px 4px rgba(65, 103, 178, 0.4);
+}
+
+.fa-twitter:hover{
+  box-shadow: 0 0 2px 4px rgba(29, 161, 242, 0.4);
+}
+.fa-linkedin:hover{
+  box-shadow: 0 0 2px 4px rgba(40, 103, 178, 0.4);
+}
+.fa-github:hover{
+  box-shadow: 0 0 2px 4px rgba(127, 71, 201, 0.4);
+}
+.fa-envelope:hover{
+  box-shadow: 0 0 2px 4px rgba(219, 68, 55, 0.4);
+}
+
+.text-copyright{
+  background-color: #212326;
+  box-shadow: 0 0 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 450px) {
+ .text-copyright {
+   display: block;
+   font-size: small;
+ }
 }
