@@ -27,7 +27,6 @@ a {
 
 button {
   border: none;
-  /* cursor: pointer; */
 }
 
 .navbar{
@@ -174,7 +173,6 @@ td{
  #bton {
   outline: none;
   border: none;
-  /* cursor: pointer; */
   display: block;
   position: relative;
   background-color: #4285F4;
@@ -426,27 +424,22 @@ td{
     transition: 0.5s;
 }
 .contact ul li:nth-child(5n+1) a:hover {
-    /* cursor: pointer; */
     text-shadow: 0 0 10px #4267B2, 0 0 20px #4267B2, 0 0 30px #4267B2, 0 0 40px #4267B2, 0 0 50px #4267B2, 0 0 60px #4267B2, 0 0 70px #4267B2, 0 0 80px #4267B2, 0 0 90px #4267B2;
 }
 
 .contact ul li:nth-child(5n+2) a:hover {
-    /* cursor: pointer; */
     text-shadow: 0 0 10px #1da1f2, 0 0 20px #1da1f2, 0 0 30px #1da1f2, 0 0 40px #1da1f2, 0 0 50px #1da1f2, 0 0 60px #1da1f2, 0 0 70px #1da1f2, 0 0 80px #1da1f2, 0 0 90px #1da1f2, 0 0 100px #1da1f2;
 }
 
 .contact ul li:nth-child(5n+3) a:hover {
-    /* cursor: pointer; */
     text-shadow: 0 0 10px #0e76a8, 0 0 20px #0e76a8, 0 0 30px #0e76a8, 0 0 40px #0e76a8, 0 0 50px #0e76a8, 0 0 60px #0e76a8, 0 0 70px #0e76a8, 0 0 80px #0e76a8, 0 0 90px #0e76a8;
 }
 
 .contact ul li:nth-child(5n+4) a:hover {
-    /* cursor: pointer; */
     text-shadow: 0 0 10px #6cc644, 0 0 20px #6cc644, 0 0 30px #6cc644, 0 0 40px #6cc644, 0 0 50px #6cc644, 0 0 60px #6cc644, 0 0 70px #6cc644, 0 0 80px #6cc644, 0 0 90px #6cc644;
 }
 
 .contact ul li:nth-child(5n+5) a:hover {
-    /* cursor: pointer; */
     text-shadow: 0 0 10px #D44638, 0 0 20px #B23121, 0 0 30px #D44638, 0 0 40px #B23121, 0 0 50px #D44638, 0 0 60px #B23121, 0 0 70px #B23121, 0 0 80px #D44638, 0 0 90px #B23121;
 }
 /* Contacts Section Ends */
@@ -502,17 +495,15 @@ Custom Cursor
 	--cSizeSmall: 10px;
 }
 
-html {
-	cursor: none;
+*{
+  cursor: none !important;
 }
-
 .cursor {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: var(--cSize);
-	height: var(--cSize);
-  background: #1919ff;
+  height: var(--cSize);
 	border-radius: 50%;
 	transform: translate(calc(var(--x) - var(--cSize)/2), calc(var(--y) - var(--cSize)/2));
 	will-change: transform;
@@ -522,11 +513,13 @@ html {
 }
 
 .cursor--large {
-	opacity: .5;
+  opacity: .5;
+  background-color: #1919ff;
 	transition: transform 0.1s linear;
 }
 
 .cursor--small {
+  background-color: #4C4CFF;
 	width: var(--cSizeSmall);
 	height: var(--cSizeSmall);
 	transform: translate(calc(var(--x) - var(--cSizeSmall)/2), calc(var(--y) - var(--cSizeSmall)/2));
