@@ -27,7 +27,6 @@ a {
 
 button {
   border: none;
-  cursor: pointer;
 }
 
 .navbar {
@@ -174,7 +173,6 @@ td {
 #bton {
   outline: none;
   border: none;
-  cursor: pointer;
   display: block;
   position: relative;
   background-color: #4285f4;
@@ -538,35 +536,30 @@ td {
   transition: 0.5s;
 }
 .contact ul li:nth-child(5n + 1) a:hover {
-  cursor: pointer;
   text-shadow: 0 0 10px #4267b2, 0 0 20px #4267b2, 0 0 30px #4267b2,
     0 0 40px #4267b2, 0 0 50px #4267b2, 0 0 60px #4267b2, 0 0 70px #4267b2,
     0 0 80px #4267b2, 0 0 90px #4267b2;
 }
 
 .contact ul li:nth-child(5n + 2) a:hover {
-  cursor: pointer;
   text-shadow: 0 0 10px #1da1f2, 0 0 20px #1da1f2, 0 0 30px #1da1f2,
     0 0 40px #1da1f2, 0 0 50px #1da1f2, 0 0 60px #1da1f2, 0 0 70px #1da1f2,
     0 0 80px #1da1f2, 0 0 90px #1da1f2, 0 0 100px #1da1f2;
 }
 
 .contact ul li:nth-child(5n + 3) a:hover {
-  cursor: pointer;
   text-shadow: 0 0 10px #0e76a8, 0 0 20px #0e76a8, 0 0 30px #0e76a8,
     0 0 40px #0e76a8, 0 0 50px #0e76a8, 0 0 60px #0e76a8, 0 0 70px #0e76a8,
     0 0 80px #0e76a8, 0 0 90px #0e76a8;
 }
 
 .contact ul li:nth-child(5n + 4) a:hover {
-  cursor: pointer;
   text-shadow: 0 0 10px #6cc644, 0 0 20px #6cc644, 0 0 30px #6cc644,
     0 0 40px #6cc644, 0 0 50px #6cc644, 0 0 60px #6cc644, 0 0 70px #6cc644,
     0 0 80px #6cc644, 0 0 90px #6cc644;
 }
 
 .contact ul li:nth-child(5n + 5) a:hover {
-  cursor: pointer;
   text-shadow: 0 0 10px #d44638, 0 0 20px #b23121, 0 0 30px #d44638,
     0 0 40px #b23121, 0 0 50px #d44638, 0 0 60px #b23121, 0 0 70px #b23121,
     0 0 80px #d44638, 0 0 90px #b23121;
@@ -582,3 +575,77 @@ footer {
   background-color: #011552;
   color: #0bd7ef;
 }
+
+/* ========================
+Custom ScrollBar
+======================== */
+
+/* On firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #90A4AE white;
+}
+
+/* On Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-track {
+  background: white;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5b798a;
+}
+::-webkit-scrollbar-thumb:active {
+  background:#325668;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color:#90A4AE;
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+} 
+
+/* ========================
+Custom Cursor
+======================== */
+:root {
+	--x: 120px;
+	--y: 120px;
+	--cSize: 34px;
+	--cSizeSmall: 10px;
+}
+
+*{
+  cursor: none !important;
+}
+.cursor {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: var(--cSize);
+  height: var(--cSize);
+	border-radius: 50%;
+	transform: translate(calc(var(--x) - var(--cSize)/2), calc(var(--y) - var(--cSize)/2));
+	will-change: transform;
+  transform-style: preserve-3d;
+	z-index: 99;
+	pointer-events: none;
+}
+
+.cursor--large {
+  opacity: .5;
+  background-color: #1919ff;
+	transition: transform 0.1s linear;
+}
+
+.cursor--small {
+  background-color: #4C4CFF;
+	width: var(--cSizeSmall);
+	height: var(--cSizeSmall);
+	transform: translate(calc(var(--x) - var(--cSizeSmall)/2), calc(var(--y) - var(--cSizeSmall)/2));
+}
+/* ========================
+
+======================== */
