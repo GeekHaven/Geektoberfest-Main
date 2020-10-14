@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Poppins&family=Raleway&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito&family=Poppins&family=Raleway&display=swap");
 
 /*
   section1=home
@@ -7,10 +7,6 @@
   section4=Participants
   section5=Contact
   */
-
-
-
-
 
 *,
 *:before,
@@ -36,7 +32,7 @@ button {
 
 nav {
   display: flex;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   justify-content: space-around;
@@ -47,7 +43,6 @@ nav {
   z-index: 1;
   background-color: rgb(255, 255, 255);
 }
-
 
 #brand {
   font-size: 1.3rem;
@@ -90,7 +85,7 @@ section * {
   align-items: center;
   background-color: #05386b;
   color: #011552;
-  font-family: 'Raleway', serif;
+  font-family: "Raleway", serif;
   position: relative;
   height: 100vh;
   width: 100%;
@@ -116,14 +111,14 @@ section * {
   text-shadow: 1px 1px #778899, 2px 2px #a9a9a9, 3px 3px #a9a9a9,
     4px 4px #a9a9a9;
 }
- /* Animated button */
- .btn {
+/* Animated button */
+#section1 .btn {
   outline: none;
   border: none;
   cursor: pointer;
   display: block;
   position: relative;
-  background-color: #4285F4;
+  background-color: #4285f4;
   font-size: 20px;
   font-weight: 400px;
   color: white;
@@ -135,23 +130,12 @@ section * {
   box-shadow: 0 6px #1d4ff2;
 }
 
-.btn:hover {
+#section1 .btn:hover {
   box-shadow: 0 4px #1d4ff2;
   top: 2px;
 }
 
-<<<<<<< HEAD
-#about {
-  color: #0bd7ef;
-  background-color: #37968b;
-}
-
-/* Projects section starts */
-
-#projects {
-  background-color: #5cdb95;
-=======
-.btn:active {
+#section1 .btn:active {
   box-shadow: none;
   top: 6px;
 }
@@ -161,26 +145,26 @@ section * {
 /* About Section Starts  */
 #section2 {
   color: #210b92;
-  background-color: #85FFBD;
-  background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 64%);
+  background-color: #85ffbd;
+  background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 64%);
   padding: 50px 100px;
   display: flex;
   flex-direction: unset;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
-#section2 .content{
+#section2 .content {
   width: 50%;
   font-size: 1.5em;
 }
 
-#section2 .content h2{
+#section2 .content h2 {
   text-transform: uppercase;
   font-size: 2em;
   letter-spacing: 0.1em;
 }
 
-#section2 .symbol{
+#section2 .symbol {
   width: 50%;
   display: inline;
   font-size: 350px;
@@ -193,31 +177,69 @@ section * {
 /* Project Section Starts  */
 
 #section3 {
-  background-color: #0093E9;
-  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
->>>>>>> f72b9c64b094d8328287062abfd0777afc907e3a
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
   color: #011552;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   padding: 50px 100px;
 }
 
-#section3 h2{
+#section3 h2 {
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
 
-/*.projects-container {
-  margin: 0 auto;
-  max-width: 1200px;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  padding: 0.5rem;
-}*/
+#section3 a {
+  width: 80%;
+  border-width: 1px;
+  border-color: #0bd7ef !important;
+  color: #0bd7ef !important;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 100px;
+  transition: background color 0.2s;
+}
+
+#section3 a:hover {
+  color: #022488 !important;
+  background-color: #0bd7ef;
+}
 
 .card {
   border: none;
-  background: #ffffff;
+  background: #011552 !important;
+  border-radius: 0.5rem;
+}
+
+@media (min-width: 1300px) {
+  .card {
+    min-width: 350px !important;
+  }
+}
+
+@media (max-width: 1300px) and (min-width: 767px) {
+  .card {
+    min-width: 150px !important;
+    margin-bottom: 100px !important;
+  }
+}
+
+.backside .card {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.backside .card-body {
+  margin: 0 !important;
+}
+
+.backside {
+  border-radius: 0.5rem !important;
+  margin-top: 0%;
+}
+
+.frontside .card-body {
+  margin-bottom: 0%;
 }
 
 .image-flip:hover .backside,
@@ -263,7 +285,7 @@ section * {
   position: absolute;
   top: 0;
   left: 0;
-  background: white;
+  background: #011552;
   -webkit-transform: rotateY(-180deg);
   -moz-transform: rotateY(-180deg);
   -o-transform: rotateY(-180deg);
@@ -299,73 +321,23 @@ section * {
 
 .backside .card a {
   font-size: 18px;
-  color: #007b5e !important;
+  color: #6fc8cc !important;
+}
+
+.backside .card {
+  color: #6fc8cc !important;
 }
 
 .frontside .card .card-title,
 .backside .card .card-title {
-  color: #007b5e !important;
+  color: #6fc8cc !important;
 }
 
 .frontside .card .card-body img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-}
-/*.card {
-  text-align: center;
-  align-items: center;
-<<<<<<< HEAD
-  background-color: #00299a !important;
-  color: #00acd8;
-  margin: 10px;
-  border: none !important;
-  border-radius: 0.5rem !important;
-  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.4);
-}
-.card-img-top {
-  border-top-left-radius: 0.5rem !important;
-  border-top-right-radius: 0.5rem !important;
-  margin: 0 !important;
-  width: 100%;
-  height: 100%;
-=======
-  height: 300px;
-  width: 250px;
-  background-color: #022488;
-  color: #0bd7ef;
-  margin: 10px;
-  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
->>>>>>> f72b9c64b094d8328287062abfd0777afc907e3a
-}
-.card-title {
-  font-size: 2em;
-  padding: 10px;
-}*/
-
-<<<<<<< HEAD
-/* Projects section ends */
-
-#participants {
-  background-color: #8ee4af;
-  color: #ee6f57;
-=======
-.project-info h3 {
-  font-size: 1.4rem;
-}
-
-.project a {
+  margin: 0 0 10px 0;
   width: 80%;
-  background-color: #0bd7ef;
-  color: #022488;
-  padding: 10px 20px;
-  font-weight: bold;
-  border-radius: 100px;
-  transition: background color 0.2s;
-}
-.project a:hover {
-  background: #4affa1;
-  color: #1f2329;
+  height: 80%;
+  border-radius: 50%;
 }
 
 /* Project Section Ends */
@@ -373,17 +345,16 @@ section * {
 /* Participants Section Starts */
 
 #section4 {
-  background-color: #08AEEA;
-  background-image: linear-gradient(315deg, #08AEEA 15%, #2AF598 47%);
+  background-color: #08aeea;
+  background-image: linear-gradient(315deg, #08aeea 15%, #2af598 47%);
   color: #3e5248;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   padding: 50px 100px;
 }
 
-#section4 h2{
+#section4 h2 {
   text-transform: uppercase;
   letter-spacing: 0.1em;
->>>>>>> f72b9c64b094d8328287062abfd0777afc907e3a
 }
 
 .participants-container {
@@ -402,7 +373,7 @@ section * {
   color: #022488;
   background-color: #24b9d6;
   margin: 10px;
-  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .participant-info h3 {
@@ -439,8 +410,8 @@ section * {
 }
 
 .highlighted {
-      color: red;
-    }
+  color: red;
+}
 
 .maintainer {
   display: flex;
@@ -467,132 +438,78 @@ section * {
   font-weight: bold;
   border-radius: 100px;
 }
-<<<<<<< HEAD
-.contact {
-  background: #011552;
-  z-index: 100;
-  min-width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  left: 0;
-  transition: 0.6s;
-  padding: 35px 80px;
-  bottom: 0;
-=======
 
 /* Maintainers Section Ends */
 
 /* Contact Session Starts */
 
-.contact{
-    background: #011552;
-    z-index: 100;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    left: 0;
-    transition: 0.6s;
-    padding: 35px 120px;
-    bottom: 0;
->>>>>>> f72b9c64b094d8328287062abfd0777afc907e3a
+.contact {
+  background: #011552;
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  transition: 0.6s;
+  padding: 35px 120px;
+  bottom: 0;
 }
 
-.contact h2{
+.contact h2 {
   float: center;
   color: white;
 }
 
 .contact ul {
-<<<<<<< HEAD
-  /* position: absolute; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .contact ul li {
-  /* position: relative; */
   list-style: none;
 }
 
 .contact ul li a {
-  /* position: relative; */
-  margin: 5px 30px;
+  margin: 5px 45px;
   text-decoration: none;
   color: #fff;
   transition: 0.5s;
 }
-
-.contact ul li:nth-child(4n + 1) a:hover {
+.contact ul li:nth-child(5n + 1) a:hover {
   cursor: pointer;
   text-shadow: 0 0 10px #4267b2, 0 0 20px #4267b2, 0 0 30px #4267b2,
     0 0 40px #4267b2, 0 0 50px #4267b2, 0 0 60px #4267b2, 0 0 70px #4267b2,
     0 0 80px #4267b2, 0 0 90px #4267b2;
 }
 
-.contact ul li:nth-child(4n + 2) a:hover {
+.contact ul li:nth-child(5n + 2) a:hover {
+  cursor: pointer;
+  text-shadow: 0 0 10px #1da1f2, 0 0 20px #1da1f2, 0 0 30px #1da1f2,
+    0 0 40px #1da1f2, 0 0 50px #1da1f2, 0 0 60px #1da1f2, 0 0 70px #1da1f2,
+    0 0 80px #1da1f2, 0 0 90px #1da1f2, 0 0 100px #1da1f2;
+}
+
+.contact ul li:nth-child(5n + 3) a:hover {
   cursor: pointer;
   text-shadow: 0 0 10px #0e76a8, 0 0 20px #0e76a8, 0 0 30px #0e76a8,
     0 0 40px #0e76a8, 0 0 50px #0e76a8, 0 0 60px #0e76a8, 0 0 70px #0e76a8,
     0 0 80px #0e76a8, 0 0 90px #0e76a8;
 }
 
-.contact ul li:nth-child(4n + 3) a:hover {
+.contact ul li:nth-child(5n + 4) a:hover {
   cursor: pointer;
   text-shadow: 0 0 10px #6cc644, 0 0 20px #6cc644, 0 0 30px #6cc644,
     0 0 40px #6cc644, 0 0 50px #6cc644, 0 0 60px #6cc644, 0 0 70px #6cc644,
     0 0 80px #6cc644, 0 0 90px #6cc644;
 }
 
-.contact ul li:nth-child(4n + 4) a:hover {
+.contact ul li:nth-child(5n + 5) a:hover {
   cursor: pointer;
   text-shadow: 0 0 10px #d44638, 0 0 20px #b23121, 0 0 30px #d44638,
     0 0 40px #b23121, 0 0 50px #d44638, 0 0 60px #b23121, 0 0 70px #b23121,
     0 0 80px #d44638, 0 0 90px #b23121;
-=======
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.contact ul li {
-    list-style: none;
-}
-
-.contact  ul li a {
-
-    margin: 5px 45px;
-    text-decoration: none;
-    color: #fff;
-    transition: 0.5s;
-}
-.contact ul li:nth-child(5n+1) a:hover {
-    cursor: pointer;
-    text-shadow: 0 0 10px #4267B2, 0 0 20px #4267B2, 0 0 30px #4267B2, 0 0 40px #4267B2, 0 0 50px #4267B2, 0 0 60px #4267B2, 0 0 70px #4267B2, 0 0 80px #4267B2, 0 0 90px #4267B2;
-}
-
-.contact ul li:nth-child(5n+2) a:hover {
-    cursor: pointer;
-    text-shadow: 0 0 10px #1da1f2, 0 0 20px #1da1f2, 0 0 30px #1da1f2, 0 0 40px #1da1f2, 0 0 50px #1da1f2, 0 0 60px #1da1f2, 0 0 70px #1da1f2, 0 0 80px #1da1f2, 0 0 90px #1da1f2, 0 0 100px #1da1f2;
-}
-
-.contact ul li:nth-child(5n+3) a:hover {
-    cursor: pointer;
-    text-shadow: 0 0 10px #0e76a8, 0 0 20px #0e76a8, 0 0 30px #0e76a8, 0 0 40px #0e76a8, 0 0 50px #0e76a8, 0 0 60px #0e76a8, 0 0 70px #0e76a8, 0 0 80px #0e76a8, 0 0 90px #0e76a8;
-}
-
-.contact ul li:nth-child(5n+4) a:hover {
-    cursor: pointer;
-    text-shadow: 0 0 10px #6cc644, 0 0 20px #6cc644, 0 0 30px #6cc644, 0 0 40px #6cc644, 0 0 50px #6cc644, 0 0 60px #6cc644, 0 0 70px #6cc644, 0 0 80px #6cc644, 0 0 90px #6cc644;
-}
-
-.contact ul li:nth-child(5n+5) a:hover {
-    cursor: pointer;
-    text-shadow: 0 0 10px #D44638, 0 0 20px #B23121, 0 0 30px #D44638, 0 0 40px #B23121, 0 0 50px #D44638, 0 0 60px #B23121, 0 0 70px #B23121, 0 0 80px #D44638, 0 0 90px #B23121;
->>>>>>> f72b9c64b094d8328287062abfd0777afc907e3a
 }
 /* Contacts Section Ends */
 
