@@ -15,6 +15,21 @@
   margin: 0;
   box-sizing: border-box;
 }
+.bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
 
 body {
   font-family: sans-serif;
@@ -82,6 +97,7 @@ button {
 }
 
 /*  */
+
 
 /* Toogle button css */
 
@@ -350,6 +366,7 @@ td {
   display: flex;
   flex-direction: row;
   font-family: "Raleway", sans-serif;
+  padding-top: 80px;
 }
 
 #section2 .content {
@@ -382,6 +399,7 @@ td {
   color: #011552;
   font-family: "Nunito", sans-serif;
   padding: 50px 100px;
+  padding-top: 80px;
 }
 
 #section3 h2 {
@@ -550,6 +568,7 @@ td {
   color: #3e5248;
   font-family: "Nunito", sans-serif;
   padding: 50px 100px;
+  padding-top: 80px;
 }
 
 #section4 h2 {
