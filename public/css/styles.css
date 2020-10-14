@@ -30,34 +30,55 @@ button {
   cursor: pointer;
 }
 
-nav {
-  display: flex;
-  font-family: "Nunito", sans-serif;
+.navbar{
+  font-family: 'Nunito', sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  justify-content: space-around;
-  align-items: center;
-  padding: 20px 10px;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  background-color: rgb(255, 255, 255);
+  padding: 0.5rem 10rem;
+  background-color: rgb(235, 245, 255);
 }
 
-#brand {
-  font-size: 1.3rem;
+#navbar.fixed-top{
+  position: fixed;
+  justify-content: inherit;
 }
 
-.links a {
-  font-weight: bold;
-  font-size: 1.3rem;
+
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
+.navbar-brand img{
+  width: 40px;
+  height: 40px;
+  margin: 0 0 10px 10px;
+  margin-bottom: 10px;
+}
+
+#navbarNav .nav-link {
+  font-weight: 500;
+  font-size: 1.1em;
   margin: 5px;
   padding: 5px;
   transition: color 0.2s;
 }
 
-.links a:hover {
-  color: #1d1ac2;
+#navbarNav .nav-link:hover {
+  color: #7c32d1;
+}
+
+/* Nav-link Hover Animation */
+.hvr-grow-shadow {
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  transition-duration: 0.3s;
+  transition-property: box-shadow, transform;
+}
+.hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
 }
 
 /* Home Section Starts */
@@ -105,14 +126,52 @@ section * {
   left: 0px;
 }
 
+/* Countdown Timer CSS */
+
+.timer {
+  color: #eeddff;
+  text-transform: uppercase;
+  /* margin: 0 auto 50px; */
+  text-shadow: 0px 3px 3px rgba(38,102,240,0.4),
+               0px 6px 8px rgba(89,142,255,0.4),
+               0px 15px 20px rgba(146,208,247,0.5);
+}
+
+td{
+  text-align: center;
+}
+
+.countdownContainer{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 220px;
+  transform : translateX(-50%) translateY(-50%);
+  text-align: top center;
+  background: rgba(245, 245, 245, 0.1);
+  box-shadow: 0 0 5px 3px rgba(255, 255, 255, 0.5);
+  border: 0.1px solid #999;
+  padding: 10px;
+}
+.info-label td{
+  font-size: 3em;
+  padding: 0;
+}
+.info-data {
+  font-size: 4em;
+}
+
+/* -------------- */
+
 #section1 h1 {
   font-size: 5rem;
   color: white;
   text-shadow: 1px 1px #778899, 2px 2px #a9a9a9, 3px 3px #a9a9a9,
     4px 4px #a9a9a9;
 }
-/* Animated button */
-#section1 .btn {
+ /* Animated button */
+ #bton {
   outline: none;
   border: none;
   cursor: pointer;
@@ -130,15 +189,16 @@ section * {
   box-shadow: 0 6px #1d4ff2;
 }
 
-#section1 .btn:hover {
+#bton:hover {
   box-shadow: 0 4px #1d4ff2;
   top: 2px;
 }
 
-#section1 .btn:active {
+#bton:active {
   box-shadow: none;
   top: 6px;
 }
+
 
 /* Home Section Ends  */
 
@@ -149,8 +209,8 @@ section * {
   background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 64%);
   padding: 50px 100px;
   display: flex;
-  flex-direction: unset;
-  font-family: "Raleway", sans-serif;
+  flex-direction: row;
+  font-family: 'Raleway', sans-serif;
 }
 
 #section2 .content {
@@ -167,6 +227,7 @@ section * {
 #section2 .symbol {
   width: 50%;
   display: inline;
+  position: relative;
   font-size: 350px;
   margin: 20px 50px;
   font-weight: 400;
@@ -517,6 +578,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   padding: 50px 200px;
   background-color: #011552;
   color: #0bd7ef;
