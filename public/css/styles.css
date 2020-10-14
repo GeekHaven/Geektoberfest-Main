@@ -66,7 +66,7 @@ button {
   transition: color 0.2s;
 }
 
-#navbarNav .nav-link:hover {
+#navbarNav .nav-link:hover, #navbarNav .nav-link:focus, #navbarNav .nav-link:active{
   color: #7c32d1;
 }
 
@@ -117,11 +117,6 @@ body.dark-theme a {
   color: white !important;
 }
 
-body.dark-theme footer,
-body.dark-theme #section5 {
-  background-color: #1a1a2e;
-}
-
 body.dark-theme .symbol {
   color: #1a1a2e;
 }
@@ -133,14 +128,14 @@ body.dark-theme #section2 {
 }
 
 body.dark-theme #section3 {
-  background-color: #0093e9;
-  background-image: linear-gradient(160deg, #132743 0%, #407088 100%);
+  background-color: #000000;
+  background-image: linear-gradient(247deg, #000000 0%, #04619f 74%);
   color: white;
 }
 
 body.dark-theme #section4 {
-  background-color: #0093e9;
-  background-image: linear-gradient(160deg, #132743 0%, #212121 100%);
+  background-color: #000000;
+  background-image: linear-gradient(315deg, #000000 0%, #7f8c8d 74%);
   color: white;
 }
 
@@ -159,6 +154,12 @@ body.dark-theme #project {
 
 .symbol.dark-theme {
   color: #1a1a2e;
+}
+
+body.dark-theme footer, body.dark-theme #section5{
+  background-color: black;
+  background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+  color: white;
 }
 
 /* Toggle button end */
@@ -337,8 +338,11 @@ td {
   border: 0.1px solid #999;
   padding: 10px;
 }
+tr:nth-child(3) td {
+    padding-top: 2.5em;
+}
 .info-label td {
-  font-size: 3em;
+  font-size: 2em;
   padding: 0;
 }
 .info-data {
@@ -507,6 +511,7 @@ td {
   -webkit-transform-style: preserve-3d;
   -ms-transition: 1s;
   -moz-transition: 1s;
+  transform: perspective(1000px);
   -moz-transform: perspective(1000px);
   -moz-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
@@ -517,6 +522,7 @@ td {
 
 .frontside {
   position: relative;
+  transform: rotateY(0deg);
   -webkit-transform: rotateY(0deg);
   -ms-transform: rotateY(0deg);
   z-index: 2;
@@ -630,11 +636,13 @@ td {
   font-weight: bold;
   border-radius: 100px;
   transition: background color 0.2s;
+  text-decoration: none;
 }
 
 .participant a:hover {
   background: #4affa1;
-  color: #334455;
+  color: #334455 !important;
+  text-decoration: none;
 }
 
 /* Project Section Ends */
@@ -683,82 +691,77 @@ td {
 
 /* Maintainers Section Ends */
 
-/* Contact Session Starts */
+/* Footer Session Starts */
 
-.contact {
-  background: #011552;
-  z-index: 100;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.footer {
   left: 0;
-  transition: 0.6s;
-  padding: 35px 120px;
   bottom: 0;
-}
-
-.contact h2 {
-  float: center;
+  width: 100%;
+  background-color:#232526;
+  font-family: 'Nunito', sans-serif;
   color: white;
-}
-
-.contact ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.contact ul li {
-  list-style: none;
-}
-
-.contact ul li a {
-  margin: 5px 45px;
-  text-decoration: none;
-  color: #fff;
-  transition: 0.5s;
-}
-.contact ul li:nth-child(5n + 1) a:hover {
-  text-shadow: 0 0 10px #4267b2, 0 0 20px #4267b2, 0 0 30px #4267b2,
-    0 0 40px #4267b2, 0 0 50px #4267b2, 0 0 60px #4267b2, 0 0 70px #4267b2,
-    0 0 80px #4267b2, 0 0 90px #4267b2;
-}
-
-.contact ul li:nth-child(5n + 2) a:hover {
-  text-shadow: 0 0 10px #1da1f2, 0 0 20px #1da1f2, 0 0 30px #1da1f2,
-    0 0 40px #1da1f2, 0 0 50px #1da1f2, 0 0 60px #1da1f2, 0 0 70px #1da1f2,
-    0 0 80px #1da1f2, 0 0 90px #1da1f2, 0 0 100px #1da1f2;
-}
-
-.contact ul li:nth-child(5n + 3) a:hover {
-  text-shadow: 0 0 10px #0e76a8, 0 0 20px #0e76a8, 0 0 30px #0e76a8,
-    0 0 40px #0e76a8, 0 0 50px #0e76a8, 0 0 60px #0e76a8, 0 0 70px #0e76a8,
-    0 0 80px #0e76a8, 0 0 90px #0e76a8;
-}
-
-.contact ul li:nth-child(5n + 4) a:hover {
-  text-shadow: 0 0 10px #6cc644, 0 0 20px #6cc644, 0 0 30px #6cc644,
-    0 0 40px #6cc644, 0 0 50px #6cc644, 0 0 60px #6cc644, 0 0 70px #6cc644,
-    0 0 80px #6cc644, 0 0 90px #6cc644;
-}
-
-.contact ul li:nth-child(5n + 5) a:hover {
-  text-shadow: 0 0 10px #d44638, 0 0 20px #b23121, 0 0 30px #d44638,
-    0 0 40px #b23121, 0 0 50px #d44638, 0 0 60px #b23121, 0 0 70px #b23121,
-    0 0 80px #d44638, 0 0 90px #b23121;
-}
-/* Contacts Section Ends */
-
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-top: 0px;
+  padding-top: 10pt;
+  padding-bottom: 0;
   text-align: center;
-  padding: 50px 200px;
-  background-color: #011552;
-  color: #0bd7ef;
+ }
+
+ .social li {
+   display: inline-block;
 }
+
+.social li a {
+   width: 35px;
+   height: 35px;
+   border-radius: 50%;
+   margin: 0.5em;
+   background: #fff;
+   color: black !important;
+   position: center;
+   display: block;
+   line-height: 1.5em;
+   text-decoration: none;
+}
+
+.fa-2x{
+  font-size: 1.5em !important;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+  transition-duration: 0.2s;
+}
+
+.fa-facebook:hover{
+  box-shadow: 0 0 2px 4px rgba(65, 103, 178, 0.4);
+}
+
+.fa-twitter:hover{
+  box-shadow: 0 0 2px 4px rgba(29, 161, 242, 0.4);
+}
+.fa-linkedin:hover{
+  box-shadow: 0 0 2px 4px rgba(40, 103, 178, 0.4);
+}
+.fa-github:hover{
+  box-shadow: 0 0 2px 4px rgba(127, 71, 201, 0.4);
+}
+.fa-envelope:hover{
+  box-shadow: 0 0 2px 4px rgba(219, 68, 55, 0.4);
+}
+
+.text-copyright{
+  background-color: #212326;
+  box-shadow: 0 0 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 450px) {
+ .text-copyright {
+   display: block;
+   font-size: small;
+ }
+}
+
+/* Footer Section Ends */
 
 /* ========================
 Custom ScrollBar

@@ -72,17 +72,18 @@ function countdown() {
 
   h %= 24;
   m %= 60;
-  s %= 60; // (To reach 0:00:00 at 31/10/2020 - 23:59:59)
-
-  h = h < 10 ? "0" + h : h;
-  m = m < 10 ? "0" + m : m;
-  s = s < 10 ? "0" + s : s;
+  s %= 60;
+  
+  if(s >= 0)
+  {
+    d = (d < 10) ? "0" + d : d;
+    h = h < 10 ? "0" + h : h;
+    m = m < 10 ? "0" + m : m;
+    s = s < 10 ? "0" + s : s;
+  }
 
   if (s < 0) {
-    d = 0;
-    h = 0;
-    m = 0;
-    s = 0;
+    d = "0"+0; h = "0"+0; m = "0"+0; s = "0"+0;
   }
 
   document.getElementById("days").textContent = d;
