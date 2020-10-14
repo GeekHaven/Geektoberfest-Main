@@ -172,6 +172,115 @@
               <h3>Name</h3>
               <p>Description...</p>
             </div>
+    <link rel="stylesheet" href="public/css/styles.css">
+   
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Favicon -->
+    <link rel="icon" href="public/img/favicon.png">
+    <!--bootstrap v4 CSS CDN ---->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+</head>
+<body>
+    <haeder>
+        <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top px-3" id="navbar">
+            <a class="navbar-brand" id="brand"><img src="public/img/Nav-logo.png" alt=""> GEEKTOBERFEST'20</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="links collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link hvr-grow-shadow" href="#sectionLink1">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hvr-grow-shadow" href="#sectionLink2">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hvr-grow-shadow" href="#sectionLink3">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hvr-grow-shadow" href="#sectionLink4">Participants</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hvr-grow-shadow" href="#sectionLink5">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        </div>
+    </haeder>
+    <main>
+        <section id="section1">
+            <div class="timer">
+                <table class="countdownContainer">
+                    <tr class="info-label">
+                        <td colspan="4">Event Ends In</td>
+                    </tr>
+                    <tr class="info-data">
+                        <td id="days"></td>
+                        <td id="hours"></td>
+                        <td id="minutes"></td>
+                        <td id="seconds"></td>
+                    </tr>
+                    <tr>
+                        <td>Days</td>
+                        <td>Hours</td>
+                        <td>Minutes</td>
+                        <td>Seconds</td>
+                    </tr>
+                </table>
+            </div>
+            <h1>GEEKTOBERFEST'20</h1>
+            <div id="animated">
+                <a style="text-decoration: none"href="https://github.com/GeekHaven/Geektoberfest-Main" id="bton">Get Started</a>
+            </div>
+
+        </section>
+        <section id="section2">
+            <span class="content">
+                <h2>About GeektoberFest</h2>
+                <p>GeektoberFest’20 is a 20 day long open source event running in parallel with the Hacktober fest. We have set up some beginner friendly repositories to help you begin your journey in the daunting world of open source and help you take your first step in your development career.</p>
+                <p>This roller coaster ride will begin at 12 midnight on 10th Oct and will keep you entertained till 12 midnight on 31st October.</p>
+                <p>To encourage the budding developers all participants with a minimum 4 valid Pull requests would be eligible for the goodies from Hacktoberfest in addition to that GeekHaven would also be giving away prizes to the best performers.</p>
+            </span>
+            <span class="symbol"><i class="fa fa-question"></i></span>
+        </section>
+
+
+        <section id="section3">
+            <h2>projects</h2>
+            <div class="projects-container">
+                <div class="project">
+                    <div class="project-info"><h3>Project 1</h3>
+                    <p>Description...</p></div>
+
+                    <a href="#">Repo link</a>
+                </div>
+                <div class="project">
+                    <div class="project-info"><h3>Project 2</h3>
+                    <p>Description...</p></div>
+
+                    <a href="#">Repo link</a>
+                </div>
+                <div class="project">
+                    <div class="project-info"><h3>Project 3</h3>
+                    <p>Description...</p></div>
+
+                    <a href="#">Repo link</a>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="section4">
+            <h2>participants</h2>
+            <div class="participants-container">
+                <div class="participant">
+                    <div class="participant-info"><h3>Name</h3>
+                        <p>Description...</p></div>
 
             <a href="#">github profile</a>
           </div>
@@ -237,6 +346,19 @@
           </li>
         </ul>
       </div>
+
+    <div class="contact" id="section5">
+        <div><h2 class="text"><em> Contact Us At:</em></h2></div>
+        <div>
+            <ul>
+                <li><a href="https://www.facebook.com/geekhaveniiita" class="fab fa-2x fa-facebook-square" target="_blank"></a></li>
+                <li><a href="https://twitter.com/geekhaveniiita?s=20" class="fab fa-2x fa-twitter-square" target="_blank"></a></li>
+                <li><a href="https://www.linkedin.com/company/geekhaven-iiita" class="fab fa-2x fa-linkedin" target="_blank"></a></li>
+                <li><a href="https://github.com/GeekHaven/" class="fab fa-2x fa-github" target="_blank"></a></li>
+                <li><a href="mailto:geekhaven@iiita.ac.in" class="fa fa-2x fa-envelope"></a></li>
+            </ul>
+        </div>
+
     </div>
 
     <footer>
@@ -244,6 +366,7 @@
     </footer>
     <script src="public/js/main.js"></script>
     <!--bootstrap v4 CDN---->
+
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -260,4 +383,9 @@
       crossorigin="anonymous"
     ></script>
   </body>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
 </html>

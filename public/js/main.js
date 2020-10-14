@@ -31,6 +31,40 @@ document.addEventListener("DOMContentLoaded", () => {
 //code for countdown timer function starts
 
 function countdown() {
+
+    const isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
+    // get all the links with an ID that starts with 'sectionLink'
+    const listOfLinks = document.querySelectorAll("a[href^='#sectionLink");
+    listOfLinks.forEach(function (link) {
+      link.addEventListener('click',  () => {
+
+        listOfLinks.forEach( (link) => {
+          if (link.classList.contains('highlighted')) {
+            link.classList.remove('highlighted');
+          }
+        });
+        link.classList.add('highlighted');
+        // get the element where to scroll
+        let ref = link.href.split('#sectionLink');
+        ref = "#section" + ref[1];
+
+        if (isIE11) {
+          window.scrollTo(0, document.querySelector(ref).offsetTop);
+        } else {
+          window.scroll({
+            behavior: 'smooth',
+            left: 0,
+            // top gets the distance from the top of the page of our target element
+            top: document.querySelector(ref).offsetTop
+          });
+        }
+      })
+    })
+  })
+
+//code for countdown timer function starts
+
+function countdown(){
   var now = new Date();
   var eventDate = new Date(2020, 10, 1);
   var currentTime = now.getTime();
@@ -56,6 +90,15 @@ function countdown() {
     h = 0;
     m = 0;
     s = 0;
+=======
+  s %= 60;  // (To reach 0:00:00 at 31/10/2020 - 23:59:59)
+
+  h = (h < 10) ? "0" + h : h;
+  m = (m < 10) ? "0" + m : m;
+  s = (s < 10) ? "0" + s : s;
+
+  if(s < 0){
+      d = 0; h = 0; m = 0; s = 0;
   }
 
   document.getElementById("days").textContent = d;
@@ -79,3 +122,4 @@ btn.addEventListener("click", function () {
 });
 
 //toggle button end
+// code for countdown timer function ends
