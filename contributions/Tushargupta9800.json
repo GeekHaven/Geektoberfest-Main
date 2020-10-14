@@ -4,5 +4,7 @@
         "about" : "Hey there! I'm 2nd year undergrad. at IIITA.\n I'm a Flutter developer.\n And I know python - pygame library as well.",
         "facebook": "https://www.facebook.com/profile.php?id=100007887737954",
         "github" : "https://github.com/Tushargupta9800",
-        "prs": []
+        "prs": [
+                "https://github.com/GeekHaven/Codelines/pull/2"
+        ]
      }
