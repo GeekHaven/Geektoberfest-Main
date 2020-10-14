@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Poppins&family=Raleway&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito&family=Poppins&family=Raleway&display=swap");
 
 /*
   section1=home
@@ -30,25 +30,24 @@ button {
   cursor: pointer;
 }
 
-.navbar{
-  font-family: 'Nunito', sans-serif;
+.navbar {
+  font-family: "Nunito", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   padding: 0.5rem 10rem;
   background-color: rgb(235, 245, 255);
 }
 
-#navbar.fixed-top{
+#navbar.fixed-top {
   position: fixed;
   justify-content: inherit;
 }
-
 
 .navbar-brand {
   font-size: 1.5rem;
 }
 
-.navbar-brand img{
+.navbar-brand img {
   width: 40px;
   height: 40px;
   margin: 0 0 10px 10px;
@@ -76,7 +75,9 @@ button {
   transition-duration: 0.3s;
   transition-property: box-shadow, transform;
 }
-.hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
+.hvr-grow-shadow:hover,
+.hvr-grow-shadow:focus,
+.hvr-grow-shadow:active {
   box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
   transform: scale(1.1);
 }
@@ -104,9 +105,9 @@ section * {
 
 #section1 {
   align-items: center;
-  background-color: #05386B;
+  background-color: #05386b;
   color: #011552;
-  font-family: 'Raleway', serif;
+  font-family: "Raleway", serif;
   position: relative;
   height: 100vh;
   width: 100%;
@@ -132,29 +133,28 @@ section * {
   color: #eeddff;
   text-transform: uppercase;
   /* margin: 0 auto 50px; */
-  text-shadow: 0px 3px 3px rgba(38,102,240,0.4),
-               0px 6px 8px rgba(89,142,255,0.4),
-               0px 15px 20px rgba(146,208,247,0.5);
+  text-shadow: 0px 3px 3px rgba(38, 102, 240, 0.4),
+    0px 6px 8px rgba(89, 142, 255, 0.4), 0px 15px 20px rgba(146, 208, 247, 0.5);
 }
 
-td{
+td {
   text-align: center;
 }
 
-.countdownContainer{
+.countdownContainer {
   position: relative;
   top: 50%;
   left: 50%;
   width: 500px;
   height: 220px;
-  transform : translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
   text-align: top center;
   background: rgba(245, 245, 245, 0.1);
   box-shadow: 0 0 5px 3px rgba(255, 255, 255, 0.5);
   border: 0.1px solid #999;
   padding: 10px;
 }
-.info-label td{
+.info-label td {
   font-size: 3em;
   padding: 0;
 }
@@ -170,14 +170,14 @@ td{
   text-shadow: 1px 1px #778899, 2px 2px #a9a9a9, 3px 3px #a9a9a9,
     4px 4px #a9a9a9;
 }
- /* Animated button */
- #bton {
+/* Animated button */
+#bton {
   outline: none;
   border: none;
   cursor: pointer;
   display: block;
   position: relative;
-  background-color: #4285F4;
+  background-color: #4285f4;
   font-size: 20px;
   font-weight: 400px;
   color: white;
@@ -199,32 +199,31 @@ td{
   top: 6px;
 }
 
-
 /* Home Section Ends  */
 
 /* About Section Starts  */
 #section2 {
   color: #210b92;
-  background-color: #85FFBD;
-  background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 64%);
+  background-color: #85ffbd;
+  background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 64%);
   padding: 50px 100px;
   display: flex;
   flex-direction: row;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
-#section2 .content{
+#section2 .content {
   width: 50%;
   font-size: 1.5em;
 }
 
-#section2 .content h2{
+#section2 .content h2 {
   text-transform: uppercase;
   font-size: 2em;
   letter-spacing: 0.1em;
 }
 
-#section2 .symbol{
+#section2 .symbol {
   width: 50%;
   display: inline;
   position: relative;
@@ -238,53 +237,167 @@ td{
 /* Project Section Starts  */
 
 #section3 {
-  background-color: #0093E9;
-  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
   color: #011552;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   padding: 50px 100px;
 }
 
-#section3 h2{
+#section3 h2 {
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
 
-.projects-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.project {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
-  align-items: center;
-  height: 300px;
-  width: 250px;
-  background-color: #022488;
-  color: #0bd7ef;
-  margin: 10px;
-  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
-}
-
-.project-info h3 {
-  font-size: 1.4rem;
-}
-
-.project a {
+#section3 a {
   width: 80%;
-  background-color: #0bd7ef;
-  color: #022488;
+  border-width: 1px;
+  border-color: #0bd7ef !important;
+  color: #0bd7ef !important;
   padding: 10px 20px;
   font-weight: bold;
   border-radius: 100px;
   transition: background color 0.2s;
 }
-.project a:hover {
-  background: #4affa1;
-  color: #1f2329;
+
+#section3 a:hover {
+  color: #022488 !important;
+  background-color: #0bd7ef;
+}
+
+.card {
+  border: none;
+  background: #011552 !important;
+  border-radius: 0.5rem;
+}
+
+@media (min-width: 1300px) {
+  .card {
+    min-width: 350px !important;
+  }
+}
+
+@media (max-width: 1300px) and (min-width: 767px) {
+  .card {
+    min-width: 150px !important;
+    margin-bottom: 100px !important;
+  }
+}
+
+.backside .card {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.backside .card-body {
+  margin: 0 !important;
+}
+
+.backside {
+  border-radius: 0.5rem !important;
+  margin-top: 0%;
+}
+
+.frontside .card-body {
+  margin-bottom: 0%;
+}
+
+.image-flip:hover .backside,
+.image-flip.hover .backside {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  border-radius: 0.25rem;
+}
+
+.image-flip:hover .frontside,
+.image-flip.hover .frontside {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.mainflip {
+  -webkit-transition: 1s;
+  -webkit-transform-style: preserve-3d;
+  -ms-transition: 1s;
+  -moz-transition: 1s;
+  -moz-transform: perspective(1000px);
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transition: 1s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.frontside {
+  position: relative;
+  -webkit-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  z-index: 2;
+  margin-bottom: 30px;
+}
+
+.backside {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #011552;
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+  -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+  box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+}
+
+.frontside,
+.backside {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: 1s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transition: 1s;
+  -moz-transform-style: preserve-3d;
+  -o-transition: 1s;
+  -o-transform-style: preserve-3d;
+  -ms-transition: 1s;
+  -ms-transform-style: preserve-3d;
+  transition: 1s;
+  transform-style: preserve-3d;
+}
+
+.frontside .card,
+.backside .card {
+  min-height: 312px;
+}
+
+.backside .card a {
+  font-size: 18px;
+  color: #6fc8cc !important;
+}
+
+.backside .card {
+  color: #6fc8cc !important;
+}
+
+.frontside .card .card-title,
+.backside .card .card-title {
+  color: #6fc8cc !important;
+}
+
+.frontside .card .card-body img {
+  margin: 0 0 10px 0;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
 }
 
 /* Project Section Ends */
@@ -292,14 +405,14 @@ td{
 /* Participants Section Starts */
 
 #section4 {
-  background-color: #08AEEA;
-  background-image: linear-gradient(315deg, #08AEEA 15%, #2AF598 47%);
+  background-color: #08aeea;
+  background-image: linear-gradient(315deg, #08aeea 15%, #2af598 47%);
   color: #3e5248;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   padding: 50px 100px;
 }
 
-#section4 h2{
+#section4 h2 {
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
@@ -320,7 +433,7 @@ td{
   color: #022488;
   background-color: #24b9d6;
   margin: 10px;
-  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .participant-info h3 {
@@ -357,8 +470,8 @@ td{
 }
 
 .highlighted {
-      color: red;
-    }
+  color: red;
+}
 
 .maintainer {
   display: flex;
@@ -390,65 +503,73 @@ td{
 
 /* Contact Session Starts */
 
-.contact{
-    background: #011552;
-    z-index: 100;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    left: 0;
-    transition: 0.6s;
-    padding: 35px 120px;
-    bottom: 0;
+.contact {
+  background: #011552;
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  transition: 0.6s;
+  padding: 35px 120px;
+  bottom: 0;
 }
 
-.contact h2{
+.contact h2 {
   float: center;
   color: white;
 }
 
 .contact ul {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact ul li {
-    list-style: none;
+  list-style: none;
 }
 
-.contact  ul li a {
-
-    margin: 5px 45px;
-    text-decoration: none;
-    color: #fff;
-    transition: 0.5s;
+.contact ul li a {
+  margin: 5px 45px;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.5s;
 }
-.contact ul li:nth-child(5n+1) a:hover {
-    cursor: pointer;
-    text-shadow: 0 0 10px #4267B2, 0 0 20px #4267B2, 0 0 30px #4267B2, 0 0 40px #4267B2, 0 0 50px #4267B2, 0 0 60px #4267B2, 0 0 70px #4267B2, 0 0 80px #4267B2, 0 0 90px #4267B2;
-}
-
-.contact ul li:nth-child(5n+2) a:hover {
-    cursor: pointer;
-    text-shadow: 0 0 10px #1da1f2, 0 0 20px #1da1f2, 0 0 30px #1da1f2, 0 0 40px #1da1f2, 0 0 50px #1da1f2, 0 0 60px #1da1f2, 0 0 70px #1da1f2, 0 0 80px #1da1f2, 0 0 90px #1da1f2, 0 0 100px #1da1f2;
+.contact ul li:nth-child(5n + 1) a:hover {
+  cursor: pointer;
+  text-shadow: 0 0 10px #4267b2, 0 0 20px #4267b2, 0 0 30px #4267b2,
+    0 0 40px #4267b2, 0 0 50px #4267b2, 0 0 60px #4267b2, 0 0 70px #4267b2,
+    0 0 80px #4267b2, 0 0 90px #4267b2;
 }
 
-.contact ul li:nth-child(5n+3) a:hover {
-    cursor: pointer;
-    text-shadow: 0 0 10px #0e76a8, 0 0 20px #0e76a8, 0 0 30px #0e76a8, 0 0 40px #0e76a8, 0 0 50px #0e76a8, 0 0 60px #0e76a8, 0 0 70px #0e76a8, 0 0 80px #0e76a8, 0 0 90px #0e76a8;
+.contact ul li:nth-child(5n + 2) a:hover {
+  cursor: pointer;
+  text-shadow: 0 0 10px #1da1f2, 0 0 20px #1da1f2, 0 0 30px #1da1f2,
+    0 0 40px #1da1f2, 0 0 50px #1da1f2, 0 0 60px #1da1f2, 0 0 70px #1da1f2,
+    0 0 80px #1da1f2, 0 0 90px #1da1f2, 0 0 100px #1da1f2;
 }
 
-.contact ul li:nth-child(5n+4) a:hover {
-    cursor: pointer;
-    text-shadow: 0 0 10px #6cc644, 0 0 20px #6cc644, 0 0 30px #6cc644, 0 0 40px #6cc644, 0 0 50px #6cc644, 0 0 60px #6cc644, 0 0 70px #6cc644, 0 0 80px #6cc644, 0 0 90px #6cc644;
+.contact ul li:nth-child(5n + 3) a:hover {
+  cursor: pointer;
+  text-shadow: 0 0 10px #0e76a8, 0 0 20px #0e76a8, 0 0 30px #0e76a8,
+    0 0 40px #0e76a8, 0 0 50px #0e76a8, 0 0 60px #0e76a8, 0 0 70px #0e76a8,
+    0 0 80px #0e76a8, 0 0 90px #0e76a8;
 }
 
-.contact ul li:nth-child(5n+5) a:hover {
-    cursor: pointer;
-    text-shadow: 0 0 10px #D44638, 0 0 20px #B23121, 0 0 30px #D44638, 0 0 40px #B23121, 0 0 50px #D44638, 0 0 60px #B23121, 0 0 70px #B23121, 0 0 80px #D44638, 0 0 90px #B23121;
+.contact ul li:nth-child(5n + 4) a:hover {
+  cursor: pointer;
+  text-shadow: 0 0 10px #6cc644, 0 0 20px #6cc644, 0 0 30px #6cc644,
+    0 0 40px #6cc644, 0 0 50px #6cc644, 0 0 60px #6cc644, 0 0 70px #6cc644,
+    0 0 80px #6cc644, 0 0 90px #6cc644;
+}
+
+.contact ul li:nth-child(5n + 5) a:hover {
+  cursor: pointer;
+  text-shadow: 0 0 10px #d44638, 0 0 20px #b23121, 0 0 30px #d44638,
+    0 0 40px #b23121, 0 0 50px #d44638, 0 0 60px #b23121, 0 0 70px #b23121,
+    0 0 80px #d44638, 0 0 90px #b23121;
 }
 /* Contacts Section Ends */
 
