@@ -295,8 +295,8 @@ td {
   border: 0.1px solid #999;
   padding: 10px;
 }
-.info-label:nth-child(1) td {
-    padding-top: 2em;
+tr:nth-child(3) td {
+    padding-top: 2.5em;
 }
 .info-label td {
   font-size: 2em;
