@@ -295,8 +295,11 @@ td {
   border: 0.1px solid #999;
   padding: 10px;
 }
+tr:nth-child(3) td {
+    padding-top: 2.5em;
+}
 .info-label td {
-  font-size: 3em;
+  font-size: 2em;
   padding: 0;
 }
 .info-data {
