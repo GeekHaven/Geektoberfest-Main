@@ -131,3 +131,61 @@ function myFunction(x) {
 var x = window.matchMedia("(max-width: 768px)");
 myFunction(x);
 x.addListener(myFunction);
+
+
+// Scroll to top button 
+$(window).scroll(function(){
+  if($(this).scrollTop() > 40){
+    $("#scrollbtn").fadeIn();
+  } else {
+    $("#scrollbtn").fadeOut();
+  }
+});
+
+$(document).ready(function(){
+  $('#scrollbtn').click(function(){
+    $('html, body').animate({scrollTop : 0}, 800);
+  });
+});
+
+let participants = [];
+const url =
+  "https://api.github.com/repos/GeekHaven/Geektoberfest-Main/commits/main";
+const url2 = "https://geekhaven.github.io/Geektoberfest-Main/contributions/";
+const participantsContainer = document.getElementById("participants-container");
+fetch(url)
+  .then((res) => res.json())
+  .then((data) => {
+    const treeUrl = data.commit.tree.url;
+    fetch(treeUrl)
+      .then((treeRes) => treeRes.json())
+      .then((treeData) => {
+        const contributionsUrl = treeData.tree[2].url;
+        fetch(contributionsUrl)
+          .then((contributionsRes) => contributionsRes.json())
+          .then((contributionsData) => {
+            participants = contributionsData.tree.map(
+              (contributor) => contributor.path
+            );
+            participants.forEach((participant) => {
+              fetch(`${url2 + participant}`)
+                .then((res) => res.json())
+                .then((data) => {
+                  participantsContainer.innerHTML +=
+                    '<div class="participant"><div class="participant-info"><h3>' +
+                    data.name +
+                    "</h3><p>" +
+                    data.about +
+                    '</p></div><a href="' +
+                    data.github +
+                    '">github profile</a></div>';
+                })
+                .catch((err) => console.log(err));
+            });
+          })
+          .catch((err) => console.log(err));
+      })
+      .catch((err) => console.log(err));
+  })
+  .catch((err) => console.log(err));
+
