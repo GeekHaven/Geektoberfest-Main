@@ -1,3 +1,18 @@
+const loader = document.querySelector("#loader");
+const main = document.querySelector("#content");
+
+function init() {
+  setTimeout(() => {
+    loader.style.opacity = 0;
+    loader.style.display = "none";
+
+    main.style.display = "block";
+    setTimeout(() => (main.style.opacity = 1), 50);
+  }, 2000);
+}
+
+init();
+
 document.addEventListener("DOMContentLoaded", () => {
   const isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
   // get all the links with an ID that starts with 'sectionLink'
@@ -27,7 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-
 
 //toggle button
 const btn = document.querySelector(".btn-toggle");
@@ -59,17 +73,19 @@ function countdown() {
   h %= 24;
   m %= 60;
   s %= 60;
-  
-  if(s >= 0)
-  {
-    d = (d < 10) ? "0" + d : d;
+
+  if (s >= 0) {
+    d = d < 10 ? "0" + d : d;
     h = h < 10 ? "0" + h : h;
     m = m < 10 ? "0" + m : m;
     s = s < 10 ? "0" + s : s;
   }
 
   if (s < 0) {
-    d = "0"+0; h = "0"+0; m = "0"+0; s = "0"+0;
+    d = "0" + 0;
+    h = "0" + 0;
+    m = "0" + 0;
+    s = "0" + 0;
   }
 
   document.getElementById("days").textContent = d;
