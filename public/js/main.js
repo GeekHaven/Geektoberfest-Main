@@ -117,12 +117,14 @@ var x = window.matchMedia("(max-width: 768px)");
 myFunction(x);
 x.addListener(myFunction);
 
-let participants = [];
-const url =
+//code for fetching participants from json files in contributionsfolder
+
+const githubApiUrl =
   "https://api.github.com/repos/GeekHaven/Geektoberfest-Main/commits/main";
-const url2 = "https://geekhaven.github.io/Geektoberfest-Main/contributions/";
+const participantBaseUrl =
+  "https://geekhaven.github.io/Geektoberfest-Main/contributions/";
 const participantsContainer = document.getElementById("participants-container");
-fetch(url)
+fetch(githubApiUrl)
   .then((res) => res.json())
   .then((data) => {
     const treeUrl = data.commit.tree.url;
@@ -133,13 +135,15 @@ fetch(url)
         fetch(contributionsUrl)
           .then((contributionsRes) => contributionsRes.json())
           .then((contributionsData) => {
-            participants = contributionsData.tree.map(
+            let participants = contributionsData.tree.map(
               (contributor) => contributor.path
             );
             participants.forEach((participant) => {
-              fetch(`${url2 + participant}`)
+              fetch(`${participantBaseUrl + participant}`)
                 .then((res) => res.json())
                 .then((data) => {
+                  //code for rendering participants in partcipants-container
+                  //participant image is available as data.imageurl
                   participantsContainer.innerHTML +=
                     '<div class="participant"><div class="participant-info"><h3>' +
                     data.name +
