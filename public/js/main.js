@@ -117,6 +117,22 @@ var x = window.matchMedia("(max-width: 768px)");
 myFunction(x);
 x.addListener(myFunction);
 
+
+// Scroll to top button 
+$(window).scroll(function(){
+  if($(this).scrollTop() > 40){
+    $("#scrollbtn").fadeIn();
+  } else {
+    $("#scrollbtn").fadeOut();
+  }
+});
+
+$(document).ready(function(){
+  $('#scrollbtn').click(function(){
+    $('html, body').animate({scrollTop : 0}, 800);
+  });
+});
+
 let participants = [];
 const url =
   "https://api.github.com/repos/GeekHaven/Geektoberfest-Main/commits/main";
@@ -157,3 +173,4 @@ fetch(url)
       .catch((err) => console.log(err));
   })
   .catch((err) => console.log(err));
+
