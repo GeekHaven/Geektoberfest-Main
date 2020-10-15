@@ -129,7 +129,7 @@ fetch(url)
     fetch(treeUrl)
       .then((treeRes) => treeRes.json())
       .then((treeData) => {
-        const contributionsUrl = treeData.tree[1].url;
+        const contributionsUrl = treeData.tree[2].url;
         fetch(contributionsUrl)
           .then((contributionsRes) => contributionsRes.json())
           .then((contributionsData) => {
