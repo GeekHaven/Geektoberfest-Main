@@ -193,7 +193,11 @@ body.dark-theme #section5 {
 
 #content {
   display: none;
+<<<<<<< HEAD
   transition: #9191e2 1s ease-out;
+=======
+  transition: 1s ease-out;
+>>>>>>> 609ab5151a59fbeeb731d11b01da6229a7342af4
 }
 /*  */
 
@@ -379,6 +383,32 @@ tr:nth-child(3) td {
 #bton:active {
   box-shadow: none;
   top: 6px;
+}
+
+#scrollbtn{
+  position: fixed;
+  bottom: 10px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 30px;
+  text-align: center;
+  background-color: #0377fc;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+#scrollbtn:hover {
+  background-color: #1a72d6;
+  transform: scale(1.1);
+  transition-duration: 0.2s;
+  box-shadow: 0 0 2px 2px rgba(25, 106, 227, 0.7);
+}
+
+#scrollbtn i{
+  line-height: 0.4;
 }
 
 /* Home Section Ends  */

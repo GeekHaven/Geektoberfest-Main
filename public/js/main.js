@@ -131,3 +131,63 @@ function myFunction(x) {
 var x = window.matchMedia("(max-width: 768px)");
 myFunction(x);
 x.addListener(myFunction);
+
+// Scroll to top button
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 40) {
+    $("#scrollbtn").fadeIn();
+  } else {
+    $("#scrollbtn").fadeOut();
+  }
+});
+
+$(document).ready(function () {
+  $("#scrollbtn").click(function () {
+    $("html, body").animate({ scrollTop: 0 }, 800);
+  });
+});
+
+//code for fetching participants from json files in contributionsfolder
+
+const githubApiUrl =
+  "https://api.github.com/repos/GeekHaven/Geektoberfest-Main/commits/main";
+const participantBaseUrl =
+  "https://geekhaven.github.io/Geektoberfest-Main/contributions/";
+const participantsContainer = document.getElementById("participants-container");
+fetch(githubApiUrl)
+  .then((res) => res.json())
+  .then((data) => {
+    const treeUrl = data.commit.tree.url;
+    fetch(treeUrl)
+      .then((treeRes) => treeRes.json())
+      .then((treeData) => {
+        const contributionsUrl = treeData.tree[2].url;
+        fetch(contributionsUrl)
+          .then((contributionsRes) => contributionsRes.json())
+          .then((contributionsData) => {
+            let participants = contributionsData.tree.map(
+              (contributor) => contributor.path
+            );
+            participants.forEach((participant) => {
+              fetch(`${participantBaseUrl + participant}`)
+                .then((res) => res.json())
+                .then((data) => {
+                  //code for rendering participants in partcipants-container
+                  //participant image is available as data.imageurl
+                  participantsContainer.innerHTML +=
+                    '<div class="participant"><div class="participant-info"><h3>' +
+                    data.name +
+                    "</h3><p>" +
+                    data.about +
+                    '</p></div><a href="' +
+                    data.github +
+                    '">github profile</a></div>';
+                })
+                .catch((err) => console.log(err));
+            });
+          })
+          .catch((err) => console.log(err));
+      })
+      .catch((err) => console.log(err));
+  })
+  .catch((err) => console.log(err));
