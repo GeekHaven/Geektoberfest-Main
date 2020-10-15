@@ -117,6 +117,21 @@ var x = window.matchMedia("(max-width: 768px)");
 myFunction(x);
 x.addListener(myFunction);
 
+// Scroll to top button
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 40) {
+    $("#scrollbtn").fadeIn();
+  } else {
+    $("#scrollbtn").fadeOut();
+  }
+});
+
+$(document).ready(function () {
+  $("#scrollbtn").click(function () {
+    $("html, body").animate({ scrollTop: 0 }, 800);
+  });
+});
+
 //code for fetching participants from json files in contributionsfolder
 
 const githubApiUrl =
