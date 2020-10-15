@@ -192,9 +192,8 @@ body.dark-theme #section5 {
 }
 
 #content {
-  opacity: 0;
   display: none;
-  transition: opacity 1s ease-out;
+  transition: 1s ease-out;
 }
 /*  */
 
