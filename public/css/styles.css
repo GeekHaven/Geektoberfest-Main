@@ -187,13 +187,13 @@ body.dark-theme #section5 {
   left: 30%; */
   width: 100%;
   height: 100vh;
-  background: #1919ff url("../img/loader.gif") no-repeat center;
+  background: #9292ca url("../img/loader.gif") no-repeat center;
   z-index: 999;
 }
 
 #content {
   display: none;
-  transition: #1919ff 1s ease-out;
+  transition: #9191e2 1s ease-out;
 }
 /*  */
 
