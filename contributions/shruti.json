@@ -1,0 +1,10 @@
+{
+    "name" : "Shruti Nanda",
+    "imageurl" : "https://www.facebook.com/photo?fbid=539243729963844&set=a.103389436882611",
+    "about" : "Hello, I'm a sophomore at IIITA",
+    "facebook": "facebook-url",
+    "github" : "https://github.com/iit2019017",
+    "prs": [
+        "https://github.com/GeekHaven/vaprco/pull/13#pullrequestreview-506552240"
+    ]
+ }
