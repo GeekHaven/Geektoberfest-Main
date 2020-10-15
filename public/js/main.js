@@ -28,14 +28,16 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-//
+
 //toggle button
 const btn = document.querySelector(".btn-toggle");
-
+let t = true;
 btn.addEventListener("click", function () {
   document.body.classList.toggle("dark-theme");
+  if (t) document.getElementById("myImg").src = "public/img/gh.png";
+  else document.getElementById("myImg").src = "public/img/Nav-logo.png";
+  t = !t;
 });
-
 //toggle button end
 //
 
