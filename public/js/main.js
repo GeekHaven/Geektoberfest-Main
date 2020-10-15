@@ -1,3 +1,18 @@
+const loader = document.querySelector("#loader");
+const main = document.querySelector("#content");
+
+function init() {
+  setTimeout(() => {
+    loader.style.opacity = 0;
+    loader.style.display = "none";
+
+    main.style.display = "block";
+    setTimeout(() => (main.style.opacity = 1), 50);
+  }, 2000);
+}
+
+init();
+
 document.addEventListener("DOMContentLoaded", () => {
   const isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
   // get all the links with an ID that starts with 'sectionLink'
