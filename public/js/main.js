@@ -147,6 +147,10 @@ $(document).ready(function () {
   });
 });
 
+// custom Image URL goes here
+
+    const customUrl ="./public/img/user.png"
+
 //code for fetching participants from json files in contributionsfolder
 
 const githubApiUrl =
@@ -176,8 +180,7 @@ fetch(githubApiUrl)
                   //participant image is available as data.imageurl
                   participantsContainer.innerHTML +=
                     '<div class="image"><img class="image__img" src="'+
-                    data.imageurl +
-                    '"><div class="image__overlay image__overlay_blur"><div class="image__title">' +
+                    data.imageurl +'" onerror="this.src='+'customUrl' +'"><div class="image__overlay image__overlay_blur"><div class="image__title">' +
                     data.name +
                     '</div><div class="image__description"><p>' +
                     data.about +
