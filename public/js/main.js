@@ -175,13 +175,17 @@ fetch(githubApiUrl)
                   //code for rendering participants in partcipants-container
                   //participant image is available as data.imageurl
                   participantsContainer.innerHTML +=
-                    '<div class="participant"><div class="participant-info"><h3>' +
+                    '<div class="image"><img class="image__img" src="'+
+                    data.imageurl +
+                    '"><div class="image__overlay image__overlay_blur"><div class="image__title">' +
                     data.name +
-                    "</h3><p>" +
+                    '</div><div class="image__description"><p>' +
                     data.about +
-                    '</p></div><a href="' +
+                    '</p></div><div class="links_par"><a href="' +
                     data.github +
-                    '">github profile</a></div>';
+                    '"><i class="fab fa-github"></i></a><a href="'+
+                    data.facebook +
+                    '"><i class="fab fa-facebook"></i></a><div></div></div>';
                 })
                 .catch((err) => console.log(err));
             });
