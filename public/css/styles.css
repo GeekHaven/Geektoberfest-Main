@@ -613,28 +613,115 @@ tr:nth-child(3) td {
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
-
 .participants-container {
   display: flex;
   flex-wrap: wrap;
 }
+.image{
+  position:relative;
+  width:270px;
+  margin:10px;
+}
+.image__img{
+  display:block;
+  width:100%;
+  height:310px;
 
+}
+.image__overlay{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:90%;
+  background:rgba(0,0,0,0.6);
+  color:#ffffff;
+  /* font-family: ; */
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  opacity:0;
+  transition: 0.25s;
+}
+.image__overlay_blur{
+  backdrop-filter: blur(5px);
+}
+.image__overlay > *{
+  transform:translateY(20px);
+  transition:0.25s;
+  margin:10px;
+}
+.links_par{
+     margin:5px;
+     padding:5px;
+}
+.links_par a i{
+  font-size:49px;
+  color:#2AF598;
+  margin:8px 20px;
+}
+.fa-github:hover{
+  color: #000000;
+}
+.fa-facebook:hover{
+  color:blue;
+
+}
+.image__overlay:hover{
+  opacity:1;
+}
+.image__overlay:hover > *{
+  transform:translateY(0);
+}
+.image__title{
+  font-size:1.5em;
+  font-weight:bold;
+  align-items:center;
+}
+
+.image__description p{
+  font-size:1.1rem;
+  display:flex;
+  flex-direction: column;
+  margin-top:0.25em;
+  color:#2AF598;
+  margin-left:3px;
+  padding-bottom:5px;
+  margin-bottom:5px;
+  
+}
+
+/*
 .participant {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
   align-items: center;
-  height: 300px;
-  width: 250px;
+  height: 500px;
+  width: 350px;
   color: #022488;
   background-color: #24b9d6;
+  border-radius: 10px;
   margin: 10px;
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
 }
+.participant-info {
+  padding:0.25rem; 
 
+}
 .participant-info h3 {
   font-size: 1.4rem;
+  margin-top:-10px;
+  color:white;
+  font-weight:
+}
+.imgpar{
+   margin: 0;
+   height:300px;
+   width: 190px;
+   border-radius: 10px;
 }
 
 .participant a {
@@ -651,8 +738,8 @@ tr:nth-child(3) td {
 .participant a:hover {
   background: #4affa1;
   color: #334455 !important;
-  text-decoration: none;
-}
+  text-decoration: none; */
+/* } */
 
 /* Project Section Ends */
 
