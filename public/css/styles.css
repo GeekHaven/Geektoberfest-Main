@@ -856,14 +856,21 @@ Custom Cursor
   pointer-events: none;
 }
 
-.cursor--large {
-  opacity: 0.5;
-  background-color: #1919ff;
-  transition: transform 0.1s linear;
+.cursor--darkl {
+  opacity: 0.8;
+  background-color:#C70039;
+  transition: transform 0.05s linear;
 }
 
-.cursor--small {
-  background-color: #4c4cff;
+
+.cursor--darkl.dark-theme {
+  opacity: 0.8;
+  background-color:white;
+  transition: transform 0.1s linear;
+}
+.cursor--darks {
+  //background-color: #4c4cff;
+  background-color: black;
   width: var(--cSizeSmall);
   height: var(--cSizeSmall);
   transform: translate(
@@ -871,6 +878,18 @@ Custom Cursor
     calc(var(--y) - var(--cSizeSmall) / 2)
   );
 }
+
+.grow{
+  //background-color: #4c4cff;
+  background-color: cyan;
+  width: var(--cSizeSmall);
+  height: var(--cSizeSmall);
+  transform: translate(
+    calc(var(--x) - var(--cSizeSmall) / 2),
+    calc(var(--y) - var(--cSizeSmall) / 2)
+  );
+}
+
 /* ========================
 
 ======================== */

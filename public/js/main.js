@@ -101,6 +101,7 @@ countdown();
 
 // code for countdown timer function ends
 
+
 //For the custom Cursor
 const root = document.querySelector(":root");
 document.addEventListener("mousemove", (e) => {
@@ -108,25 +109,33 @@ document.addEventListener("mousemove", (e) => {
   root.style.setProperty("--y", e.clientY + "px");
 });
 
-//Disables the cursor for touch device having width less then 768 px only
-var supportsTouch = "ontouchstart" in window || navigator.msMaxTouchPoints;
-var cursor = document.getElementById("cursordiv");
-function myFunction(x) {
-  if (x.matches && supportsTouch === true) {
-    while (cursor.firstChild) {
-      cursor.removeChild(cursor.firstChild);
-    }
-  } else {
-    var node1 = document.createElement("SPAN");
-    node1.classList.add("cursor");
-    node1.classList.add("cursor--large");
-    cursor.appendChild(node1);
+let smallcursor=document.querySelector(".cursor--darks");
+let largecursor=document.querySelector(".cursor--darkl");
 
-    var node2 = document.createElement("SPAN");
-    node2.classList.add("cursor");
-    node2.classList.add("cursor--small");
-    cursor.appendChild(node2);
-  }
+
+document.addEventListener("mousemove",movecursor);
+
+function movecursor(e){
+  const root = document.querySelector(":root");
+document.addEventListener("mousemove", (e) => {
+  root.style.setProperty("--x", e.clientX + "px");
+  root.style.setProperty("--y", e.clientY + "px");
+});
+}
+
+let links=Array.from(document.querySelectorAll("a"));
+if(t){
+links.forEach((link)=>{
+  link.addEventListener("mouseover",()=>{
+
+    smallcursor.classList.add("grow");
+    //smallcursor.classList.remove("cursor--small");
+  });
+  link.addEventListener("mouseout",()=>{
+
+    smallcursor.classList.remove("grow");
+  });
+});
 }
 var x = window.matchMedia("(max-width: 768px)");
 myFunction(x);
