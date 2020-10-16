@@ -332,7 +332,7 @@ td {
   top: 50%;
   left: 50%;
   width: 500px;
-  height: 200px;
+  height: 180px;
   transform: translateX(-50%) translateY(-50%);
   text-align: top center;
   background: rgba(245, 245, 245, 0.1);
@@ -340,12 +340,13 @@ td {
   border: 0.1px solid #999;
   padding: 10px;
 }
-tr:nth-child(3) td {
+/*tr:nth-child(3) td {
   padding-top: 2.5em;
-}
+}*/
 .info-label td {
   font-size: 2em;
-  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 3px;
 }
 .info-data {
   font-size: 4em;
@@ -355,6 +356,7 @@ tr:nth-child(3) td {
 #info-data-labels>td {
   padding: 0;
   height: 25px;
+  padding-bottom: 10px;
 }
 
 /* -------------- */
