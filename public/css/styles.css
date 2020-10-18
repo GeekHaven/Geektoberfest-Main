@@ -52,6 +52,10 @@ button {
   height:65px;
 }
 
+.navbar-toggler {
+  margin-left: auto;
+}
+
 #navbar.fixed-top {
   position: fixed;
   justify-content: inherit;
@@ -281,6 +285,8 @@ section {
 section h2 {
   font-size: 3rem;
 }
+
+
 section p {
   font-size: 1.3rem;
 }
@@ -340,6 +346,10 @@ td {
   border: 0.1px solid #999;
   padding: 10px;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> upstream/main
 /*tr:nth-child(3) td {
   padding-top: 2.5em;
 }*/
@@ -367,6 +377,8 @@ td {
   text-shadow: 1px 1px #778899, 2px 2px #a9a9a9, 3px 3px #a9a9a9,
     4px 4px #a9a9a9;
 }
+
+
 /* Animated button */
 #bton {
   outline: none;
@@ -435,6 +447,7 @@ td {
   padding-top: 80px;
 }
 
+
 #section2 .content {
   width: 50%;
   font-size: 1.5em;
@@ -450,11 +463,12 @@ td {
   width: 50%;
   display: inline;
   position: relative;
-  font-size: 350px;
   margin: 20px 50px;
+  font-size: 350px;
   font-weight: 400;
   text-align: end;
 }
+
 
 /* About Section Ends  */
 
@@ -978,3 +992,46 @@ Custom Cursor
 /* ========================
 
 ======================== */
+
+/*-------------------------------- Media Queries----------------------- */
+
+
+@media screen and (max-width: 600px) {
+
+ section {
+   padding:50px 10px;
+ }
+ section h2 {
+   font-size: 2rem;
+ }
+ .countdownContainer {
+   width:90vw;
+ }
+ .switch {
+   margin-inline-start: inherit;
+ }
+ #section2 {
+   padding:50px 10px;
+ }
+ #section2 .content h2 {
+   font-size: 2rem !important;
+ }
+ #section2 .content {
+   width: 60%;
+ }
+ #section2 .symbol {
+   font-size: 50vw;
+   width:30%;
+   padding-top: inherit;
+   margin: 20px 0px !important;
+ }
+}
+
+@media screen and (max-width:750px) {
+  #section1 h1 {
+    font-size: 10vw !important;
+  }
+}
+
+/*======================================= end 
+==================================================*/
