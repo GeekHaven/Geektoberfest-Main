@@ -108,7 +108,6 @@ document.addEventListener("mousemove", (e) => {
   root.style.setProperty("--y", e.clientY + "px");
 });
 
-
 let smallcursor=document.querySelector(".cursor--darks");
 let largecursor=document.querySelector(".cursor--darkl");
 
@@ -137,7 +136,26 @@ links.forEach((link)=>{
   });
 });
 }
+//Disables the cursor for touch device having width less then 768 px only
+var supportsTouch = "ontouchstart" in window || navigator.msMaxTouchPoints;
+var cursor = document.getElementById("cursordiv");
+function myFunction(x) {
+  if (x.matches && supportsTouch === true) {
+    while (cursor.firstChild) {
+      cursor.removeChild(cursor.firstChild);
+    }
+  } else {
+    var node1 = document.createElement("SPAN");
+    node1.classList.add("cursor");
+    node1.classList.add("cursor--large");
+    cursor.appendChild(node1);
 
+    var node2 = document.createElement("SPAN");
+    node2.classList.add("cursor");
+    node2.classList.add("cursor--small");
+    cursor.appendChild(node2);
+  }
+}
 var x = window.matchMedia("(max-width: 768px)");
 myFunction(x);
 x.addListener(myFunction);
