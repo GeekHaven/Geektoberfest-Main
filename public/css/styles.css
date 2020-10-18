@@ -647,32 +647,37 @@ td {
 .participants-container {
   display: flex;
   flex-wrap: wrap;
+  /* flex-direction: column; */
+  justify-content:center;
+  margin: auto;
 }
 .image{
   position:relative;
   width:270px;
   margin:10px;
+  display: flex;
+  justify-content:center;
 }
 .image__img{
   display:block;
   width: 225px;
   height: 225px;
-
+  border-radius:13px;
 }
 .image__overlay{
   position:absolute;
   top:0;
-  left:0;
+  left:20;
   width: 225px;
   height: 225px;
   background:rgba(0,0,0,0.6);
   color:#ffffff;
   display:flex;
   flex-direction:column;
-  align-items:center;
   justify-content:center;
   opacity:0;
   transition: 0.25s;
+  border-radius:13px;
 }
 .image__overlay_blur{
   backdrop-filter: blur(5px);
@@ -692,11 +697,10 @@ td {
   margin:4px 20px;
 }
 .fa-github:hover{
-  color: #000000;
+  color:red;
 }
 .fa-facebook:hover{
-  color:blue;
-
+  color:yellow;
 }
 .image__overlay:hover{
   opacity:1;
@@ -708,10 +712,9 @@ td {
   font-size:1.3em;
   font-weight:bold;
   align-items:center;
-  padding: 18px 1px 1px 1px;
+  padding: 25px 1px 1px 1px;
   margin:1px;
   margin-bottom: -5px;
-
 }
 .image__description{
   margin:0px;
@@ -865,20 +868,20 @@ td {
   transition-duration: 0.2s;
 }
 
-.fa-facebook:hover {
+.social .fa-facebook:hover {
   box-shadow: 0 0 2px 4px rgba(65, 103, 178, 0.4);
 }
 
-.fa-twitter:hover {
+.social .fa-twitter:hover {
   box-shadow: 0 0 2px 4px rgba(29, 161, 242, 0.4);
 }
-.fa-linkedin:hover {
+.social .fa-linkedin:hover {
   box-shadow: 0 0 2px 4px rgba(40, 103, 178, 0.4);
 }
-.fa-github:hover {
+.social .fa-github:hover {
   box-shadow: 0 0 2px 4px rgba(127, 71, 201, 0.4);
 }
-.fa-envelope:hover {
+.social .fa-envelope:hover {
   box-shadow: 0 0 2px 4px rgba(219, 68, 55, 0.4);
 }
 
