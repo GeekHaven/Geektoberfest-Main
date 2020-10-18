@@ -180,7 +180,7 @@ fetch(githubApiUrl)
                   //participant image is available as data.imageurl
                   participantsContainer.innerHTML +=
                     '<div class="image"><img class="image__img" src="'+
-                    data.imageurl +'" onerror="this.src='+'customUrl' +'"><div class="image__overlay image__overlay_blur"><div class="image__title">' +
+                    data.imageurl +'" onerror="this.src='+'customUrl' +'"><div class="image__overlay image__overlay_blur"><div class="image__title text-center">' +
                     data.name +
                     '</div><div class="image__description"><p>' +
                     data.about +
