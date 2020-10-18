@@ -928,7 +928,7 @@ Custom Cursor
   --x: 120px;
   --y: 120px;
   --cSize: 34px;
-  --cSizeSmall: 10px;
+  --cSizeSmall: 13px;
 }
 
 * {
@@ -954,7 +954,7 @@ Custom Cursor
 }
 
 .cursor--darkl {
-  opacity: 0.8;
+  opacity: 0.65;
   background-color:blue;
   transition: transform 0.05s linear;
   background-blend-mode: difference;
@@ -962,7 +962,7 @@ Custom Cursor
 
 .cursor--darks {
   //background-color: #4c4cff;
-  background-color: black;
+  background-color: white;
   width: var(--cSizeSmall);
   height: var(--cSizeSmall);
   transform: translate(
