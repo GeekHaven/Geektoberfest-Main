@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      .container {
+        width: 80%;
+        margin: auto;
+      }
+
+      h1 {
+        margin: 0;
+        padding: 0px;
+      }
+
+      .heading {
+        background-color: darkcyan;
+        padding: 30px 50px;
+        color: whitesmoke;
+      }
+
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 400px;
+        margin: auto;
+        text-align: center;
+        font-family: arial;
+      }
+
+      #about {
+        color: grey;
+        font-size: 18px;
+      }
+
+      a {
+        text-decoration: none;
+        font-size: 22px;
+        color: black;
+      }
+
+      a:hover {
+        opacity: 0.7;
+      }
+
+      i {
+        color: black;
+      }
+
+      #demo {
+        color: grey;
+        font-size: 18px;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="heading"><div class="container">Profiles Details</div></h1>
+    <div class="container">
+      <br />
+      <div class="card">
+        <img id="userImg" src="" alt="" style="width: 100%" />
+        <h1 id="name"></h1>
+        <p id="about"></p>
+        <p id="demo"></p>
+        <div style="margin: 20px 0">
+          <a id="fbLink" href=""><i class="fab fa-facebook"></i></a>
+          <a id="gitLink" href=""><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <br />
+
+    <script>
+      let params = new URLSearchParams(document.location.search.substring(1));
+      let username = params.get("username");
+      const name = document.getElementById("name");
+      const about = document.getElementById("about");
+      const image = document.getElementById("userImg");
+      const fbLink = document.getElementById("fbLink");
+      const gitLink = document.getElementById("gitLink");
+
+      fetch(
+        "https://geekhaven.github.io/Geektoberfest-Main/contributions/" +
+          username +
+          ".json"
+      )
+        .then((res) => res.text())
+        .then((res) => getDetails(res))
+        .catch((err) => {
+          console.log(err);
+        });
+
+      function getDetails(data) {
+        var obj = JSON.parse(data);
+        name.innerHTML = obj.name;
+        about.innerHTML = obj.about;
+        image.src = obj.imageurl;
+        fbLink.href = obj.facebook;
+        gitLink.href = obj.github;
+
+        let text, fLen, i;
+        let prs = obj.prs;
+        fLen = prs.length;
+
+        text = "<ul>";
+        for (i = 0; i < fLen; i++) {
+          text += "<li>" + prs[i] + "</li>";
+        }
+        text += "</ul>";
+
+        document.getElementById("demo").innerHTML = text;
+      }
+    </script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </body>
+</html>
