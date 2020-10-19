@@ -1,10 +1,13 @@
 {
         "name" : "Mrinal Bhave",
         "imageurl" : "https://www.facebook.com/photo?fbid=164991461524227&set=a.105492787474095",
-        "about" : "Hey! I am interested in WebD",
+        "about" : "Hey! I am a Front-End Developer",
         "facebook": "https://www.facebook.com/mrinal.bhave.56",
         "github" : "https://github.com/thelavenderhue",
         "prs": [
             "https://github.com/GeekHaven/vaprco/pull/24",
+            "https://github.com/Elevate-Lab/elevate-lab-website/pull/172",
+            "https://github.com/GeekHaven/WorkTrack/pull/20",
+            "https://github.com/sumana2001/styles/pull/44"
         ]
      }

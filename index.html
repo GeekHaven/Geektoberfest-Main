@@ -2,7 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
     <title>Geektoberfest</title>
     <link rel="stylesheet" href="public/css/styles.css" />
 
@@ -37,14 +39,29 @@
           >
             <!-- For the Cursor -->
             <div class="cursors" id="cursordiv">
-              <span class="cursor cursor--large"></span>
-              <span class="cursor cursor--small"></span>
+              <span class="cursor cursor--darkl"></span>
+              <span class="cursor cursor--darks"></span>
             </div>
             <a class="navbar-brand" id="brand"
               ><img id="myImg" src="public/img/Nav-logo.png" alt="" />
-              GEEKTOBERFEST'20</a
+             <span class="d-none d-sm-inline">GEEKTOBERFEST'20</span></a
             >
-            
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <label class="switch px-3">
+              <input type="checkbox" class="btn-toggle" />
+              <span class="slider round"></span>
+            </label>
+
 
             <div class="links collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
@@ -69,6 +86,7 @@
                   >
                 </li>
                 <li class="nav-item">
+
                   <a class="nav-link " href="#sectionLink5"
                     >Contact</a
                   >
@@ -109,7 +127,7 @@
                 <td id="minutes"></td>
                 <td id="seconds"></td>
               </tr>
-              <tr>
+              <tr id="info-data-labels">
                 <td>Days</td>
                 <td>Hours</td>
                 <td>Minutes</td>
@@ -153,14 +171,11 @@
               channels for each repository, if you have any queries regarding
               any repository in the Geektoberfest feel free to ask questions in
               the respective Channels at the
-              <a href="https://discord.gg/VQqfNAG" target="_blank"
-                >Discord Server</a
-              >
+              <a href="https://discord.gg/VQqfNAG" target="_blank">Discord Server</a>
             </p>
           </span>
           <span class="symbol"><i class="fa fa-question"></i></span>
         </section>
-
         <section id="section3">
           <h2>projects</h2>
           <div class="projects-container container">
@@ -186,7 +201,7 @@
                     </div>
 
                     <div class="backside">
-                      <div class="card">
+                      <div class="card h-100">
                         <div class="card-body text-center mt-4">
                           <p class="card-text">
                             <strong>Description : </strong><br />A flutter
@@ -203,7 +218,7 @@
                             href="https://github.com/GeekHaven/find-my-senior"
                             target="_blank"
                             class="btn btn-outline-primary"
-                            >Go To Repo</a
+                            ><p class="card-text1">Go To Repo</p></a
                           >
                         </div>
                       </div>
@@ -232,7 +247,7 @@
                     </div>
 
                     <div class="backside">
-                      <div class="card">
+                      <div class="card h-100">
                         <div class="card-body text-center mt-4">
                           <p class="card-text">
                             <strong>Description :</strong><br />A weather data
@@ -249,7 +264,7 @@
                             href="https://github.com/GeekHaven/weather-app"
                             target="_blank"
                             class="btn btn-outline-primary"
-                            >Go To Repo</a
+                            ><p class="card-text1">Go To Repo</p></a
                           >
                         </div>
                       </div>
@@ -276,7 +291,7 @@
                     </div>
 
                     <div class="backside">
-                      <div class="card">
+                      <div class="card h-100">
                         <div class="card-body text-center mt-4">
                           <p class="card-text">
                             <strong>Description</strong><br />A nodejs, express
@@ -292,7 +307,7 @@
                             href="https://github.com/GeekHaven/WorkTrack"
                             target="_blank"
                             class="btn btn-outline-primary"
-                            >Go To Repo</a
+                            ><p class="card-text1">Go To Repo</p></a
                           >
                         </div>
                       </div>
@@ -319,7 +334,7 @@
                     </div>
 
                     <div class="backside">
-                      <div class="card">
+                      <div class="card h-100">
                         <div class="card-body text-center mt-4">
                           <p class="card-text">
                             <strong>Description</strong><br />A Java based
@@ -336,7 +351,7 @@
                             href="https://github.com/GeekHaven/ChatApp"
                             target="_blank"
                             class="btn btn-outline-primary"
-                            >Go To Repo</a
+                            ><p class="card-text1">Go To Repo</p></a
                           >
                         </div>
                       </div>
@@ -365,7 +380,7 @@
                     </div>
 
                     <div class="backside">
-                      <div class="card">
+                      <div class="card h-100">
                         <div class="card-body text-center mt-4">
                           <p class="card-text">
                             <strong>Description</strong><br />A simple
@@ -381,7 +396,7 @@
                             href="https://github.com/GeekHaven/file-explorer"
                             target="_blank"
                             class="btn btn-outline-primary"
-                            >Go To Repo</a
+                            ><p class="card-text1">Go To Repo</p></a
                           >
                         </div>
                       </div>
@@ -410,7 +425,7 @@
                     </div>
 
                     <div class="backside">
-                      <div class="card">
+                      <div class="card h-100">
                         <div class="card-body text-center mt-4">
                           <p class="card-text">
                             <strong>Description</strong><br />This project aims
@@ -426,7 +441,7 @@
                             href="https://github.com/GeekHaven/Real-Time-Face-Mask-Detector"
                             target="_blank"
                             class="btn btn-outline-primary"
-                            >Go To Repo</a
+                            ><p class="card-text1">Go To Repo</p></a
                           >
                         </div>
                       </div>
@@ -453,7 +468,7 @@
                     </div>
 
                     <div class="backside">
-                      <div class="card">
+                      <div class="card h-100">
                         <div class="card-body text-center mt-4">
                           <p class="card-text">
                             <strong>Description</strong><br />vaprco website
@@ -466,7 +481,7 @@
                             href="https://github.com/GeekHaven/vaprco"
                             target="_blank"
                             class="btn btn-outline-primary"
-                            >Go To Repo</a
+                            ><p class="card-text1">Go To Repo</p></a
                           >
                         </div>
                       </div>
@@ -487,7 +502,7 @@
                               alt="card image"
                             />
                           </p>
-                          <h3 class="card-title">
+                          <h3 class="card-title card-title1">
                             <strong>Geektober-Main</strong>
                           </h3>
                         </div>
@@ -495,7 +510,7 @@
                     </div>
 
                     <div class="backside">
-                      <div class="card">
+                      <div class="card h-100">
                         <div class="card-body text-center mt-4">
                           <p class="card-text">
                             <strong>Description</strong><br />The starting point
@@ -512,7 +527,7 @@
                             href="https://github.com/GeekHaven/Geektoberfest-Main"
                             target="_blank"
                             class="btn btn-outline-primary"
-                            >Go To Repo</a
+                            ><p class="card-text1">Go To Repo</p></a
                           >
                         </div>
                       </div>
@@ -541,7 +556,7 @@
                     </div>
 
                     <div class="backside">
-                      <div class="card">
+                      <div class="card h-100">
                         <div class="card-body text-center mt-4">
                           <p class="card-text">
                             <strong>Description</strong><br />Repo for Logo and
@@ -557,7 +572,7 @@
                             href="https://github.com/GeekHaven/design-for-chat-app"
                             target="_blank"
                             class="btn btn-outline-primary"
-                            >Go To Repo</a
+                            ><p class="card-text1">Go To Repo</p></a
                           >
                         </div>
                       </div>
@@ -586,7 +601,7 @@
                     </div>
 
                     <div class="backside">
-                      <div class="card">
+                      <div class="card h-100">
                         <div class="card-body text-center mt-4">
                           <p class="card-text">
                             <strong>Description</strong><br />A Java based
@@ -603,7 +618,7 @@
                             href="https://github.com/GeekHaven/GOT-Character-App"
                             target="_blank"
                             class="btn btn-outline-primary"
-                            >Go To Repo</a
+                            ><p class="card-text1">Go To Repo</p></a
                           >
                         </div>
                       </div>
@@ -630,7 +645,7 @@
                     </div>
 
                     <div class="backside">
-                      <div class="card">
+                      <div class="card h-100">
                         <div class="card-body text-center mt-4">
                           <p class="card-text">
                             <strong>Description</strong><br />Code Debugging
@@ -646,7 +661,7 @@
                             href="https://github.com/GeekHaven/Codelines"
                             target="_blank"
                             class="btn btn-outline-primary"
-                            >Go To Repo</a
+                            ><p class="card-text1">Go To Repo</p></a
                           >
                         </div>
                       </div>
@@ -675,7 +690,7 @@
                     </div>
 
                     <div class="backside">
-                      <div class="card">
+                      <div class="card h-100">
                         <div class="card-body text-center mt-4">
                           <p class="card-text">
                             <strong>Description</strong><br />This repository
@@ -692,7 +707,7 @@
                             href="https://github.com/GeekHaven/find-my-senior"
                             target="_blank"
                             class="btn btn-outline-primary"
-                            >Go To Repo</a
+                            ><p class="card-text1">Go To Repo</p></a
                           >
                         </div>
                       </div>

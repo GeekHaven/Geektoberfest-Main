@@ -1,6 +1,6 @@
 const loader = document.querySelector("#loader");
 const main = document.querySelector("#content");
-
+var g;
 function init() {
   setTimeout(() => {
     loader.style.opacity = 0;
@@ -108,6 +108,35 @@ document.addEventListener("mousemove", (e) => {
   root.style.setProperty("--y", e.clientY + "px");
 });
 
+let smallcursor=document.querySelector(".cursor--darks");
+let largecursor=document.querySelector(".cursor--darkl");
+
+
+document.addEventListener("mousemove",movecursor);
+
+function movecursor(e){
+  const root = document.querySelector(":root");
+document.addEventListener("mousemove", (e) => {
+  root.style.setProperty("--x", e.clientX + "px");
+  root.style.setProperty("--y", e.clientY + "px");
+});
+}
+
+let links=Array.from(document.querySelectorAll("a"));
+if(t){
+links.forEach((link)=>{
+  link.addEventListener("mouseover",()=>{
+
+    smallcursor.classList.add("grow");
+    //smallcursor.classList.remove("cursor--small");
+  });
+  link.addEventListener("mouseout",()=>{
+
+    smallcursor.classList.remove("grow");
+  });
+});
+}
+
 //Disables the cursor for touch device having width less then 768 px only
 var supportsTouch = "ontouchstart" in window || navigator.msMaxTouchPoints;
 var cursor = document.getElementById("cursordiv");
@@ -178,17 +207,19 @@ fetch(githubApiUrl)
                 .then((data) => {
                   //code for rendering participants in partcipants-container
                   //participant image is available as data.imageurl
-                  participantsContainer.innerHTML +=
-                    '<div class="image"><img class="image__img" src="'+
-                    data.imageurl +'" onerror="this.src='+'customUrl' +'"><div class="image__overlay image__overlay_blur"><div class="image__title">' +
-                    data.name +
-                    '</div><div class="image__description"><p>' +
-                    data.about +
-                    '</p></div><div class="links_par"><a href="' +
-                    data.github +
-                    '"><i class="fab fa-github"></i></a><a href="'+
-                    data.facebook +
-                    '"><i class="fab fa-facebook"></i></a><div></div></div>';
+                 x='<div class="image"><img class="image__img" src="'+
+                    data.imageurl +'" onerror="this.src='+'customUrl' +'"><div class="image__overlay image__overlay_blur"><div class="image__title text-center">' +
+                    data.name;
+                  x=x+'</div><div class="image__description"><p id="parag" class="text-center">';
+                  g=data.about;
+                  g=truncate(g);
+                  x=x+g;
+                  x=x +'</p></div><div class="links_par"><a  href="' +
+                  data.github +
+                  '"><i class="fab fa-github"></i></a><a href="'+
+                  data.facebook +
+                  '"><i class="fab fa-facebook"></i></a><div></div></div>';
+                  participantsContainer.innerHTML+=x; 
                 })
                 .catch((err) => console.log(err));
             });
@@ -198,3 +229,34 @@ fetch(githubApiUrl)
       .catch((err) => console.log(err));
   })
   .catch((err) => console.log(err));
+
+function truncate(usertext){
+  var n = usertext.length;
+  var c=0;
+  for(i=0;i<n;i++)
+  {
+      if(usertext[i]==" ")
+      {
+        c++;
+      }   
+  }
+  var f = 12;
+  if(c>12)
+  {
+      var temText ="";
+       for(i=0;i<n;i++)
+       {
+         if(f>0)
+         {
+           if(usertext[i]==" ")
+           f--;
+           temText+=usertext[i];
+             
+         }
+
+       }
+       temText+="...";
+       usertext=temText;
+  }
+  return usertext;
+}
