@@ -522,14 +522,17 @@ td {
 
 .backside .card {
   margin-top: 0;
+  height:100%;
   margin-bottom: 5px;
 }
 
 .backside .card-body {
+  height:100%;
   margin: 0 !important;
 }
 
 .backside {
+  height:100%;
   border-radius: 0.5rem !important;
   margin-top: 0%;
 }
