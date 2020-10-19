@@ -43,13 +43,15 @@ button {
   border: none;
 }
 
+
+
 .navbar {
   font-family: "Nunito", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  padding: 0.5rem 10rem;
-  background-color: rgb(235, 245, 255);
-  height:65px;
+  padding: 0.5rem 10rem; 
+  background-color: rgb(235, 236, 255);
+  height:80px;
 }
 
 .navbar-toggler {
@@ -61,55 +63,47 @@ button {
   justify-content: inherit;
 }
 
-.navbar-brand {
-  font-size: 1.5rem;
-}
-
 .navbar-brand img {
   width: 40px;
   height: 40px;
   margin: 0 0 10px 10px;
-  margin-bottom: 10px;
+  margin-bottom: 10px;  
 }
 
-.navbar-brand img#myImg{
-  margin-top:1.5px;
-  margin-right:10px;
+.navbar-nav  {
+  padding-left: 0px;
+  margin: 0rem;
 }
 
-#navbarNav .nav-link {
-  font-weight: 500;
+#navbarNav li a {
+  word-spacing: 0em;
+  text-decoration: none;
+  position: relative;
+  display: block;
+  overflow: hidden;
   font-size: 1.1em;
   margin: 5px;
+  padding-left: 0rem;
   padding: 5px;
-  transition: color 0.2s;
+  color: #000000;
+  transition: color 0.5s;
 }
 
-#navbarNav .nav-link:hover,
-#navbarNav .nav-link:focus,
-#navbarNav .nav-link:active {
-  color: #7c32d1;
+#navbarNav li a::before {
+  content: '';
+  width: 70px;
+  position: absolute;
+  border-bottom: 2px solid #7c32d1;
+  bottom: 0;
+  right: 350px;
+  transition: 0.5s all;
 }
 
-/* Nav-link Hover Animation */
-.hvr-grow-shadow {
-  display: inline-block;
-  vertical-align: middle;
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  transition-duration: 0.3s;
-  transition-property: box-shadow, transform;
-}
-.hvr-grow-shadow:hover,
-.hvr-grow-shadow:focus,
-.hvr-grow-shadow:active {
-  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
-  transform: scale(1.1);
+#navbarNav li a:hover::before {
+  right: 0;
 }
 
-/*  */
 
-/*  */
 #loader {
   position: fixed;
   /* top: 20%;
@@ -138,9 +132,9 @@ body.dark-theme .navbar {
   background-color: #1a1a2e;
 }
 
-body.dark-theme .hvr-grow-shadow:hover {
+/* body.dark-theme .hvr-grow-shadow:hover {
   background-color: #590995;
-}
+} */
 
 body.dark-theme #section1 h1,
 body.dark-theme #section1 td {
