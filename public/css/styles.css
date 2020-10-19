@@ -640,7 +640,10 @@ td {
   height: 80%;
   border-radius: 50%;
 }
-
+.card-text1{
+  text-align: center;
+  margin:auto;
+}
 /* Project Section Ends */
 
 /* Participants Section Starts */
@@ -1041,6 +1044,40 @@ Custom Cursor
    padding-top: inherit;
    margin: 20px 0px !important;
  }
+ #section3{
+  width:100%;
+ }
+.backside{
+  width: 100%;
+  padding: 0px;
+  margin:0px;
+}
+ .backside .card a{
+  text-align: center;
+   padding: 24px;
+  margin:auto;
+  width: 100%;
+ }
+ a.btn.btn-outline-primary{
+  margin:auto;
+  margin-top: 30px;
+  padding:0px;
+ }
+ .card-title{
+  font-size:20px;
+  }
+ .backside .card{
+   padding: 0px;
+  margin:0px;
+ }
+ .backside .card-text{
+  font-size: 13px;
+ }
+.card-text1{
+  text-align: center;
+  margin:auto;
+  font-size: 11px;
+}
 }
 
 @media screen and (max-width:750px) {
