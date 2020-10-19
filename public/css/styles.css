@@ -928,12 +928,13 @@ Custom Cursor
   --x: 120px;
   --y: 120px;
   --cSize: 34px;
-  --cSizeSmall: 10px;
+  --cSizeSmall: 13px;
 }
 
 * {
   cursor: none !important;
 }
+
 .cursor {
   position: fixed;
   top: 0;
@@ -949,23 +950,40 @@ Custom Cursor
   transform-style: preserve-3d;
   z-index: 99;
   pointer-events: none;
+  background-blend-mode: difference;
 }
 
-.cursor--large {
-  opacity: 0.5;
-  background-color: #1919ff;
-  transition: transform 0.1s linear;
+.cursor--darkl {
+  opacity: 0.6;
+  background-color:blue;
+  transition: transform 0.05s linear;
+  background-blend-mode: difference;
 }
 
-.cursor--small {
-  background-color: #4c4cff;
+.cursor--darks {
+  //background-color: #4c4cff;
+  background-color: white;
   width: var(--cSizeSmall);
   height: var(--cSizeSmall);
   transform: translate(
     calc(var(--x) - var(--cSizeSmall) / 2),
     calc(var(--y) - var(--cSizeSmall) / 2)
   );
+  background-blend-mode:difference;
 }
+
+.grow{
+  //background-color: #4c4cff;
+  background-color: cyan;
+  width: var(--cSizeSmall);
+  height: var(--cSizeSmall);
+  transform: translate(
+    calc(var(--x) - var(--cSizeSmall) / 2),
+    calc(var(--y) - var(--cSizeSmall) / 2)
+  );
+  background-blend-mode:difference;
+}
+
 /* ========================
 
 ======================== */
