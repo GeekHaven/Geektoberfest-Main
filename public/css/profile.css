@@ -1,0 +1,13 @@
+.profile-page{
+    margin-top: 5rem;
+}
+.profile-img{
+    height: 25%;
+    width: 25%;
+}
+.profile-img #userImg{
+    border-radius: 50%;
+}
+.profile-card{
+    border: 1px solid black;
+}
