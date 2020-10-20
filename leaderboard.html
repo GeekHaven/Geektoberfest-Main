@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Leaderboard</title>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Favicon -->
+    <link rel="icon" href="public/img/favicon.png" />
+    <style>
+      .leaderboard-image {
+        height: 50px;
+        width: 50px;
+      }
+      body {
+        padding: 30px;
+        text-align: center;
+        font-family: "Nunito", sans-serif;
+        background: rgb(72, 6, 172);
+        background: linear-gradient(
+          90deg,
+          rgba(72, 6, 172, 1) 0%,
+          rgba(25, 95, 231, 1) 30%,
+          rgb(146, 163, 161) 60%,
+          rgba(59, 193, 31, 1) 100%
+        );
+        color: white;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="leaderboard-container" class="column leaderboard-container">
+      <table id="leaderboard-table" style="width: 100%">
+        <div class="table-header">
+          <tr>
+            <td><strong>RANK</strong></td>
+            <td><strong>PICTURE</strong></td>
+            <td><strong>USERNAME</strong></td>
+            <td><strong>NUMBER OF PRs</strong></td>
+            <td><strong>GITHUB</strong></td>
+          </tr>
+        </div>
+        <br />
+        <script src="./public/js/leaderboard.js"></script>
+      </table>
+    </div>
+  </body>
+</html>
