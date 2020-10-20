@@ -433,6 +433,7 @@ td {
   color: white;
   cursor: pointer;
   display: none;
+  z-index: 9999;
 }
 
 #scrollbtn:hover {
@@ -787,7 +788,7 @@ td {
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
 }
 .participant-info {
-  padding:0.25rem; 
+  padding:0.25rem;
 
 }
 .participant-info h3 {
@@ -1169,6 +1170,6 @@ margin-right:40px;
    text-decoration-line:none;
    text-decoration-style:none;
    border-bottom:2px solid #7c32d1;
-   
+
  }
 }
