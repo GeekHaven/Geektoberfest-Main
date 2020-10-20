@@ -221,7 +221,7 @@ fetch(githubApiUrl)
                   '"><i class="fab fa-facebook"></i></a><div></div></div>';
                   participantsContainer.innerHTML+=x; 
                 })
-                .catch((err) => console.log(err));
+                .catch((err) => console.log(participant + ": " + err));
             });
           })
           .catch((err) => console.log(err));
