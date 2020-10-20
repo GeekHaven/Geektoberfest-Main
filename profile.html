@@ -30,80 +30,20 @@
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
       crossorigin="anonymous"
     ></script>
-    <!-- <style>
-      body {
-        margin: 0;
-      }
-
-      .container {
-        width: 80%;
-        margin: auto;
-      }
-
-      h1 {
-        margin: 0;
-        padding: 0px;
-      }
-
-      .heading {
-        background-color: darkcyan;
-        padding: 30px 50px;
-        color: whitesmoke;
-      }
-
-      .card {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        max-width: 400px;
-        margin: auto;
-        text-align: center;
-        font-family: arial;
-      }
-
-      #about {
-        color: grey;
-        font-size: 18px;
-      }
-
-      a {
-        text-decoration: none;
-        font-size: 22px;
-        color: black;
-      }
-
-      a:hover {
-        opacity: 0.7;
-      }
-
-      i {
-        color: black;
-      }
-
-      #demo {
-        color: grey;
-        font-size: 18px;
-        text-align: left;
-      }
-    </style> -->
   </head>
   <body>
     <div class="container">
-      <!-- Navbar -->
       <nav
         class="navbar navbar-expand-lg navbar-light fixed-top px-3"
         id="navbar"
       >
-        <!-- For the Cursor -->
-        <div class="cursors" id="cursordiv">
-          <span class="cursor cursor--darkl"></span>
-          <span class="cursor cursor--darks"></span>
-        </div>
-        <!-- For the Cursor Ends-->
         <a class="navbar-brand" id="brand"
           ><img id="myImg" src="public/img/Nav-logo.png" alt="" />
          <span class="d-none d-sm-inline">GEEKTOBERFEST'20</span></a
         >
+        
         <button
-          class="navbar-toggler"
+          class="navbar-toggler nav-toggle-btn"
           type="button"
           data-toggle="collapse"
           data-target="#navbarNav"
@@ -113,10 +53,6 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <label class="switch px-3">
-          <input type="checkbox" class="btn-toggle" />
-          <span class="slider round"></span>
-        </label>
 
 
         <div class="links collapse navbar-collapse" id="navbarNav">
@@ -142,99 +78,117 @@
               >
             </li>
             <li class="nav-item">
-
-              <a class="nav-link " href="../index.html#sectionLink5"
+              <a class="nav-link " href="../index.html#sectionLink6"
+                >Mentors</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#contactus-profile-page"
                 >Contact</a
               >
             </li>
           </ul>
+          <label class="switch">
+            <input type="checkbox" class="btn-toggle" />
+            <span class="slider round"></span>
+          </label>
         </div>
-        <!-- Navbar Ends -->
 
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        
-        <label class="switch">
-          <input type="checkbox" class="btn-toggle" />
-          <span class="slider round"></span>
-        </label>
 
       </nav>
     </div>
-    <div class="container profile-page">
-      <br />
-      <div class="profile-img">
-        <img id="userImg" src="" alt="" style="width: 100%" />
-      </div>
-      <div class="profile-card">
-        <h1 id="name"></h1>
-        <p id="about"></p>
-        <p id="demo"></p>
-        <div style="margin: 20px 0">
-          <a id="fbLink" href=""><i class="fab fa-facebook"></i></a>
-          <a id="gitLink" href=""><i class="fab fa-github"></i></a>
+
+    <div id="profile">
+      <div class="container profile-page">
+        <br />
+        <div class="profile-img">
+          <img id="userImg" src="" alt="" style="width: 100%" />
+        </div>
+        <div class="profile-card">
+          <div class="personal-info">
+            <h1 id="name" class="name"></h1>
+            <p id="about" class="about"></p>
+            <div class="personal-social">
+              <a id="gitLink" href=""><i class="fab fa-github personal-link"></i></a>
+              <a id="fbLink" href=""><i class="fab fa-facebook personal-link"></i></a>
+            </div>
+          </div>
+          <div class="no-of-pr"><h3 class="pr-title" id="pr-title">Number of PRs : </h3></div>
+          <p id="demo"></p>
+          <div class="table-cont">
+            <table id="table" class="table table-borderless table-striped">
+              <thead class="thead">
+                <tr>
+                  <!-- <th scope="col">#</th> -->
+                  <th scope="col">PR Link</th>
+                  <th scope="col">Issue Link</th>
+                  <th scope="col">PR Summary</th>
+                  <!-- <th scope="col">Description</th> -->
+                </tr>
+              </thead>
+              <tbody id="tbody" class="tbody"> 
+
+              </tbody>
+            </table>
+        </div>
         </div>
       </div>
     </div>
-    <br />
+    
+    <!-- Footer Section -->
+    <div class="section fp-auto-height" id="contactus-profile-page">
+      <footer id="footer">
+        <div class="footer">
+          <ul class="social list-unstyled mt-4">
+            <p class="contact-text h4"><em>Contact Us At:</em></p>
+            <li>
+              <a
+                href="https://www.facebook.com/geekhaveniiita"
+                target="_blank"
+                class="fab fa-2x fa-facebook icon"
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://twitter.com/geekhaveniiita?s=20"
+                target="_blank"
+                class="fab fa-2x fa-twitter icon"
+              ></a>
+            </li>
 
-<<<<<<< HEAD
+            <li>
+              <a
+                href="https://www.linkedin.com/company/geekhaven-iiita"
+                target="_blank"
+                class="fab fa-2x fa-linkedin icon"
+              ></a>
+            </li>
 
-=======
-    <script>
-      let params = new URLSearchParams(document.location.search.substring(1));
-      let username = params.get("username");
-      const name = document.getElementById("name");
-      const about = document.getElementById("about");
-      const image = document.getElementById("userImg");
-      const fbLink = document.getElementById("fbLink");
-      const gitLink = document.getElementById("gitLink");
+            <li>
+              <a
+                href="https://github.com/GeekHaven/"
+                target="_blank"
+                class="fab fa-2x fa-github icon"
+              ></a>
+            </li>
+            <li>
+              <a
+                href="mailto:geekhaven@iiita.ac.in"
+                target="_blank"
+                class="fa fa-2x fa-envelope icon"
+              ></a>
+            </li>
+          </ul>
+          <div class="text-copyright">
+            <p class="m-0 pb-2">
+              © Copyright <strong>Geektoberfest'20</strong> | GeekHaven - IIIT
+              Allahabad
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
 
-      fetch(
-        "https://geekhaven.github.io/Geektoberfest-Main/contributions/" +
-          username +
-          ".json"
-      )
-        .then((res) => res.text())
-        .then((res) => getDetails(res))
-        .catch((err) => {
-          console.log(err);
-        });
-
-      function getDetails(data) {
-        var obj = JSON.parse(data);
-        name.innerHTML = obj.name;
-        about.innerHTML = obj.about;
-        image.src = obj.imageurl;
-        fbLink.href = obj.facebook;
-        gitLink.href = obj.github;
-
-        let text, fLen, i;
-        let prs = obj.prs;
-        fLen = prs.length;
-
-        text = "<ul>";
-        for (i = 0; i < fLen; i++) {
-          text += "<li>" + prs[i] + "</li>";
-        }
-        text += "</ul>";
-
-        document.getElementById("demo").innerHTML = text;
-        let title=document.getElementById('title');
-                  title.innerHTML=name.innerHTML;
-                  document.title='Profile - '+title.innerHTML;
-      }
-    </script>
->>>>>>> main
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="public/js/profile.js"></script>
     <!--bootstrap v4 CDN---->

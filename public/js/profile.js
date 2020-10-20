@@ -10,66 +10,6 @@ btn.addEventListener("click", function () {
 //toggle button end
 
 
-//For the custom Cursor
-const root = document.querySelector(":root");
-document.addEventListener("mousemove", (e) => {
-  root.style.setProperty("--x", e.clientX + "px");
-  root.style.setProperty("--y", e.clientY + "px");
-});
-
-let smallcursor=document.querySelector(".cursor--darks");
-let largecursor=document.querySelector(".cursor--darkl");
-
-
-document.addEventListener("mousemove",movecursor);
-
-function movecursor(e){
-  const root = document.querySelector(":root");
-document.addEventListener("mousemove", (e) => {
-  root.style.setProperty("--x", e.clientX + "px");
-  root.style.setProperty("--y", e.clientY + "px");
-});
-}
-
-let links=Array.from(document.querySelectorAll("a"));
-if(t){
-links.forEach((link)=>{
-  link.addEventListener("mouseover",()=>{
-
-    smallcursor.classList.add("grow");
-    //smallcursor.classList.remove("cursor--small");
-  });
-  link.addEventListener("mouseout",()=>{
-
-    smallcursor.classList.remove("grow");
-  });
-});
-}
-
-//Disables the cursor for touch device having width less then 768 px only
-var supportsTouch = "ontouchstart" in window || navigator.msMaxTouchPoints;
-var cursor = document.getElementById("cursordiv");
-function myFunction(x) {
-  if (x.matches && supportsTouch === true) {
-    while (cursor.firstChild) {
-      cursor.removeChild(cursor.firstChild);
-    }
-  } else {
-    var node1 = document.createElement("SPAN");
-    node1.classList.add("cursor");
-    node1.classList.add("cursor--large");
-    cursor.appendChild(node1);
-
-    var node2 = document.createElement("SPAN");
-    node2.classList.add("cursor");
-    node2.classList.add("cursor--small");
-    cursor.appendChild(node2);
-  }
-}
-var x = window.matchMedia("(max-width: 768px)");
-myFunction(x);
-x.addListener(myFunction);
-
 // Fetch details of mentioned user in profile.html
 let params = new URLSearchParams(document.location.search.substring(1));
       let username = params.get("username");
@@ -78,6 +18,8 @@ let params = new URLSearchParams(document.location.search.substring(1));
       const image = document.getElementById("userImg");
       const fbLink = document.getElementById("fbLink");
       const gitLink = document.getElementById("gitLink");
+      const numOfPr = document.getElementById("pr-title");
+      const tableCont = document.getElementById("tbody");
 
       fetch(
         "https://geekhaven.github.io/Geektoberfest-Main/contributions/" +
@@ -98,15 +40,41 @@ let params = new URLSearchParams(document.location.search.substring(1));
         fbLink.href = obj.facebook;
         gitLink.href = obj.github;
 
-        let text, fLen, i;
+        var tbody, fLen, i;
         let prs = obj.prs;
         fLen = prs.length;
+        numOfPr.innerHTML += fLen;
 
-        text = "<ul>";
-        for (i = 0; i < fLen; i++) {
-          text += "<li>" + prs[i] + "</li>";
+        // const giturl = "https://api.github.com/repos/";
+
+        function insertData(link){
+          fetch(link)
+            .then((res) => res.json())
+            .then((data) => {
+              pr=data.html_url.split('/');
+              pr = 'In ' + pr[pr.length-4] + ' / '+ pr[pr.length-3];
+              issue = data.issue_url.split('/');
+              issue = issue[issue.length-3] + " 's Issue #"+ issue[issue.length-1];
+              x="<tr>";
+              x +="<td><a class='left' href='"+data.html_url+"'>"+pr+"</a></td>";
+              x +="<td><a href='"+data.issue_url+"'>"+issue+"</a></td>";
+              x +="<td>"+data.title+"<div class='pr-changes'><span class='pr-adds'>+ "+data.additions+"&nbsp; &nbsp;</span><span class='pr-dels'> -"+data.deletions+"</span></div></td>";
+              x += "</tr>";
+              tableCont.innerHTML += x;
+            });
         }
-        text += "</ul>";
+       
+        prs.forEach((pr) => {
+          // Following lines get the details from github api for the particular pull request
 
-        document.getElementById("demo").innerHTML = text;
+            // setting up the url
+            var giturl = "https://api.github.com/repos/" + pr.substring(19);
+            var urlarray = giturl.split('/');
+            // console.log(urlarray);
+            urlarray[urlarray.length-2] = 'pulls';
+            giturl = urlarray.join('/');
+            // getting description of PR
+            insertData(giturl);
+        }
+        )
       }
