@@ -1133,4 +1133,24 @@ Custom Cursor
   #section1 h1 {
     font-size: 10vw !important;
   }
+
+   ul.navbar-nav{
+    margin-top:12px;
+    margin-left:-18px;
+    margin-right:-20px;
+  }
+  li{
+    background-color: rgb(235, 236, 255);
+  }
+  li.nav-item{
+    margin-left:2px;
+  }
+  body.dark-theme li{
+background-color: #1a1a2e;
+  }
+
+  label.switch{
+margin-top: -333px;
+margin-right:40px;
+  }
 }
