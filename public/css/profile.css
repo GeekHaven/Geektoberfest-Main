@@ -87,6 +87,17 @@ body{
     margin: 0;
     border-radius: 5px;
 }
+th{
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+th:nth-child(1){
+    text-align: left;
+}
+th:nth-child(3){
+    text-align: right;
+}
 .thead{
     border-color: transparent;
     border-radius: 10px;
@@ -154,7 +165,7 @@ body.dark-theme .profile-card{
         width: 100%;
     }
     .table td, .table th{
-        padding: 0.4rem;
+        padding: 0.2rem;
     }
     .profile-page{
         width: 100%;
@@ -164,6 +175,17 @@ body.dark-theme .profile-card{
 @media(max-width: 475px){
     .container{
         max-width: 100%;
+    }
+    .thead{
+        font-size: 0.8rem;
+    }
+    .tbody{
+        font-size: 0.8rem;
+    }
+}
+@media(max-width: 335px){
+    .tbody{
+        font-size: 0.8rem;
     }
 }
 @media(min-width:768px){
