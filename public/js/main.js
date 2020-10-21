@@ -43,6 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+let t = true;
+
 //toggle button
 let darkMode = localStorage.getItem('darkMode'); 
 const toggleButton = document.getElementById("toggle");
@@ -71,6 +73,7 @@ darkModeToggle.addEventListener('click', () => {
   } else {  
     disableDarkMode(); 
   }
+  t = !t;
 });
 // const btn = document.querySelector(".btn-toggle");
 // let t = true;
