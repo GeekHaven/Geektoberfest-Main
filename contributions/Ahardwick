@@ -1,0 +1,12 @@
+{
+        "name" : "Alyssa Hardwick",
+        "imageurl" : "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9c6b0742-9f7f-43c2-a2e4-592964071127/dbcyxou-72692287-9983-44ff-bd7d-ac121088d152.png/v1/fill/w_400,h_625,strp/brown_hair_anime_girl_render_by_thigrizzle_dbcyxou-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD02MjUiLCJwYXRoIjoiXC9mXC85YzZiMDc0Mi05ZjdmLTQzYzItYTJlNC01OTI5NjQwNzExMjdcL2RiY3l4b3UtNzI2OTIyODctOTk4My00NGZmLWJkN2QtYWMxMjEwODhkMTUyLnBuZyIsIndpZHRoIjoiPD00MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.E84qFzMyzUNQuY1gHx2Lo2cExVO-B644-0DPLnCQG7A",
+        "about" : "Hi! My name is Alyssa. I am an aspiring frontend developer, an artist, and a designer",
+        "facebook": "",
+        "github" : "https://github.com/alyssahardwick",
+        "prs": [
+            "https://github.com/alyssahardwick/My-Portfolio-Site",
+            "https://github.com/alyssahardwick/Mini-projects",
+            ...
+        ]
+     }
