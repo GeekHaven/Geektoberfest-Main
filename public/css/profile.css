@@ -92,6 +92,12 @@ th{
     font-weight: 600;
     text-align: center;
 }
+th:nth-child(1){
+    text-align: left;
+}
+th:nth-child(3){
+    text-align: right;
+}
 .thead{
     border-color: transparent;
     border-radius: 10px;
