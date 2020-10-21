@@ -45,19 +45,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //toggle button
 let darkMode = localStorage.getItem('darkMode'); 
-
+const toggleButton = document.getElementById("toggle");
 const darkModeToggle = document.querySelector('.btn-toggle');
 
 const enableDarkMode = () => {
   document.body.classList.add('dark-theme');
   localStorage.setItem('darkMode', 'enabled');
   document.getElementById("myImg").src = "public/img/gh.png";
+  toggleButton.checked = true;
 }
 
 const disableDarkMode = () => {
   document.body.classList.remove('dark-theme');
   localStorage.setItem('darkMode', null);
   document.getElementById("myImg").src = "public/img/Nav-logo.png";
+  toggleButton.checked = false;
 }
 if (darkMode === 'enabled') {
   enableDarkMode();
