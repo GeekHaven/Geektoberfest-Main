@@ -87,6 +87,11 @@ body{
     margin: 0;
     border-radius: 5px;
 }
+th{
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
 .thead{
     border-color: transparent;
     border-radius: 10px;
@@ -165,11 +170,14 @@ body.dark-theme .profile-card{
     .container{
         max-width: 100%;
     }
+    .thead{
+        font-size: 0.8rem;
+    }
     .tbody{
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 }
-@media(max-width: 320px){
+@media(max-width: 335px){
     .tbody{
         font-size: 0.8rem;
     }
