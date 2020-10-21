@@ -182,6 +182,9 @@ body.dark-theme .profile-card{
     .tbody{
         font-size: 0.8rem;
     }
+    .pr-changes{
+        font-size: 0.8rem;
+    }
 }
 @media(max-width: 335px){
     .tbody{
