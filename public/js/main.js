@@ -44,14 +44,40 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 //toggle button
-const btn = document.querySelector(".btn-toggle");
-let t = true;
-btn.addEventListener("click", function () {
-  document.body.classList.toggle("dark-theme");
-  if (t) document.getElementById("myImg").src = "public/img/gh.png";
-  else document.getElementById("myImg").src = "public/img/Nav-logo.png";
-  t = !t;
+let darkMode = localStorage.getItem('darkMode'); 
+
+const darkModeToggle = document.querySelector('.btn-toggle');
+
+const enableDarkMode = () => {
+  document.body.classList.add('dark-theme');
+  localStorage.setItem('darkMode', 'enabled');
+  document.getElementById("myImg").src = "public/img/gh.png";
+}
+
+const disableDarkMode = () => {
+  document.body.classList.remove('dark-theme');
+  localStorage.setItem('darkMode', null);
+  document.getElementById("myImg").src = "public/img/Nav-logo.png";
+}
+if (darkMode === 'enabled') {
+  enableDarkMode();
+}
+darkModeToggle.addEventListener('click', () => {
+  darkMode = localStorage.getItem('darkMode'); 
+  if (darkMode !== 'enabled') {
+    enableDarkMode(); 
+  } else {  
+    disableDarkMode(); 
+  }
 });
+// const btn = document.querySelector(".btn-toggle");
+// let t = true;
+// btn.addEventListener("click", function () {
+//   document.body.classList.toggle("dark-theme");
+//   if (t) document.getElementById("myImg").src = "public/img/gh.png";
+//   else document.getElementById("myImg").src = "public/img/Nav-logo.png";
+//   t = !t;
+// });
 //toggle button end
 //
 
