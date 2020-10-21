@@ -39,7 +39,7 @@ let params = new URLSearchParams(document.location.search.substring(1));
         image.src = obj.imageurl;
         fbLink.href = obj.facebook;
         gitLink.href = obj.github;
-
+        document.getElementById('tit').innerHTML="Profile-"+obj.name;
         var tbody, fLen, i;
         let prs = obj.prs;
         fLen = prs.length;
