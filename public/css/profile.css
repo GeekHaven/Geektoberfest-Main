@@ -154,7 +154,7 @@ body.dark-theme .profile-card{
         width: 100%;
     }
     .table td, .table th{
-        padding: 0.4rem;
+        padding: 0.2rem;
     }
     .profile-page{
         width: 100%;
@@ -164,6 +164,14 @@ body.dark-theme .profile-card{
 @media(max-width: 475px){
     .container{
         max-width: 100%;
+    }
+    .tbody{
+        font-size: 1rem;
+    }
+}
+@media(max-width: 320px){
+    .tbody{
+        font-size: 0.8rem;
     }
 }
 @media(min-width:768px){
