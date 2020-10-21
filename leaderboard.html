@@ -9,49 +9,76 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     />
     <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap"
       rel="stylesheet"
     />
     <!-- Favicon -->
     <link rel="icon" href="public/img/favicon.png" />
+
+  </head>
+  <body>
+    <div id="leaderboard-container" class="column leaderboard-container">
+      <p class="h1 mb-5">Geektoberfest'20 Leaderboard</p>
+      <table class="table table-borderless" id="leaderboard-table">
+        <div class="table-header">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col"><strong>RANK</strong></th>
+              <th scope="col"><strong>PICTURE</strong></th>
+              <th scope="col"><strong>USERNAME</strong></th>
+              <th scope="col"><strong>NUMBER OF PRs</strong></th>
+              <th scope="col"><strong>GITHUB</strong></th>
+            </tr>
+          </thead>
+        </div>
+        <tbody></tbody>
+        <script src="./public/js/leaderboard.js"></script>
+      </table>
+    </div>
+
     <style>
       .leaderboard-image {
         height: 50px;
         width: 50px;
+        border-radius: 50%;
       }
       body {
-        padding: 30px;
+        padding: 20px;
         text-align: center;
+        background-image: linear-gradient(-225deg, #69EACB 0%, #EACCF8 48%, #6654F1 100%);
         font-family: "Nunito", sans-serif;
-        background: rgb(72, 6, 172);
-        background: linear-gradient(
-          90deg,
-          rgba(72, 6, 172, 1) 0%,
-          rgba(25, 95, 231, 1) 30%,
-          rgb(146, 163, 161) 60%,
-          rgba(59, 193, 31, 1) 100%
-        );
-        color: white;
+        color: black;
         font-size: 20px;
       }
-    </style>
-  </head>
 
-  <body>
-    <div id="leaderboard-container" class="column leaderboard-container">
-      <table id="leaderboard-table" style="width: 100%">
-        <div class="table-header">
-          <tr>
-            <td><strong>RANK</strong></td>
-            <td><strong>PICTURE</strong></td>
-            <td><strong>USERNAME</strong></td>
-            <td><strong>NUMBER OF PRs</strong></td>
-            <td><strong>GITHUB</strong></td>
-          </tr>
-        </div>
-        <br />
-        <script src="./public/js/leaderboard.js"></script>
-      </table>
-    </div>
+      .h1{
+        text-align: center;
+        text-transform: uppercase;
+      }
+      table{
+        max-width: 1000px;
+        max-height: 300px;
+        justify-content: center;
+        margin: 0 auto;
+        background-color: white;
+      }
+
+      a{
+        color: black;
+      }
+      a:hover{
+        color: #992be3;
+      }
+
+      .fa-github{
+        font-size: 30px;
+      }
+    </style>
   </body>
 </html>
