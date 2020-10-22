@@ -433,7 +433,7 @@ td {
   color: white;
   cursor: pointer;
   display: none;
-  z-index:10;
+  z-index: 10;
 }
 
 #scrollbtn:hover {
@@ -735,10 +735,13 @@ td {
 .links_par a i {
   font-size: 40px;
   color: #2af598;
-  margin: 4px 20px;
+  margin: 4px 15px;
 }
 .fa-github:hover {
   color: red;
+}
+.fa-user:hover {
+  color: blue;
 }
 .fa-facebook:hover {
   color: yellow;
@@ -1135,41 +1138,39 @@ Custom Cursor
     font-size: 10vw !important;
   }
 }
-  @media screen and (max-width:993px){
-
-   ul.navbar-nav{
-    margin-top:12px;
-    margin-left:-18px;
-    margin-right:-20px;
+@media screen and (max-width: 993px) {
+  ul.navbar-nav {
+    margin-top: 12px;
+    margin-left: -18px;
+    margin-right: -20px;
   }
-  li{
+  li {
     background-color: rgb(235, 236, 255);
   }
-  li.nav-item{
-    margin-left:2px;
+  li.nav-item {
+    margin-left: 2px;
   }
-  body.dark-theme li{
-background-color: #1a1a2e;
+  body.dark-theme li {
+    background-color: #1a1a2e;
   }
 
-  label.switch{
-margin-top: -333px;
-margin-right:40px;
+  label.switch {
+    margin-top: -333px;
+    margin-right: 40px;
   }
- #navbarNav li a {
-   text-decoration-line: none;
-   text-decoration-style: none;
-   border-bottom: none;
- }
- #navbarNav li a::before{
-   text-decoration-line: none;
-   text-decoration-style:none;
-   border-bottom: none;
- }
- #navbarNav li a:hover::before{
-   text-decoration-line:none;
-   text-decoration-style:none;
-   border-bottom:2px solid #7c32d1;
-   
- }
+  #navbarNav li a {
+    text-decoration-line: none;
+    text-decoration-style: none;
+    border-bottom: none;
+  }
+  #navbarNav li a::before {
+    text-decoration-line: none;
+    text-decoration-style: none;
+    border-bottom: none;
+  }
+  #navbarNav li a:hover::before {
+    text-decoration-line: none;
+    text-decoration-style: none;
+    border-bottom: 2px solid #7c32d1;
+  }
 }
