@@ -1,3 +1,6 @@
+// custom Image URL goes here
+const customUrl ="./public/img/user.png";
+
 const githubApiUrl =
             "https://api.github.com/repos/GeekHaven/Geektoberfest-Main/commits/main";
           const participantBaseUrl =
@@ -53,9 +56,9 @@ const githubApiUrl =
 
                               cell1.innerHTML = rank;
                               cell2.innerHTML =
-                                '<img class="leaderboard-image" src="' +
-                                user.imageurl +
-                                '">';
+                              '<img class="leaderboard-image" src="' +
+                              user.imageurl +'"onerror="this.src='+
+                              'customUrl' +'">';
                               cell3.innerHTML =
                                 '<div class="participant-name">' +
                                 user.name +
