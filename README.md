@@ -80,22 +80,23 @@ We will follow the official GitHub documentation for setting up the repo.
 
 Please help us follow the best practice to make it easy for the reviewer as well as the contributor. We want to focus on the code quality more than on managing pull request ethics.
 
-- People before code: If any of the following rules are violated, the pull-requests must not be rejected. This is to create an easy and joyful onboarding process for new programmers and first-time contributors.
+ - People before code: If any of the following rules are violated, the pull-requests must not be rejected. This is to create an easy and joyful onboarding process for      
+   new programmers and first-time contributors.
 
-- Single commit per pull request and name the commit as something meaningful, example: Updating <-username->'s PR file with a new PR in <-repo-name->.
+ - Single commit per pull request and name the commit as something meaningful, example: Updating <-username->'s PR file with a new PR in <-repo-name->.
 
-- Reference the issue numbers in the commit message if it resolves an open issue. Follow the pattern Fixes #<-issue number-> <-commit message->
+ - Reference the issue numbers in the commit message if it resolves an open issue. Follow the pattern Fixes #<-issue number-> <-commit message->
 
-- Provide the link to live gh-pages from your forked repository or relevant screenshot for easier review.
+ - Provide the link to live gh-pages from your forked repository or relevant screenshot for easier review.
 
-- Pull Request older than 3 days with no response from the contributor shall be marked closed.
+ - Pull Request older than 3 days with no response from the contributor shall be marked closed.
 
-- Do not make PR which is not related to any issues. You can create an issue and solve it once we approve them.
+ - Do not make PR which is not related to any issues. You can create an issue and solve it once we approve them.
 
-- Avoid duplicate PRs, if need be comment on the older PR with the PR number of the follow-up (new PR) and close the obsolete PR yourself.
+ - Avoid duplicate PRs, if need be comment on the older PR with the PR number of the follow-up (new PR) and close the obsolete PR yourself.
 
-- Be polite: Be polite to other community members.
+ - Be polite: Be polite to other community members.
 
-- Communicate: Whether you are working on a new feature or facing a doubt please feel free to ask us on our slack channel. We will be happy to help you out.
+ - Communicate: Whether you are working on a new feature or facing a doubt please feel free to ask us on our slack channel. We will be happy to help you out.
 
 ### Happy Coding :v:
