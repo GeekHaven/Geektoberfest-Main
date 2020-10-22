@@ -433,6 +433,7 @@ td {
   color: white;
   cursor: pointer;
   display: none;
+  z-index:10;
 }
 
 #scrollbtn:hover {
