@@ -82,7 +82,18 @@ body{
     border: 3px #056676 solid;
     border-radius: 10px;
     margin-bottom: 5%;
+    opacity: 0;
+    display: none;
 }
+.fetchLoader {
+    background: url("../img/ping.gif") center no-repeat;
+    height: 400px;
+    width: 90%;
+    margin: auto;
+    border: 3px #056676 solid;
+    border-radius: 10px;
+    margin-bottom: 5%;
+  }
 .table{
     margin: 0;
     border-radius: 5px;
