@@ -57,7 +57,7 @@ let params = new URLSearchParams(document.location.search.substring(1));
               issue = issue[issue.length-3] + " 's Issue #"+ issue[issue.length-1];
               x="<tr>";
               x +="<td><a class='left' href='"+data.html_url+"'>"+pr+"</a></td>";
-              x +="<td><a href='"+data.issue_url+"'>"+issue+"</a></td>";
+              // x +="<td><a href='"+data.issue_url+"'>"+issue+"</a></td>";
               x +="<td>"+data.title+"<div class='pr-changes'><span class='pr-adds'>+ "+data.additions+"&nbsp; &nbsp;</span><span class='pr-dels'> -"+data.deletions+"</span></div></td>";
               x += "</tr>";
               tableCont.innerHTML += x;
