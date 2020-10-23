@@ -123,6 +123,7 @@ button {
   z-index: 999;
 }
 
+
 #content {
   display: none;
   transition: #9191e2 1s ease-out;
@@ -1144,15 +1145,15 @@ Custom Cursor
     margin-left: -18px;
     margin-right: -20px;
   }
-  li {
+  /* li {
     background-color: rgb(235, 236, 255);
-  }
+  } */
   li.nav-item {
     margin-left: 2px;
   }
-  body.dark-theme li {
+  /* body.dark-theme li {
     background-color: #1a1a2e;
-  }
+  } */
 
   label.switch {
     margin-top: -333px;
