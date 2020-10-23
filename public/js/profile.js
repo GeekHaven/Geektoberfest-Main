@@ -9,6 +9,19 @@ btn.addEventListener("click", function () {
 });
 //toggle button end
 
+// pre data loader 
+const loader = document.getElementById('fetchLoader')
+const main = document.getElementById('fetchData')
+
+function preLoader() {
+  setTimeout(() => {
+    loader.style.opacity = 0;
+    loader.style.display = "none";
+    main.style.display = 'flex';
+    main.style.opacity = 1;
+  }, 5000);
+}
+// pre data loader end 
 
 // Fetch details of mentioned user in profile.html
 let params = new URLSearchParams(document.location.search.substring(1));
@@ -77,4 +90,5 @@ let params = new URLSearchParams(document.location.search.substring(1));
             insertData(giturl);
         }
         )
+        preLoader();
       }
