@@ -1150,10 +1150,15 @@ Custom Cursor
   li.nav-item {
     margin-left: 2px;
   }
+  
+  .social li {
+    background-color: #232526 !important;
+  }
+
   body.dark-theme li {
     background-color: #1a1a2e;
   }
-
+  
   label.switch {
     margin-top: -333px;
     margin-right: 40px;
