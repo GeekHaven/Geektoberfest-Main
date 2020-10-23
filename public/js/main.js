@@ -256,12 +256,12 @@ fetch(githubApiUrl)
                   x = x + g;
                   x =
                     x +
-                    '</p></div><div class="links_par"><a  href="' +
+                    '</p></div><div class="links_par"><a target= "_blank" href="' +
                     data.github +
-                    '"><i class="fab fa-github"></i></a><a  href="' +
+                    '"><i class="fab fa-github"></i></a><a target= "_blank" href="' +
                     participantProfile +
                     participantUsername +
-                    '"><i class="fa fa-user"></i></a><a href="' +
+                    '"><i class="fa fa-user"></i></a><a target= "_blank"  href="' +
                     data.facebook +
                     '"><i class="fab fa-facebook"></i></a><div></div></div>';
                   participantsContainer.innerHTML += x;
