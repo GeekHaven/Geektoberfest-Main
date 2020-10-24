@@ -92,3 +92,18 @@ let params = new URLSearchParams(document.location.search.substring(1));
         )
         preLoader();
       }
+
+    // ============= search user ==================
+    const getUser = document.getElementById('getUser')
+    getUser.addEventListener('click',(e) => {
+      e.preventDefault()
+      const userRequested = document.getElementById('user').value
+      if(userRequested === ''){
+        alert("You need to enter some user name!")
+        return
+      }
+      else {
+        window.location.assign(`https://geekhaven.github.io/Geektoberfest-Main/profile.html?username=${userRequested}`)
+      document.getElementById('user').value = ''
+      }
+    })
