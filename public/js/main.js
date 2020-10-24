@@ -258,12 +258,12 @@ fetch(githubApiUrl)
                     x +
                     '</p></div><div class="links_par"><a  href="' +
                     data.github +
-                    '"><i class="fab fa-github"></i></a><a  href="' +
+                    '" target="_blank"><i class="fab fa-github"></i></a><a  href="' +
                     participantProfile +
                     participantUsername +
-                    '"><i class="fa fa-user"></i></a><a href="' +
+                    '" target="_blank"><i class="fa fa-user"></i></a><a href="' +
                     data.facebook +
-                    '"><i class="fab fa-facebook"></i></a><div></div></div>';
+                    '" target="_blank"><i class="fab fa-facebook"></i></a><div></div></div>';
                   participantsContainer.innerHTML += x;
                 })
                 .catch((err) => console.log(participant + ": " + err));
