@@ -20,17 +20,81 @@
     />
     <!-- Favicon -->
     <link rel="icon" href="public/img/favicon.png" />
-
+    <link rel="stylesheet" href="public/css/leaderboard.css" />
   </head>
   <body>
+    <haeder>
+      <div class="container">
+        <nav
+          class="navbar navbar-expand-lg navbar-light fixed-top px-3"
+          id="navbar"
+        >
+          <!-- For the Cursor -->
+          <div class="cursors" id="cursordiv">
+            <span class="cursor cursor--darkl"></span>
+            <span class="cursor cursor--darks"></span>
+          </div>
+          <a class="navbar-brand" id="brand"
+            ><img id="myImg" src="public/img/Nav-logo.png" alt="" />
+            <span class="d-none d-sm-inline">GEEKTOBERFEST'20</span></a
+          >
+
+          <button
+            class="navbar-toggler nav-toggle-btn"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="links collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link hvr-grow-shadow" href="./index.html#sectionLink1"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#section2">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/index.html#section3">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/index.html#section4">Participants</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/index.html#section6">Mentors</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./leaderboard.html" target="_self"
+                  >Leaderboard</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/index.html#section5">Contact</a>
+              </li>
+            </ul>
+            
+          </div>
+        </nav>
+      </div>
+    </haeder>
     <div id="leaderboard-container" class="column leaderboard-container">
       <p class="h1 mb-2">Geektoberfest'20 Leaderboard</p>
       <center>
-      <div style="max-width:1000px;">
-        <p class="h5 mb-5">
-          Note: Quality of the PRs you make has way more weightage in final evaluation than the Number of PRs you make, don't take this leaderboard as a sign of who's winning. Making the most number of PRs is not the goal of this event.
-        </p>
-      </div>
+        <div style="max-width: 1000px">
+          <p class="h5 mb-5">
+            Note: Quality of the PRs you make has way more weightage in final
+            evaluation than the Number of PRs you make, don't take this
+            leaderboard as a sign of who's winning. Making the most number of
+            PRs is not the goal of this event.
+          </p>
+        </div>
       </center>
       <table class="table table-borderless" id="leaderboard-table">
         <div class="table-header">
@@ -47,45 +111,58 @@
         <tbody></tbody>
         <script src="./public/js/leaderboard.js"></script>
       </table>
+      
     </div>
+    <div class="section fp-auto-height" id="section5">
+      <footer id="footer">
+        <div class="footer">
+          <ul class="social list-unstyled mt-4">
+            <p class="contact-text h4"><em>Contact Us At:</em></p>
+            <li>
+              <a
+                href="https://www.facebook.com/geekhaveniiita"
+                target="_blank"
+                class="fab fa-2x fa-facebook icon"
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://twitter.com/geekhaveniiita?s=20"
+                target="_blank"
+                class="fab fa-2x fa-twitter icon"
+              ></a>
+            </li>
 
-    <style>
-      .leaderboard-image {
-        height: 50px;
-        width: 50px;
-        border-radius: 50%;
-      }
-      body {
-        padding: 20px;
-        text-align: center;
-        background-image: linear-gradient(-225deg, #69EACB 0%, #EACCF8 48%, #6654F1 100%);
-        font-family: "Nunito", sans-serif;
-        color: black;
-        font-size: 20px;
-      }
+            <li>
+              <a
+                href="https://www.linkedin.com/company/geekhaven-iiita"
+                target="_blank"
+                class="fab fa-2x fa-linkedin icon"
+              ></a>
+            </li>
 
-      .h1{
-        text-align: center;
-        text-transform: uppercase;
-      }
-      table{
-        max-width: 1000px;
-        max-height: 300px;
-        justify-content: center;
-        margin: 0 auto;
-        background-color: white;
-      }
-
-      a{
-        color: black;
-      }
-      a:hover{
-        color: #037bfc;
-      }
-
-      .fa-user{
-        font-size: 30px;
-      }
-    </style>
+            <li>
+              <a
+                href="https://github.com/GeekHaven/"
+                target="_blank"
+                class="fab fa-2x fa-github icon"
+              ></a>
+            </li>
+            <li>
+              <a
+                href="mailto:geekhaven@iiita.ac.in"
+                target="_blank"
+                class="fa fa-2x fa-envelope icon"
+              ></a>
+            </li>
+          </ul>
+          <div class="text-copyright">
+            <p class="m-0 pb-2">
+              © Copyright <strong>Geektoberfest'20</strong> | GeekHaven - IIIT
+              Allahabad
+            </p>
+          </div>
+        </div>
+      </footer>
   </body>
 </html>
