@@ -32,21 +32,24 @@
         </p>
       </div>
       </center>
-      <table class="table table-borderless" id="leaderboard-table">
-        <div class="table-header">
-          <thead class="thead-dark">
-            <tr>
-              <th scope="col"><strong>RANK</strong></th>
-              <th scope="col"><strong>PICTURE</strong></th>
-              <th scope="col"><strong>USERNAME</strong></th>
-              <th scope="col"><strong>NUMBER OF PRs</strong></th>
-              <th scope="col"><strong>DETAILS</strong></th>
-            </tr>
-          </thead>
-        </div>
-        <tbody></tbody>
-        <script src="./public/js/leaderboard.js"></script>
-      </table>
+      <div id="preloader"></div>
+      <div class="table-content" id="table-data">
+        <table class="table table-borderless" id="leaderboard-table">
+          <div class="table-header">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col"><strong>RANK</strong></th>
+                <th scope="col"><strong>PICTURE</strong></th>
+                <th scope="col"><strong>USERNAME</strong></th>
+                <th scope="col"><strong>NUMBER OF PRs</strong></th>
+                <th scope="col"><strong>DETAILS</strong></th>
+              </tr>
+            </thead>
+          </div>
+          <tbody></tbody>
+          <script src="./public/js/leaderboard.js"></script>
+        </table>
+      </div>
     </div>
 
     <style>
@@ -63,7 +66,19 @@
         color: black;
         font-size: 20px;
       }
-
+      #preloader{
+        background: url(./public/img/leaderboard-preloader.gif) no-repeat center;
+        background-size: contain;
+        height: 450px;
+        width: 80%;
+        /* border: #056676 3px solid; */
+        margin-bottom: 5%;
+        border-radius: 10px;
+        margin: auto;
+      }
+      .table-content{
+        display: none;
+      }
       .h1{
         text-align: center;
         text-transform: uppercase;
