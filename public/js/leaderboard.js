@@ -69,7 +69,7 @@ const githubApiUrl =
                               cell5.innerHTML =
                                 '<div class="github-link"><a  href="' +
                                 link +
-                                '"><i class="fas fa-user"></i></a></div>';
+                                '" target="_blank"><i class="fas fa-user"></i></a></div>';
                             });
                           })
                           .catch((error) => console.log(error));
