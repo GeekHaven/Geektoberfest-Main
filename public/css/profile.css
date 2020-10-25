@@ -98,6 +98,15 @@ body{
     margin: 0;
     border-radius: 5px;
 }
+.errorImage{
+  background: url("../img/error404.gif") center no-repeat;
+  height: 400px;
+  width: 90%;
+  margin: auto;
+  border: 3px #056676 solid;
+  border-radius: 10px;
+  margin-bottom: 5%;
+}
 th{
     font-size: 1.5rem;
     font-weight: 600;
