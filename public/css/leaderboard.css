@@ -19,7 +19,19 @@ body {
   font-family: "Nunito", sans-serif;
   color: black;
 }
-
+#preloader{
+  background: url(../img/leaderboard-preloader.gif) no-repeat center;
+  background-size: contain;
+  height: 450px;
+  width: 20%;
+  /* border: #056676 3px solid; */
+  margin-bottom: 5%;
+  border-radius: 10px;
+  margin: auto;
+}
+.table-content{
+  display: none;
+}
 .h1 {
   text-align: center;
   text-transform: uppercase;
