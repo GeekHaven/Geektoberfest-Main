@@ -1,6 +1,16 @@
 // custom Image URL goes here
 const customUrl ="./public/img/user.png";
+const loader = document.getElementById("preloader");
+const main = document.getElementById("table-data");
 
+function preloader(){
+  setTimeout(()=>{
+      loader.style.opacity = 0;
+      loader.style.display = "none";
+      main.style.display = "flex";
+      main.style.opacity = 1;
+  },3000);
+}
 const githubApiUrl =
             "https://api.github.com/repos/GeekHaven/Geektoberfest-Main/commits/main";
           const participantBaseUrl =
@@ -78,5 +88,6 @@ const githubApiUrl =
                     .catch((err) => console.log(err));
                 })
                 .catch((err) => console.log(err));
+                preloader();
             })
             .catch((err) => console.log(err));
