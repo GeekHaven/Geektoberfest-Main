@@ -1,0 +1,235 @@
+.leaderboard-container {
+  padding-top: 100px;
+  font-size: 20px;
+}
+
+.leaderboard-image {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+body {
+  text-align: center;
+  background-image: linear-gradient(
+    -225deg,
+    #69eacb 0%,
+    #eaccf8 48%,
+    #6654f1 100%
+  );
+  font-family: "Nunito", sans-serif;
+  color: black;
+}
+#preloader{
+  background: url(../img/leaderboard-preloader.gif) no-repeat center;
+  background-size: contain;
+  height: 450px;
+  width: 20%;
+  /* border: #056676 3px solid; */
+  margin-bottom: 5%;
+  border-radius: 10px;
+  margin: auto;
+}
+.table-content{
+  display: none;
+}
+.h1 {
+  text-align: center;
+  text-transform: uppercase;
+}
+table {
+  max-width: 1000px;
+  max-height: 300px;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: white;
+}
+
+a {
+  color: black;
+}
+a:hover {
+  color: #037bfc;
+}
+
+.fa-user {
+  font-size: 30px;
+}
+
+.navbar {
+  font-family: "Nunito", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  padding: 0.5rem 10rem;
+  background-color: rgb(235, 236, 255);
+  height: 80px;
+}
+
+.navbar-toggler {
+  margin-left: auto;
+}
+
+#navbar.fixed-top {
+  position: fixed;
+  justify-content: inherit;
+}
+
+.navbar-brand img {
+  width: 40px;
+  height: 40px;
+  margin: 0 0 10px 10px;
+  margin-bottom: 10px;
+}
+
+.navbar-nav {
+  padding-left: 0px;
+  margin: 0rem;
+}
+
+#navbarNav li a {
+  word-spacing: 0em;
+  text-decoration: none;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  font-size: 1.1em;
+  margin: 5px;
+  padding-left: 0rem;
+  padding: 5px;
+  color: #000000;
+  transition: color 0.5s;
+}
+
+#navbarNav li a::before {
+  content: "";
+  width: 70px;
+  position: absolute;
+  border-bottom: 2px solid #7c32d1;
+  bottom: 0;
+  right: 350px;
+  transition: 0.5s all;
+}
+
+#navbarNav li a:hover::before {
+  right: 0;
+}
+
+.nav-toggle-btn {
+  border: none;
+}
+
+.nav-toggle-btn:focus {
+  outline: 0 !important;
+}
+
+.nav-toggle-btn:active {
+  outline: 0 !important;
+}
+
+body.dark-theme .navbar {
+  background-color: #1a1a2e;
+}
+
+@media screen and (max-width: 993px) {
+  ul.navbar-nav {
+    margin-top: 12px;
+    margin-left: -18px;
+    margin-right: -20px;
+  }
+  li {
+    background-color: rgb(235, 236, 255);
+  }
+  li.nav-item {
+    margin-left: 2px;
+  }
+  body.dark-theme li {
+    background-color: #1a1a2e;
+  }
+
+  label.switch {
+    margin-top: -333px;
+    margin-right: 40px;
+  }
+  #navbarNav li a {
+    text-decoration-line: none;
+    text-decoration-style: none;
+    border-bottom: none;
+  }
+  #navbarNav li a::before {
+    text-decoration-line: none;
+    text-decoration-style: none;
+    border-bottom: none;
+  }
+  #navbarNav li a:hover::before {
+    text-decoration-line: none;
+    text-decoration-style: none;
+    border-bottom: 2px solid #7c32d1;
+  }
+}
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #232526;
+  font-family: "Nunito", sans-serif;
+  color: white;
+  margin-top: 0px;
+  padding-top: 10pt;
+  padding-bottom: 0;
+  text-align: center;
+}
+
+.social li {
+  display: inline-block;
+}
+
+.social li a {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin: 0.5em;
+  background: #fff;
+  color: black !important;
+  position: center;
+  display: block;
+  line-height: 1.5em;
+  text-decoration: none;
+}
+
+.fa-2x {
+  font-size: 1.5em !important;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+  transition-duration: 0.2s;
+}
+
+.social .fa-facebook:hover {
+  box-shadow: 0 0 2px 4px rgba(65, 103, 178, 0.4);
+}
+
+.social .fa-twitter:hover {
+  box-shadow: 0 0 2px 4px rgba(29, 161, 242, 0.4);
+}
+.social .fa-linkedin:hover {
+  box-shadow: 0 0 2px 4px rgba(40, 103, 178, 0.4);
+}
+.social .fa-github:hover {
+  box-shadow: 0 0 2px 4px rgba(127, 71, 201, 0.4);
+}
+.social .fa-envelope:hover {
+  box-shadow: 0 0 2px 4px rgba(219, 68, 55, 0.4);
+}
+
+.text-copyright {
+  background-color: #212326;
+  box-shadow: 0 0 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 450px) {
+  .text-copyright {
+    display: block;
+    font-size: small;
+  }
+}

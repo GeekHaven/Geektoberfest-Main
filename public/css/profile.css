@@ -1,0 +1,279 @@
+* {
+    cursor: auto !important;
+}
+* a{
+    cursor: pointer !important;
+}
+body{
+    font-family: "Nunito", sans-serif;
+}
+#profile{
+    background: rgb(168,255,99);
+    background: linear-gradient(135deg, rgba(168,255,99,1) 0%, rgba(147,189,251,1) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 5%;
+}
+
+/* ======================================================For Profile Image================================================================ */
+.profile-img{
+    border: 8px solid black;
+    border-radius: 50%;
+    height: 40%;
+    width: 40%;
+    position: relative;
+    left: 30%;
+    transform: translateY(40%);
+}
+.profile-img #userImg{
+    border-radius: 50%;
+}
+/* ======================================================Profile Image Ends================================================================ */
+
+/* ======================================================For Profile Card================================================================ */
+
+.profile-card{
+    padding-top: 15%;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.name{
+    font-size: 3rem;
+    font-weight: 800;
+}
+.about{
+    font-size: 1.5rem;;
+}
+.personal-info{
+    width: 40%;
+    min-width: 350px;
+    text-align: right;
+    margin: 5% 5%;
+    margin-left: auto;
+}
+.personal-social{
+    margin: 0;
+}
+.personal-link{
+    margin: 0;
+   font-size: 2rem;
+   margin-left: 5%;
+}
+.no-of-pr{
+    border: 3px #056676 solid;
+    padding: 2% 0;
+    /* background-color: #6f4a8e; */
+    width: 90%;
+    border-radius: 10px;
+    margin: auto;
+    text-align: center;
+    /* color: white; */
+}
+.pr-title{
+    font-weight: 600;
+}
+/* ======================================================Profile Card Ends================================================================ */
+
+/* ======================================================Table Styling( Table is inside Profile Card)================================================================ */
+.table-cont{
+    width: 90%;
+    margin: auto;
+    border: 3px #056676 solid;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    opacity: 0;
+    display: none;
+}
+.fetchLoader {
+    background: url("../img/ping.gif") center no-repeat;
+    height: 400px;
+    width: 90%;
+    margin: auto;
+    border: 3px #056676 solid;
+    border-radius: 10px;
+    margin-bottom: 5%;
+  }
+.table{
+    margin: 0;
+    border-radius: 5px;
+}
+th{
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+th:nth-child(1){
+    text-align: left;
+}
+th:nth-child(3){
+    text-align: right;
+}
+.thead{
+    border-color: transparent;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.tbody{
+    font-size: 1.2rem;
+}
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0,0,0,.15);
+}
+td{
+    text-align: center;
+    font-weight: 500;
+}
+td:nth-child(1){
+    text-align: left;
+}
+td:nth-child(3){
+    text-align: right;
+}
+td>a{
+    color: black;
+}
+td>a:hover{
+    color: #0f3057;
+    font-weight: bold;
+    text-decoration: underline;
+    transition-timing-function: ease-in;
+}
+.pr-changes{
+    margin: 0;
+    margin-top: 2%;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.pr-adds{
+    color: green !important;
+}
+.pr-dels{
+    color: red !important;
+}
+/* ======================================================Table Styling Ends================================================================ */
+
+
+/* ======================================================Dark Theme================================================================ */
+body.dark-theme #profile{
+    background: rgb(87,42,91);
+background: linear-gradient(135deg, rgba(87,42,91,1) 0%, rgba(84,37,90,1) 3%, rgba(1,87,84,1) 99%);
+    color: #dbe2ef;
+}
+body.dark-theme table *{
+    color: #dbe2ef;
+}
+body.dark-theme .profile-card{
+    border-color: #11999e;
+}
+/* ======================================================Dark Theme Ends================================================================ */
+
+/* ======================================================Media Queries================================================================ */
+@media(max-width: 768px){
+    .table{
+        width: 100%;
+    }
+    .table td, .table th{
+        padding: 0.2rem;
+    }
+    .profile-page{
+        width: 100%;
+        padding: 0;
+    }
+}
+@media(max-width: 475px){
+    .container{
+        max-width: 100%;
+    }
+    .thead{
+        font-size: 0.8rem;
+    }
+    .tbody{
+        font-size: 0.8rem;
+    }
+    .pr-changes{
+        font-size: 0.8rem;
+    }
+}
+@media(max-width: 335px){
+    .tbody{
+        font-size: 0.8rem;
+    }
+}
+@media(min-width:768px){
+    .profile-img{
+        height: 30%;
+        width: 30%;
+        left: 35%;
+        transform: translateY(40%);
+    }
+}
+/* ======================================================Media Queries End================================================================ */
+
+/*===================================search bar ======================================*/
+.searchOuter {
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+    position: relative;
+    top: 100px;
+}
+
+@media screen and (max-width:985px) {
+    .searchOuter {
+        margin-top: 1rem !important;
+    }
+}
+@media screen and (max-width:445px) {
+    .searchOuter {
+        margin-bottom: 3rem !important;
+    }
+    .searchbar:hover > .search_input {
+        width: 60vw !important;
+    }
+}
+.searchbar{
+  margin-bottom: auto;
+  margin-top: auto;
+  height: 60px;
+  background-color:#696f6970;
+  border-radius: 30px;
+  padding: 10px;
+  }
+
+
+  .search_input{
+  color: white;
+  border: 0;
+  outline: 0;
+  background: none;
+  width: 6rem;
+  caret-color:transparent;
+  line-height: 40px;
+  transition: width 0.4s linear;
+  }
+
+  .searchbar:hover > .search_input{
+  padding: 0 10px;
+  width: 30vw;
+  caret-color:red;
+  transition: width 0.4s linear;
+  }
+
+  .searchbar:hover > .search_icon{
+  background: white;
+  color: #e74c3c;
+  }
+
+  .search_icon{
+  height: 40px;
+  width: 40px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color:white;
+  text-decoration:none;
+  }

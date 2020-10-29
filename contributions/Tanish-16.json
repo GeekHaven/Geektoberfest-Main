@@ -1,0 +1,12 @@
+{
+    "name" : "Tanish Patel",
+    "imageurl" : "https://www.facebook.com/photo?fbid=1268855116619784&set=a.103833673121940",
+    "about" : "Hello, I'm a Machine Learning newbie",
+    "facebook": "https://www.facebook.com/tanish.patel.750",
+    "github" : "https://github.com/Tanish-16",
+    "prs": [
+        "https://github.com/GeekHaven/Real-Time-Face-Mask-Detector/pull/11",
+        "https://github.com/GeekHaven/Real-Time-Face-Mask-Detector/pull/13",
+        "https://github.com/GeekHaven/Real-Time-Face-Mask-Detector/pull/18"
+    ]
+ }

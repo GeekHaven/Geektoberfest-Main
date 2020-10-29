@@ -1,8 +1,14 @@
 {
     "name" : "Aman Singh",
     "imageurl" : "https://avatars2.githubusercontent.com/u/53997924?s=400&u=4c5b75ef111e9014b358162c1e9ae3a488966968&v=4",
-    "about" : "Hello, I'm a Student, Tech Lover and Programmer!",
+    "about" : "Hello, I'm a Student who is interested in CyberSec and Web Dev",
     "facebook": "https://www.facebook.com/Am4nS1ngh",
     "github" : "https://github.com/prince-7",
-    "prs": []
+    "prs": [
+        "https://github.com/GeekHaven/weather-app/pull/27",
+        "https://github.com/GeekHaven/file-explorer/pull/22",
+        "https://github.com/GeekHaven/file-explorer/pull/30",
+        "https://github.com/GeekHaven/file-explorer/pull/33",
+        "https://github.com/GeekHaven/file-explorer/pull/38"
+    ]
  }

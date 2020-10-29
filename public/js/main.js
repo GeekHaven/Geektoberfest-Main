@@ -1,3 +1,18 @@
+const loader = document.querySelector("#loader");
+const main = document.querySelector("#content");
+var g;
+function init() {
+  setTimeout(() => {
+    loader.style.opacity = 0;
+    loader.style.display = "none";
+
+    main.style.display = "block";
+    setTimeout(() => (main.style.opacity = 1), 50);
+  }, 2000);
+}
+
+init();
+
 document.addEventListener("DOMContentLoaded", () => {
   const isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
   // get all the links with an ID that starts with 'sectionLink'
@@ -28,14 +43,46 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-//
+let t = true;
+
 //toggle button
-const btn = document.querySelector(".btn-toggle");
+let darkMode = localStorage.getItem("darkMode");
+const toggleButton = document.getElementById("toggle");
+const darkModeToggle = document.querySelector(".btn-toggle");
 
-btn.addEventListener("click", function () {
-  document.body.classList.toggle("dark-theme");
+const enableDarkMode = () => {
+  document.body.classList.add("dark-theme");
+  localStorage.setItem("darkMode", "enabled");
+  document.getElementById("myImg").src = "public/img/gh.png";
+  toggleButton.checked = true;
+};
+
+const disableDarkMode = () => {
+  document.body.classList.remove("dark-theme");
+  localStorage.setItem("darkMode", null);
+  document.getElementById("myImg").src = "public/img/Nav-logo.png";
+  toggleButton.checked = false;
+};
+if (darkMode === "enabled") {
+  enableDarkMode();
+}
+darkModeToggle.addEventListener("click", () => {
+  darkMode = localStorage.getItem("darkMode");
+  if (darkMode !== "enabled") {
+    enableDarkMode();
+  } else {
+    disableDarkMode();
+  }
+  t = !t;
 });
-
+// const btn = document.querySelector(".btn-toggle");
+// let t = true;
+// btn.addEventListener("click", function () {
+//   document.body.classList.toggle("dark-theme");
+//   if (t) document.getElementById("myImg").src = "public/img/gh.png";
+//   else document.getElementById("myImg").src = "public/img/Nav-logo.png";
+//   t = !t;
+// });
 //toggle button end
 //
 
@@ -57,17 +104,19 @@ function countdown() {
   h %= 24;
   m %= 60;
   s %= 60;
-  
-  if(s >= 0)
-  {
-    d = (d < 10) ? "0" + d : d;
+
+  if (s >= 0) {
+    d = d < 10 ? "0" + d : d;
     h = h < 10 ? "0" + h : h;
     m = m < 10 ? "0" + m : m;
     s = s < 10 ? "0" + s : s;
   }
 
   if (s < 0) {
-    d = "0"+0; h = "0"+0; m = "0"+0; s = "0"+0;
+    d = "0" + 0;
+    h = "0" + 0;
+    m = "0" + 0;
+    s = "0" + 0;
   }
 
   document.getElementById("days").textContent = d;
@@ -89,6 +138,32 @@ document.addEventListener("mousemove", (e) => {
   root.style.setProperty("--x", e.clientX + "px");
   root.style.setProperty("--y", e.clientY + "px");
 });
+
+let smallcursor = document.querySelector(".cursor--darks");
+let largecursor = document.querySelector(".cursor--darkl");
+
+document.addEventListener("mousemove", movecursor);
+
+function movecursor(e) {
+  const root = document.querySelector(":root");
+  document.addEventListener("mousemove", (e) => {
+    root.style.setProperty("--x", e.clientX + "px");
+    root.style.setProperty("--y", e.clientY + "px");
+  });
+}
+
+let links = Array.from(document.querySelectorAll("a"));
+if (t) {
+  links.forEach((link) => {
+    link.addEventListener("mouseover", () => {
+      smallcursor.classList.add("grow");
+      //smallcursor.classList.remove("cursor--small");
+    });
+    link.addEventListener("mouseout", () => {
+      smallcursor.classList.remove("grow");
+    });
+  });
+}
 
 //Disables the cursor for touch device having width less then 768 px only
 var supportsTouch = "ontouchstart" in window || navigator.msMaxTouchPoints;
@@ -113,3 +188,112 @@ function myFunction(x) {
 var x = window.matchMedia("(max-width: 768px)");
 myFunction(x);
 x.addListener(myFunction);
+
+// Scroll to top button
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 40) {
+    $("#scrollbtn").fadeIn();
+  } else {
+    $("#scrollbtn").fadeOut();
+  }
+});
+
+$(document).ready(function () {
+  $("#scrollbtn").click(function () {
+    $("html, body").animate({ scrollTop: 0 }, 800);
+  });
+});
+
+// custom Image URL goes here
+
+const customUrl = "./public/img/user.png";
+
+//code for fetching participants from json files in contributionsfolder
+
+const githubApiUrl =
+  "https://api.github.com/repos/GeekHaven/Geektoberfest-Main/commits/main";
+const participantBaseUrl =
+  "https://geekhaven.github.io/Geektoberfest-Main/contributions/";
+const participantProfile =
+  "https://geekhaven.github.io/Geektoberfest-Main/profile.html?username=";
+const participantsContainer = document.getElementById("participants-container");
+fetch(githubApiUrl)
+  .then((res) => res.json())
+  .then((data) => {
+    const treeUrl = data.commit.tree.url;
+    fetch(treeUrl)
+      .then((treeRes) => treeRes.json())
+      .then((treeData) => {
+        const contributionsUrl = treeData.tree[2].url;
+        fetch(contributionsUrl)
+          .then((contributionsRes) => contributionsRes.json())
+          .then((contributionsData) => {
+            let participants = contributionsData.tree.map(
+              (contributor) => contributor.path
+            );
+            participants.forEach((participant) => {
+              const participantUsername = participant.substring(
+                0,
+                participant.length - 5
+              );
+              fetch(`${participantBaseUrl + participant}`)
+                .then((res) => res.json())
+                .then((data) => {
+                  //code for rendering participants in partcipants-container
+                  //participant image is available as data.imageurl
+                  x =
+                    '<div class="image"><img class="image__img" src="' +
+                    data.imageurl +
+                    '" onerror="this.src=' +
+                    "customUrl" +
+                    '"><div class="image__overlay image__overlay_blur"><div class="image__title text-center">' +
+                    data.name;
+                  x =
+                    x +
+                    '</div><div class="image__description"><p id="parag" class="text-center">';
+                  g = data.about;
+                  g = truncate(g);
+                  x = x + g;
+                  x =
+                    x +
+                    '</p></div><div class="links_par"><a  href="' +
+                    data.github +
+                    '" target="_blank"><i class="fab fa-github"></i></a><a  href="' +
+                    participantProfile +
+                    participantUsername +
+                    '" target="_blank"><i class="fa fa-user"></i></a><a href="' +
+                    data.facebook +
+                    '" target="_blank"><i class="fab fa-facebook"></i></a><div></div></div>';
+                  participantsContainer.innerHTML += x;
+                })
+                .catch((err) => console.log(participant + ": " + err));
+            });
+          })
+          .catch((err) => console.log(err));
+      })
+      .catch((err) => console.log(err));
+  })
+  .catch((err) => console.log(err));
+
+function truncate(usertext) {
+  var n = usertext.length;
+  var c = 0;
+  for (i = 0; i < n; i++) {
+    if (usertext[i] == " ") {
+      c++;
+    }
+  }
+  var f = 12;
+  if (c > 12) {
+    var temText = "";
+    for (i = 0; i < n; i++) {
+      if (f > 0) {
+        if (usertext[i] == " ") f--;
+        temText += usertext[i];
+      }
+    }
+    temText += "...";
+    usertext = temText;
+  }
+  return usertext;
+}

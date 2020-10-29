@@ -1,0 +1,13 @@
+{
+    "name" : "Ranveer Singh",
+    "imageurl" : "https://avatars3.githubusercontent.com/u/53096435?s=400&u=3c47b7a5fbdc459e623d64cb138c09f783c60d69&v=4",
+    "about" : "Hello I'm a web developer",
+    "facebook": "https://www.facebook.com/manik.sidana.98/",
+    "github" : "https://github.com/Ranveer251",
+    "prs": [
+        "https://github.com/Elevate-Lab/elevate-lab-website/pull/198",
+        "https://github.com/Elevate-Lab/elevate-lab-website/pull/210",
+        "https://github.com/GeekHaven/weather-app/pull/35",
+        "https://github.com/GeekHaven/Geektoberfest-Main/pull/215"
+    ]
+ }

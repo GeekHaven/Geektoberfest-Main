@@ -1,8 +1,12 @@
 {
     "name" : "Aditya Aggarwal",
-    "imageurl" : "https://www.facebook.com/photo?fbid=158003802206435&set=a.148857116454437",
+    "imageurl" : "https://avatars3.githubusercontent.com/u/58394891?s=460&u=ac17a4f27a1e3000f60c044a6cc78465d6df2d86&v=4",
     "about" : "I am second year student at IIITA and learning web development",
     "facebook": "https://www.facebook.com/aditya.aggarwal.980315",
     "github" : "https://github.com/Aditya-2001",
-    "prs": []
+    "prs": [
+        "https://github.com/GeekHaven/Geektoberfest-Main/pull/140",
+        "https://github.com/GeekHaven/Geektoberfest-Main/pull/288",
+        "https://github.com/GeekHaven/Geektoberfest-Main/pull/289"
+    ]
  }

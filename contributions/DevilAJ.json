@@ -1,0 +1,15 @@
+{
+    "name" : "Aniket Jaiswal",
+    "imageurl" : "https://avatars0.githubusercontent.com/u/58396277?s=400&u=4d3bbdfcd85b9c050f5b98ce5789a7b385779b9a&v=4",
+    "about" : "Hey, I am a second year undergraduate @ IIITA; and I am a App Developer and learning flutter now.",
+    "facebook": "https://www.facebook.com/profile.php?id=100039403392707",
+    "github" : "https://github.com/DevilAJ",
+    "prs": [
+	"https://github.com/GeekHaven/ChatApp/pull/18",
+        "https://github.com/GeekHaven/ChatApp/pull/21",
+        "https://github.com/GeekHaven/GOT-Character-App/pull/33",
+        "https://github.com/GeekHaven/GOT-Character-App/pull/36",
+	"https://github.com/GeekHaven/GOT-Character-App/pull/41",
+	"https://github.com/GeekHaven/GOT-Character-App/pull/45"
+    ]
+ }

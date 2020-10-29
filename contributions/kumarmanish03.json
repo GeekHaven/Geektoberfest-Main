@@ -4,5 +4,12 @@
     "about" : "Hey, I am a 2nd Undergraduate at IIIT Allahabad. I love to learn Web Development",
     "facebook": "https://www.facebook.com/profile.php?id=100009172781875",
     "github" : "https://github.com/kumarmanish03",
-    "prs": ["https://github.com/GeekHaven/Geektoberfest-Main/pull/103"]
+    "prs": ["https://github.com/GeekHaven/Geektoberfest-Main/pull/103",
+           "https://github.com/GeekHaven/Geektoberfest-Main/pull/148",
+           "https://github.com/GeekHaven/file-explorer/pull/21",
+           "https://github.com/GeekHaven/Geektoberfest-Main/pull/195",
+           "https://github.com/GeekHaven/Geektoberfest-Main/pull/268",
+           "https://github.com/GeekHaven/Geektoberfest-Main/pull/253",
+           "https://github.com/Elevate-Lab/elevate-lab-website/pull/228",
+           "https://github.com/bajajvinamr/HacktoberFest2020/pull/578"]
  }
