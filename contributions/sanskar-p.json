@@ -1,0 +1,17 @@
+ 
+{
+    "name" : "Sanskar Patro",
+    "imageurl" : "https://avatars1.githubusercontent.com/u/54014518?s=460&v=4",
+    "about" : "that's what she said",
+    "facebook": "https://www.facebook.com/",
+    "github" : "https://github.com/sanskar-p",
+    "prs": [
+        "https://github.com/boostercloud/booster/pull/455",
+        "https://github.com/GeekHaven/WorkTrack/pull/21",
+        "https://github.com/litmuschaos/litmus/pull/2137",
+        "https://github.com/LoginRadius/engineering-portal/pull/387",
+        "https://github.com/asyncapi/asyncapi-react/pull/164",
+        "https://github.com/storybookjs/storybook/pull/12761",
+        "https://github.com/dephraiim/awesome-developer-dictionary/pull/8"
+    ]
+ }
